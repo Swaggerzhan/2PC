@@ -1,0 +1,73 @@
+option cc_generic_services = true;
+
+message BeginArgs {
+};
+
+message BeginReply {
+  required int32 err = 1;
+  required int32 Tid = 2;
+};
+
+message EndArgs {
+  required int32 Tid = 1;
+}
+
+message EndReply {
+  required int32 err = 1;
+}
+
+message AbortArgs {
+  required int32 Tid = 1;
+}
+
+message AbortReply {
+  required int32 err = 1;
+}
+
+message GetArgs {
+  required int32 Tid = 1;
+  required string key = 2;
+};
+
+message GetReply {
+  required int32 err = 1;
+  required string value = 2;
+};
+
+
+message PutArgs {
+  required int32 Tid = 1;
+
+  // 暂不考虑幂等性
+  optional int64 seq = 2;
+  optional int64 clientID = 3;
+
+  required string key = 4;
+  required string value = 5;
+};
+
+
+message PutReply {
+  required int32 err = 1;
+  required string value = 2;
+};
+
+service KvServerBase {
+  rpc Get(GetArgs) returns (GetReply);
+  rpc Put(PutArgs) returns (PutReply);
+
+
+  rpc BEGIN(BeginArgs) returns (BeginReply);
+  rpc END(EndArgs) returns (EndReply);
+  rpc ABORT(AbortArgs) returns (AbortReply);
+}
+
+
+
+
+
+
+
+
+
+
