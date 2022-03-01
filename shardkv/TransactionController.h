@@ -7,14 +7,31 @@
 
 
 #include <atomic>
+#include <memory>
+#include <vector>
 
-class TransactionController {
+struct Entry;
+
+class TransactionID {
 public:
 
   static int get();
 
 private:
   static std::atomic<int> id_;
+};
+
+
+int TimeoutGenerator();
+
+
+class TransactionController {
+public:
+
+
+private:
+  int Tid_;
+  std::vector<std::shared_ptr<Entry>> lockTable_;
 };
 
 

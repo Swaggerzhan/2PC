@@ -9,9 +9,21 @@
 
 enum RpcState{
   RPC_OK = 1,
-  RPC_TransactionNotInit = 2,
-  RPC_KeyNotExist = 3,
-  RPC_WriteFailed = 4,
+
+
+  Prepare_Failed = -1,
+  Prepare_OK = 6,
+  Prepare_NotInit = 7,
+  Prepare_ConnectFail = 8,
+
+
+  Transaction_OK = 9,
+  Transaction_Failed = -2,
+  Transaction_NotInit = 11,
+
+
+
+
 };
 
 #endif //INC_2PC_GLOBAL_H

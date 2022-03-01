@@ -1,11 +1,13 @@
 #include <iostream>
-#include "../../rpc/Server.h"
-#include "../../shardkv/KvServer.h"
+#include "../../shardkv/ShardKvServer.h"
 
 
 int main() {
-  Server s;
+
+
+  ShardKvServer s(7777);
   s.start();
+
 }
 
 

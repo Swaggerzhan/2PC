@@ -27,6 +27,9 @@ struct TransactionContext {
 
   int t_id;
   std::vector<UndoRecord> undoList;
+  std::vector<std::shared_ptr<Entry>> lockTable;
+
+  bool invalid;
 };
 
 

@@ -14,9 +14,23 @@ add_executable(2PC main.cpp
         shardkv/Engine.h shardkv/Engine.cc
         shardkv/TransactionContext.h
         shardkv/TransactionContext.cc
-        shardkv/KvServer.h shardkv/KvServer.cc
-        proto/KvServer.pb.h proto/KvServer.pb.cc
-        shardkv/TransactionController.h shardkv/TransactionController.cc client/KvClient.h client/KvClient.cc rpc/Server.h rpc/Server.cc rpc/global.h)
+        shardkv/TransactionController.h shardkv/TransactionController.cc
+        proto/shardkv.pb.h proto/shardkv.pb.cc
+        proto/transaction.pb.h proto/transaction.pb.cc
+
+
+        client/KvClient.h client/KvClient.cc
+        rpc/Server.h rpc/Server.cc
+        rpc/global.h
+        shardkv/ShardKv.h shardkv/ShardKv.cc
+        shardkv/ShardKvServer.h shardkv/ShardKvServer.cc
+        coordinator/TransactionCoordinator.h coordinator/TransactionCoordinator.cc
+        shardkv/ShardKvClient.cc shardkv/ShardKvClient.h
+
+        util/MurmurHash2.h util/MurmurHash2.cc
+
+
+        )
 
 target_link_libraries(2PC Threads::Threads)
 target_link_libraries(2PC brpc)

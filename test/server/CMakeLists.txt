@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.10)
-project(server)
+project(ShardKvServer)
 
 set(CMAKE_CXX_STANDARD 14)
 
@@ -10,20 +10,37 @@ link_directories(/usr/local/lib)
 
 find_package(Threads)
 
-add_executable(server server.cc
-        ../../shardkv/Engine.h ../../shardkv/Engine.cc
-        ../../shardkv/TransactionContext.h
-        ../../shardkv/TransactionContext.cc
-        ../../shardkv/KvServer.h ../../shardkv/KvServer.cc
-        ../../proto/KvServer.pb.h ../../proto/KvServer.pb.cc
-        ../../shardkv/TransactionController.h ../../shardkv/TransactionController.cc
-        ../../rpc/Server.h ../../rpc/Server.cc
+
+
+set(ShardKv
+        ../../shardkv/ShardKvServer.h ../../shardkv/ShardKvServer.cc
+        ../../shardkv/ShardKv.h ../../shardkv/ShardKv.cc
+
+        ../../proto/shardkv.pb.h ../../proto/shardkv.pb.cc
+
+        ../../rpc/global.h
         )
 
-target_link_libraries(server Threads::Threads)
-target_link_libraries(server brpc)
+set(ShardKvTransaction
+        ../../shardkv/TransactionController.h ../../shardkv/TransactionController.cc
+        ../../shardkv/TransactionContext.h ../../shardkv/TransactionContext.cc
+        )
 
-target_link_libraries(server protobuf)
-target_link_libraries(server protoc)
+set(Engine
+       ../../shardkv/Engine.h ../../shardkv/Engine.cc
+        )
+
+
+add_executable( ShardKvServer server.cc
+        ${ShardKv}
+        ${ShardKvTransaction}
+        ${Engine}
+        )
+
+target_link_libraries(ShardKvServer Threads::Threads)
+target_link_libraries(ShardKvServer brpc)
+
+target_link_libraries(ShardKvServer protobuf)
+target_link_libraries(ShardKvServer protoc)
 
 

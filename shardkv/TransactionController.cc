@@ -3,11 +3,17 @@
 //
 
 #include "TransactionController.h"
+#include <random>
 
+std::atomic<int> TransactionID::id_ = {};
 
-std::atomic<int> TransactionController::id_ = {};
-
-int TransactionController::get() {
+int TransactionID::get() {
   return id_.fetch_add(1);
+}
+
+
+// 3 - 5
+int TimeoutGenerator() {
+  return (rand() % 2) + 3;
 }
 

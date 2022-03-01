@@ -8,7 +8,8 @@
 
 
 TransactionContext::TransactionContext()
-: t_id(TransactionController::get())
+: t_id(-1)
+, invalid(false)
 {}
 
 

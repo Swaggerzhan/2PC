@@ -1,0 +1,77 @@
+option cc_generic_services = true;
+
+
+message BeginArgs {
+  required int32 Tid = 1;  // 事务ID
+};
+
+message BeginReply {
+  required int32 err = 1; // RPC操作
+};
+
+message EndArgs {
+  required int32 Tid = 1;
+};
+
+message EndReply {
+  required int32 err = 1;
+};
+
+message AbortArgs {
+  required int32 Tid = 1;
+};
+
+message AbortReply {
+  required int32 err = 1;
+};
+
+
+message ReadArgs {
+  required int32 Tid = 1;
+  required string key = 2;
+};
+
+message ReadReply {
+  required int32 err = 1;
+  required string value = 2; // optional
+};
+
+message WriteArgs {
+  required int32 Tid = 1;
+  required string key = 2;
+  required string value = 3;
+
+  // 幂等性先不考虑
+  optional int64 clientID = 4;
+  optional int64 seqID = 5;
+};
+
+message WriteReply {
+  required int32 err = 1;
+};
+
+// coordinator
+message ConnectArgs {
+
+};
+
+message ConnectReply {
+
+};
+
+
+service ShardKvBase {
+  rpc PrepareRead(ReadArgs) returns (ReadReply);
+  rpc PrepareWrite(WriteArgs) returns (WriteReply);
+
+  rpc BEGIN(BeginArgs) returns (BeginReply);
+  rpc END(EndArgs) returns (EndReply);
+  rpc ABORT(AbortArgs) returns (AbortReply);
+
+  rpc CONNECT(ConnectArgs) returns (ConnectReply);
+}
+
+
+
+
+
