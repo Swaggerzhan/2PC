@@ -16,7 +16,7 @@ set(ShardKv
         ../../shardkv/ShardKvClient.h ../../shardkv/ShardKvClient.cc
         ../../proto/shardkv.pb.h ../../proto/shardkv.pb.cc
 
-        ../../rpc/global.h
+        ../../util/global.h ../../util/global.cc
         )
 
 set(ShardKvTransaction

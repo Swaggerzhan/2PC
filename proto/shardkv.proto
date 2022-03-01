@@ -33,7 +33,7 @@ message ReadArgs {
 
 message ReadReply {
   required int32 err = 1;
-  required string value = 2; // optional
+  optional string value = 2; // optional
 };
 
 message WriteArgs {
@@ -52,11 +52,11 @@ message WriteReply {
 
 // coordinator
 message ConnectArgs {
-
+  required string host = 1;
 };
 
 message ConnectReply {
-
+  required int32 err = 1;
 };
 
 

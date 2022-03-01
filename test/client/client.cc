@@ -18,11 +18,11 @@ void add() {
 
   int tid = 1;
 
-  cout << c.BEGIN(tid) << endl;
-  cout << c.PrepareWrite(tid, key, value) << endl;
-  cout << c.PrepareWrite(tid, key2, value2) << endl;
-  cout << c.PrepareWrite(tid, key3, value3) << endl;
-  cout << c.END(tid) << endl;
+  cout << State2Str(c.BEGIN(tid)) << endl;
+  cout << State2Str(c.PrepareWrite(tid, key, value)) << endl;
+  cout << State2Str(c.PrepareWrite(tid, key2, value2)) << endl;
+  cout << State2Str(c.PrepareWrite(tid, key3, value3)) << endl;
+  cout << State2Str(c.END(tid)) << endl;
 }
 
 void query() {
@@ -37,11 +37,11 @@ void query() {
   string value3;
   int tid = 2;
 
-  cout << c.BEGIN(tid) << endl;
-  cout << c.PrepareRead(tid, key, value) << endl;
-  cout << c.PrepareRead(tid, key2, value2) << endl;
-  cout << c.PrepareRead(tid, key3, value3) << endl;
-  cout << c.END(tid) << endl;
+  cout << State2Str(c.BEGIN(tid)) << endl;
+  cout << State2Str(c.PrepareRead(tid, key, value)) << endl;
+  cout << State2Str(c.PrepareRead(tid, key2, value2)) << endl;
+  cout << State2Str(c.PrepareRead(tid, key3, value3)) << endl;
+  cout << State2Str(c.END(tid)) << endl;
 
   cout << value << endl;
   cout << value2 << endl;
@@ -64,12 +64,33 @@ void abortTest() {
 
   int tid = 1;
 
-  cout << c.BEGIN(tid) << endl;
-  cout << c.PrepareWrite(tid, key, value) << endl;
-  cout << c.PrepareWrite(tid, key2, value2) << endl;
-  cout << c.PrepareWrite(tid, key3, value3) << endl;
-  cout << c.PrepareRead(tid, key4, value4) << endl;
-  cout << c.END(tid) << endl;
+  cout << State2Str(c.BEGIN(tid)) << endl;
+  cout << State2Str(c.PrepareWrite(tid, key, value)) << endl;
+  cout << State2Str(c.PrepareWrite(tid, key2, value2)) << endl;
+  cout << State2Str(c.PrepareWrite(tid, key3, value3)) << endl;
+  cout << State2Str(c.PrepareRead(tid, key4, value4)) << endl;
+  cout << State2Str(c.END(tid)) << endl;
+}
+
+void handleAbort() {
+    ShardKvClient c("0.0.0.0:7777");
+
+    string key = "Swagger";
+    string key2 = "Bob";
+    string key3 = "Alice";
+    string value = "100000";
+    string value2 = "Bob has not money";
+    string value3 = "Alice say fuck you!";
+
+    int tid = 1;
+
+    cout << State2Str(c.BEGIN(tid)) << endl;
+    cout << State2Str(c.PrepareWrite(tid, key, value)) << endl;
+    cout << State2Str(c.PrepareWrite(tid, key2, value2)) << endl;
+    cout << State2Str(c.PrepareWrite(tid, key3, value3)) << endl;
+    cout << State2Str(c.ABORT(tid)) << endl;
+    cout << State2Str(c.END(tid)) << endl;
+
 }
 
 
@@ -84,5 +105,7 @@ int main(int argc, char** args) {
     query();
   }else if (atoi(args[1]) == 3) {
     abortTest();
+  } else if ( atoi(args[1]) == 4) {
+    handleAbort();
   }
 }

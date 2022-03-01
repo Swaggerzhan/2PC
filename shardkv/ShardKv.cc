@@ -7,7 +7,7 @@
 #include "Engine.h"
 #include "brpc/server.h"
 #include "TransactionContext.h"
-#include "../rpc/global.h"
+#include "../util/global.h"
 
 
 // for debug
@@ -83,15 +83,15 @@ void ShardKv::PrepareRead(::google::protobuf::RpcController *c, const ::ReadArgs
   State s = Engine::read(Tctx, key, value);
   if ( s == KeyNotExist ) {
     reply->set_err(Prepare_Failed);
-    reply->set_value("Err"); // TODO:
     Engine::ABORT(Tctx);
+    removeContext(args->tid());
     return;
   }
 
   if ( s == LockFailed ) {
     reply->set_err(Prepare_Failed);
-    reply->set_value("Err"); // TODO:
     Engine::ABORT(Tctx);
+    removeContext(args->tid());
     return;
   }
   reply->set_err(Prepare_OK);
@@ -121,6 +121,7 @@ void ShardKv::PrepareWrite(::google::protobuf::RpcController* c, const ::WriteAr
 
   if ( s == LockFailed ) {
     Engine::ABORT(Tctx);
+    removeContext(args->tid());
     reply->set_err(Prepare_Failed);
     return;
   }
@@ -128,4 +129,28 @@ void ShardKv::PrepareWrite(::google::protobuf::RpcController* c, const ::WriteAr
 
 }
 
+void ShardKv::ABORT(::google::protobuf::RpcController*, const ::AbortArgs* args,
+                    ::AbortReply* reply,
+                    ::google::protobuf::Closure* done) {
+  brpc::ClosureGuard done_guard(done);
 
+  mutex_.lock();
+  auto iter = Tmap_.find(args->tid());
+  if ( iter == Tmap_.end() ) {
+    mutex_.unlock();
+    reply->set_err(Prepare_NotInit);
+    return;
+  }
+  TransactionContextPtr Tctx = iter->second;
+  Tmap_.erase(args->tid());
+  mutex_.unlock();
+
+  Engine::ABORT(Tctx);
+  reply->set_err(Prepare_OK);
+}
+
+
+void ShardKv::removeContext(int tid) {
+  std::unique_lock<std::mutex> lockGuard(mutex_);
+  Tmap_.erase(tid);
+}

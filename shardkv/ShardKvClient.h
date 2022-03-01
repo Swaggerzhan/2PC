@@ -10,7 +10,7 @@
 #include "../proto/shardkv.pb.h"
 #include "brpc/channel.h"
 #include "gflags/gflags.h"
-#include "../rpc/global.h"
+#include "../util/global.h"
 
 
 class ShardKvClient {
@@ -30,7 +30,7 @@ public:
   // tid
   RpcState END(int);
 
-  //RpcState Abort(int);
+  RpcState ABORT(int);
 
 
 private:

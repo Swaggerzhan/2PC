@@ -142,7 +142,31 @@ struct WriteReplyDefaultTypeInternal {
   };
 };
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT WriteReplyDefaultTypeInternal _WriteReply_default_instance_;
-static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_shardkv_2eproto[10];
+constexpr ConnectArgs::ConnectArgs(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : host_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string){}
+struct ConnectArgsDefaultTypeInternal {
+  constexpr ConnectArgsDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~ConnectArgsDefaultTypeInternal() {}
+  union {
+    ConnectArgs _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT ConnectArgsDefaultTypeInternal _ConnectArgs_default_instance_;
+constexpr ConnectReply::ConnectReply(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : err_(0){}
+struct ConnectReplyDefaultTypeInternal {
+  constexpr ConnectReplyDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~ConnectReplyDefaultTypeInternal() {}
+  union {
+    ConnectReply _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT ConnectReplyDefaultTypeInternal _ConnectReply_default_instance_;
+static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_shardkv_2eproto[12];
 static constexpr ::PROTOBUF_NAMESPACE_ID::EnumDescriptor const** file_level_enum_descriptors_shardkv_2eproto = nullptr;
 static const ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor* file_level_service_descriptors_shardkv_2eproto[1];
 
@@ -239,6 +263,22 @@ const uint32_t TableStruct_shardkv_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(
   ~0u,  // no _inlined_string_donated_
   PROTOBUF_FIELD_OFFSET(::WriteReply, err_),
   0,
+  PROTOBUF_FIELD_OFFSET(::ConnectArgs, _has_bits_),
+  PROTOBUF_FIELD_OFFSET(::ConnectArgs, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::ConnectArgs, host_),
+  0,
+  PROTOBUF_FIELD_OFFSET(::ConnectReply, _has_bits_),
+  PROTOBUF_FIELD_OFFSET(::ConnectReply, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::ConnectReply, err_),
+  0,
 };
 static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   { 0, 7, -1, sizeof(::BeginArgs)},
@@ -251,6 +291,8 @@ static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOB
   { 58, 66, -1, sizeof(::ReadReply)},
   { 68, 79, -1, sizeof(::WriteArgs)},
   { 84, 91, -1, sizeof(::WriteReply)},
+  { 92, 99, -1, sizeof(::ConnectArgs)},
+  { 100, 107, -1, sizeof(::ConnectReply)},
 };
 
 static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
@@ -264,6 +306,8 @@ static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] =
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::_ReadReply_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::_WriteArgs_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::_WriteReply_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::_ConnectArgs_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::_ConnectReply_default_instance_),
 };
 
 const char descriptor_table_protodef_shardkv_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
@@ -273,19 +317,22 @@ const char descriptor_table_protodef_shardkv_2eproto[] PROTOBUF_SECTION_VARIABLE
   "\tAbortArgs\022\013\n\003Tid\030\001 \002(\005\"\031\n\nAbortReply\022\013\n"
   "\003err\030\001 \002(\005\"$\n\010ReadArgs\022\013\n\003Tid\030\001 \002(\005\022\013\n\003k"
   "ey\030\002 \002(\t\"\'\n\tReadReply\022\013\n\003err\030\001 \002(\005\022\r\n\005va"
-  "lue\030\002 \002(\t\"U\n\tWriteArgs\022\013\n\003Tid\030\001 \002(\005\022\013\n\003k"
+  "lue\030\002 \001(\t\"U\n\tWriteArgs\022\013\n\003Tid\030\001 \002(\005\022\013\n\003k"
   "ey\030\002 \002(\t\022\r\n\005value\030\003 \002(\t\022\020\n\010clientID\030\004 \001("
   "\003\022\r\n\005seqID\030\005 \001(\003\"\031\n\nWriteReply\022\013\n\003err\030\001 "
-  "\002(\0052\274\001\n\013ShardKvBase\022$\n\013PrepareRead\022\t.Rea"
-  "dArgs\032\n.ReadReply\022\'\n\014PrepareWrite\022\n.Writ"
-  "eArgs\032\013.WriteReply\022 \n\005BEGIN\022\n.BeginArgs\032"
-  "\013.BeginReply\022\032\n\003END\022\010.EndArgs\032\t.EndReply"
-  "\022 \n\005ABORT\022\n.AbortArgs\032\013.AbortReplyB\003\200\001\001"
+  "\002(\005\"\033\n\013ConnectArgs\022\014\n\004host\030\001 \002(\t\"\033\n\014Conn"
+  "ectReply\022\013\n\003err\030\001 \002(\0052\344\001\n\013ShardKvBase\022$\n"
+  "\013PrepareRead\022\t.ReadArgs\032\n.ReadReply\022\'\n\014P"
+  "repareWrite\022\n.WriteArgs\032\013.WriteReply\022 \n\005"
+  "BEGIN\022\n.BeginArgs\032\013.BeginReply\022\032\n\003END\022\010."
+  "EndArgs\032\t.EndReply\022 \n\005ABORT\022\n.AbortArgs\032"
+  "\013.AbortReply\022&\n\007CONNECT\022\014.ConnectArgs\032\r."
+  "ConnectReplyB\003\200\001\001"
   ;
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_shardkv_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_shardkv_2eproto = {
-  false, false, 559, descriptor_table_protodef_shardkv_2eproto, "shardkv.proto", 
-  &descriptor_table_shardkv_2eproto_once, nullptr, 0, 10,
+  false, false, 657, descriptor_table_protodef_shardkv_2eproto, "shardkv.proto", 
+  &descriptor_table_shardkv_2eproto_once, nullptr, 0, 12,
   schemas, file_default_instances, TableStruct_shardkv_2eproto::offsets,
   file_level_metadata_shardkv_2eproto, file_level_enum_descriptors_shardkv_2eproto, file_level_service_descriptors_shardkv_2eproto,
 };
@@ -1734,7 +1781,7 @@ class ReadReply::_Internal {
     (*has_bits)[0] |= 1u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000003) ^ 0x00000003) != 0;
+    return ((has_bits[0] & 0x00000002) ^ 0x00000002) != 0;
   }
 };
 
@@ -1824,7 +1871,7 @@ const char* ReadReply::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::
         } else
           goto handle_unusual;
         continue;
-      // required string value = 2;
+      // optional string value = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_value();
@@ -1873,7 +1920,7 @@ uint8_t* ReadReply::_InternalSerialize(
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(1, this->_internal_err(), target);
   }
 
-  // required string value = 2;
+  // optional string value = 2;
   if (cached_has_bits & 0x00000001u) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
       this->_internal_value().data(), static_cast<int>(this->_internal_value().length()),
@@ -1891,43 +1938,25 @@ uint8_t* ReadReply::_InternalSerialize(
   return target;
 }
 
-size_t ReadReply::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:ReadReply)
-  size_t total_size = 0;
-
-  if (_internal_has_value()) {
-    // required string value = 2;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_value());
-  }
-
-  if (_internal_has_err()) {
-    // required int32 err = 1;
-    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32SizePlusOne(this->_internal_err());
-  }
-
-  return total_size;
-}
 size_t ReadReply::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:ReadReply)
   size_t total_size = 0;
 
-  if (((_has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required string value = 2;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_value());
-
-    // required int32 err = 1;
+  // required int32 err = 1;
+  if (_internal_has_err()) {
     total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32SizePlusOne(this->_internal_err());
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
+
+  // optional string value = 2;
+  cached_has_bits = _has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_value());
+  }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_cached_size_);
 }
@@ -2596,6 +2625,419 @@ void WriteReply::InternalSwap(WriteReply* other) {
 
 // ===================================================================
 
+class ConnectArgs::_Internal {
+ public:
+  using HasBits = decltype(std::declval<ConnectArgs>()._has_bits_);
+  static void set_has_host(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
+  }
+};
+
+ConnectArgs::ConnectArgs(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor();
+  if (!is_message_owned) {
+    RegisterArenaDtor(arena);
+  }
+  // @@protoc_insertion_point(arena_constructor:ConnectArgs)
+}
+ConnectArgs::ConnectArgs(const ConnectArgs& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message(),
+      _has_bits_(from._has_bits_) {
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  host_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    host_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), "", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (from._internal_has_host()) {
+    host_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_host(), 
+      GetArenaForAllocation());
+  }
+  // @@protoc_insertion_point(copy_constructor:ConnectArgs)
+}
+
+inline void ConnectArgs::SharedCtor() {
+host_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  host_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), "", GetArenaForAllocation());
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+}
+
+ConnectArgs::~ConnectArgs() {
+  // @@protoc_insertion_point(destructor:ConnectArgs)
+  if (GetArenaForAllocation() != nullptr) return;
+  SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+inline void ConnectArgs::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  host_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+
+void ConnectArgs::ArenaDtor(void* object) {
+  ConnectArgs* _this = reinterpret_cast< ConnectArgs* >(object);
+  (void)_this;
+}
+void ConnectArgs::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
+void ConnectArgs::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+
+void ConnectArgs::Clear() {
+// @@protoc_insertion_point(message_clear_start:ConnectArgs)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  cached_has_bits = _has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    host_.ClearNonDefaultToEmpty();
+  }
+  _has_bits_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* ConnectArgs::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // required string host = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
+          auto str = _internal_mutable_host();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          #ifndef NDEBUG
+          ::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "ConnectArgs.host");
+          #endif  // !NDEBUG
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  _has_bits_.Or(has_bits);
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* ConnectArgs::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:ConnectArgs)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _has_bits_[0];
+  // required string host = 1;
+  if (cached_has_bits & 0x00000001u) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
+      this->_internal_host().data(), static_cast<int>(this->_internal_host().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
+      "ConnectArgs.host");
+    target = stream->WriteStringMaybeAliased(
+        1, this->_internal_host(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:ConnectArgs)
+  return target;
+}
+
+size_t ConnectArgs::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:ConnectArgs)
+  size_t total_size = 0;
+
+  // required string host = 1;
+  if (_internal_has_host()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_host());
+  }
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData ConnectArgs::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
+    ConnectArgs::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*ConnectArgs::GetClassData() const { return &_class_data_; }
+
+void ConnectArgs::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
+                      const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+  static_cast<ConnectArgs *>(to)->MergeFrom(
+      static_cast<const ConnectArgs &>(from));
+}
+
+
+void ConnectArgs::MergeFrom(const ConnectArgs& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:ConnectArgs)
+  GOOGLE_DCHECK_NE(&from, this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from._internal_has_host()) {
+    _internal_set_host(from._internal_host());
+  }
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void ConnectArgs::CopyFrom(const ConnectArgs& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:ConnectArgs)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool ConnectArgs::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_has_bits_)) return false;
+  return true;
+}
+
+void ConnectArgs::InternalSwap(ConnectArgs* other) {
+  using std::swap;
+  auto* lhs_arena = GetArenaForAllocation();
+  auto* rhs_arena = other->GetArenaForAllocation();
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_has_bits_[0], other->_has_bits_[0]);
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &host_, lhs_arena,
+      &other->host_, rhs_arena
+  );
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata ConnectArgs::GetMetadata() const {
+  return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
+      &descriptor_table_shardkv_2eproto_getter, &descriptor_table_shardkv_2eproto_once,
+      file_level_metadata_shardkv_2eproto[10]);
+}
+
+// ===================================================================
+
+class ConnectReply::_Internal {
+ public:
+  using HasBits = decltype(std::declval<ConnectReply>()._has_bits_);
+  static void set_has_err(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
+  }
+};
+
+ConnectReply::ConnectReply(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor();
+  if (!is_message_owned) {
+    RegisterArenaDtor(arena);
+  }
+  // @@protoc_insertion_point(arena_constructor:ConnectReply)
+}
+ConnectReply::ConnectReply(const ConnectReply& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message(),
+      _has_bits_(from._has_bits_) {
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  err_ = from.err_;
+  // @@protoc_insertion_point(copy_constructor:ConnectReply)
+}
+
+inline void ConnectReply::SharedCtor() {
+err_ = 0;
+}
+
+ConnectReply::~ConnectReply() {
+  // @@protoc_insertion_point(destructor:ConnectReply)
+  if (GetArenaForAllocation() != nullptr) return;
+  SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+inline void ConnectReply::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+}
+
+void ConnectReply::ArenaDtor(void* object) {
+  ConnectReply* _this = reinterpret_cast< ConnectReply* >(object);
+  (void)_this;
+}
+void ConnectReply::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
+void ConnectReply::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+
+void ConnectReply::Clear() {
+// @@protoc_insertion_point(message_clear_start:ConnectReply)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  err_ = 0;
+  _has_bits_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* ConnectReply::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // required int32 err = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _Internal::set_has_err(&has_bits);
+          err_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  _has_bits_.Or(has_bits);
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* ConnectReply::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:ConnectReply)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  cached_has_bits = _has_bits_[0];
+  // required int32 err = 1;
+  if (cached_has_bits & 0x00000001u) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(1, this->_internal_err(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:ConnectReply)
+  return target;
+}
+
+size_t ConnectReply::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:ConnectReply)
+  size_t total_size = 0;
+
+  // required int32 err = 1;
+  if (_internal_has_err()) {
+    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32SizePlusOne(this->_internal_err());
+  }
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData ConnectReply::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
+    ConnectReply::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*ConnectReply::GetClassData() const { return &_class_data_; }
+
+void ConnectReply::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
+                      const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+  static_cast<ConnectReply *>(to)->MergeFrom(
+      static_cast<const ConnectReply &>(from));
+}
+
+
+void ConnectReply::MergeFrom(const ConnectReply& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:ConnectReply)
+  GOOGLE_DCHECK_NE(&from, this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from._internal_has_err()) {
+    _internal_set_err(from._internal_err());
+  }
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void ConnectReply::CopyFrom(const ConnectReply& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:ConnectReply)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool ConnectReply::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_has_bits_)) return false;
+  return true;
+}
+
+void ConnectReply::InternalSwap(ConnectReply* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_has_bits_[0], other->_has_bits_[0]);
+  swap(err_, other->err_);
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata ConnectReply::GetMetadata() const {
+  return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
+      &descriptor_table_shardkv_2eproto_getter, &descriptor_table_shardkv_2eproto_once,
+      file_level_metadata_shardkv_2eproto[11]);
+}
+
+// ===================================================================
+
 ShardKvBase::~ShardKvBase() {}
 
 const ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor* ShardKvBase::descriptor() {
@@ -2647,6 +3089,14 @@ void ShardKvBase::ABORT(::PROTOBUF_NAMESPACE_ID::RpcController* controller,
   done->Run();
 }
 
+void ShardKvBase::CONNECT(::PROTOBUF_NAMESPACE_ID::RpcController* controller,
+                         const ::ConnectArgs*,
+                         ::ConnectReply*,
+                         ::google::protobuf::Closure* done) {
+  controller->SetFailed("Method CONNECT() not implemented.");
+  done->Run();
+}
+
 void ShardKvBase::CallMethod(const ::PROTOBUF_NAMESPACE_ID::MethodDescriptor* method,
                              ::PROTOBUF_NAMESPACE_ID::RpcController* controller,
                              const ::PROTOBUF_NAMESPACE_ID::Message* request,
@@ -2694,6 +3144,14 @@ void ShardKvBase::CallMethod(const ::PROTOBUF_NAMESPACE_ID::MethodDescriptor* me
                  response),
              done);
       break;
+    case 5:
+      CONNECT(controller,
+             ::PROTOBUF_NAMESPACE_ID::internal::DownCast<const ::ConnectArgs*>(
+                 request),
+             ::PROTOBUF_NAMESPACE_ID::internal::DownCast<::ConnectReply*>(
+                 response),
+             done);
+      break;
     default:
       GOOGLE_LOG(FATAL) << "Bad method index; this should never happen.";
       break;
@@ -2714,6 +3172,8 @@ const ::PROTOBUF_NAMESPACE_ID::Message& ShardKvBase::GetRequestPrototype(
       return ::EndArgs::default_instance();
     case 4:
       return ::AbortArgs::default_instance();
+    case 5:
+      return ::ConnectArgs::default_instance();
     default:
       GOOGLE_LOG(FATAL) << "Bad method index; this should never happen.";
       return *::PROTOBUF_NAMESPACE_ID::MessageFactory::generated_factory()
@@ -2735,6 +3195,8 @@ const ::PROTOBUF_NAMESPACE_ID::Message& ShardKvBase::GetResponsePrototype(
       return ::EndReply::default_instance();
     case 4:
       return ::AbortReply::default_instance();
+    case 5:
+      return ::ConnectReply::default_instance();
     default:
       GOOGLE_LOG(FATAL) << "Bad method index; this should never happen.";
       return *::PROTOBUF_NAMESPACE_ID::MessageFactory::generated_factory()
@@ -2788,6 +3250,13 @@ void ShardKvBase_Stub::ABORT(::PROTOBUF_NAMESPACE_ID::RpcController* controller,
   channel_->CallMethod(descriptor()->method(4),
                        controller, request, response, done);
 }
+void ShardKvBase_Stub::CONNECT(::PROTOBUF_NAMESPACE_ID::RpcController* controller,
+                              const ::ConnectArgs* request,
+                              ::ConnectReply* response,
+                              ::google::protobuf::Closure* done) {
+  channel_->CallMethod(descriptor()->method(5),
+                       controller, request, response, done);
+}
 
 // @@protoc_insertion_point(namespace_scope)
 PROTOBUF_NAMESPACE_OPEN
@@ -2820,6 +3289,12 @@ template<> PROTOBUF_NOINLINE ::WriteArgs* Arena::CreateMaybeMessage< ::WriteArgs
 }
 template<> PROTOBUF_NOINLINE ::WriteReply* Arena::CreateMaybeMessage< ::WriteReply >(Arena* arena) {
   return Arena::CreateMessageInternal< ::WriteReply >(arena);
+}
+template<> PROTOBUF_NOINLINE ::ConnectArgs* Arena::CreateMaybeMessage< ::ConnectArgs >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::ConnectArgs >(arena);
+}
+template<> PROTOBUF_NOINLINE ::ConnectReply* Arena::CreateMaybeMessage< ::ConnectReply >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::ConnectReply >(arena);
 }
 PROTOBUF_NAMESPACE_CLOSE
 

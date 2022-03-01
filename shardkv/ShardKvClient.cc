@@ -70,9 +70,32 @@ RpcState ShardKvClient::END(int tid) {
 
   if ( reply.err() == Prepare_OK ) {
     return Prepare_OK;
-  }else {
-    return Prepare_Failed;
   }
+
+  if ( reply.err() == Prepare_NotInit ) {
+    return Prepare_NotInit;
+  }
+  return Prepare_Failed;
+}
+
+RpcState ShardKvClient::ABORT(int tid) {
+  if ( stub_ == nullptr )
+    return Prepare_NotInit;
+  AbortArgs args;
+  AbortReply reply;
+  brpc::Controller cntl;
+
+  args.set_tid(tid);
+
+  stub_->ABORT(&cntl, &args, &reply, nullptr);
+  if ( cntl.Failed() ) {
+    return Prepare_ConnectFail;
+  }
+
+  if ( reply.err() == Prepare_OK ) {
+    return Prepare_OK;
+  }
+  return Prepare_Failed;
 }
 
 
@@ -92,13 +115,16 @@ RpcState ShardKvClient::PrepareRead(int tid, std::string& key, std::string& valu
   stub_->PrepareRead(&cntl, &args, &reply, nullptr);
 
   if ( cntl.Failed() ) {
-    cout << "Failed" << endl;
     return Prepare_ConnectFail;
   }
 
   if ( reply.err() == Prepare_OK ) {
     value = reply.value();
     return Prepare_OK;
+  }
+
+  if ( reply.err() == Prepare_NotInit ) {
+    return Prepare_NotInit;
   }
 
   return Prepare_Failed;

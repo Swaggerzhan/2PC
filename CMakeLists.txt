@@ -20,14 +20,13 @@ add_executable(2PC main.cpp
 
 
         client/KvClient.h client/KvClient.cc
-        rpc/Server.h rpc/Server.cc
-        rpc/global.h
         shardkv/ShardKv.h shardkv/ShardKv.cc
         shardkv/ShardKvServer.h shardkv/ShardKvServer.cc
         coordinator/TransactionCoordinator.h coordinator/TransactionCoordinator.cc
         shardkv/ShardKvClient.cc shardkv/ShardKvClient.h
 
         util/MurmurHash2.h util/MurmurHash2.cc
+        util/global.h util/global.cc
 
 
         )

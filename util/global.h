@@ -6,6 +6,7 @@
 #define INC_2PC_GLOBAL_H
 
 
+#include <string>
 
 enum RpcState{
   RPC_OK = 1,
@@ -21,9 +22,10 @@ enum RpcState{
   Transaction_Failed = -2,
   Transaction_NotInit = 11,
 
-
-
-
 };
+
+
+std::string State2Str(RpcState);
+
 
 #endif //INC_2PC_GLOBAL_H

@@ -29,9 +29,12 @@ public:
            const ::WriteArgs*, ::WriteReply*, ::google::protobuf::Closure*) override;
 
   // TODO:ABORT
+  void ABORT(::google::protobuf::RpcController*,
+             const ::AbortArgs*, ::AbortReply*, ::google::protobuf::Closure*) override;
 
 private:
 
+  void removeContext(int);
 
 private:
   std::map<int, std::shared_ptr<TransactionContext>> Tmap_;

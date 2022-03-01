@@ -47,7 +47,7 @@ struct TableStruct_shardkv_2eproto {
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::AuxiliaryParseTableField aux[]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
-  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[10]
+  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[12]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::FieldMetadata field_metadata[];
   static const ::PROTOBUF_NAMESPACE_ID::internal::SerializationTable serialization_table[];
@@ -66,6 +66,12 @@ extern BeginArgsDefaultTypeInternal _BeginArgs_default_instance_;
 class BeginReply;
 struct BeginReplyDefaultTypeInternal;
 extern BeginReplyDefaultTypeInternal _BeginReply_default_instance_;
+class ConnectArgs;
+struct ConnectArgsDefaultTypeInternal;
+extern ConnectArgsDefaultTypeInternal _ConnectArgs_default_instance_;
+class ConnectReply;
+struct ConnectReplyDefaultTypeInternal;
+extern ConnectReplyDefaultTypeInternal _ConnectReply_default_instance_;
 class EndArgs;
 struct EndArgsDefaultTypeInternal;
 extern EndArgsDefaultTypeInternal _EndArgs_default_instance_;
@@ -89,6 +95,8 @@ template<> ::AbortArgs* Arena::CreateMaybeMessage<::AbortArgs>(Arena*);
 template<> ::AbortReply* Arena::CreateMaybeMessage<::AbortReply>(Arena*);
 template<> ::BeginArgs* Arena::CreateMaybeMessage<::BeginArgs>(Arena*);
 template<> ::BeginReply* Arena::CreateMaybeMessage<::BeginReply>(Arena*);
+template<> ::ConnectArgs* Arena::CreateMaybeMessage<::ConnectArgs>(Arena*);
+template<> ::ConnectReply* Arena::CreateMaybeMessage<::ConnectReply>(Arena*);
 template<> ::EndArgs* Arena::CreateMaybeMessage<::EndArgs>(Arena*);
 template<> ::EndReply* Arena::CreateMaybeMessage<::EndReply>(Arena*);
 template<> ::ReadArgs* Arena::CreateMaybeMessage<::ReadArgs>(Arena*);
@@ -1360,7 +1368,7 @@ class ReadReply final :
     kValueFieldNumber = 2,
     kErrFieldNumber = 1,
   };
-  // required string value = 2;
+  // optional string value = 2;
   bool has_value() const;
   private:
   bool _internal_has_value() const;
@@ -1394,9 +1402,6 @@ class ReadReply final :
   // @@protoc_insertion_point(class_scope:ReadReply)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -1796,6 +1801,327 @@ class WriteReply final :
   int32_t err_;
   friend struct ::TableStruct_shardkv_2eproto;
 };
+// -------------------------------------------------------------------
+
+class ConnectArgs final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:ConnectArgs) */ {
+ public:
+  inline ConnectArgs() : ConnectArgs(nullptr) {}
+  ~ConnectArgs() override;
+  explicit constexpr ConnectArgs(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  ConnectArgs(const ConnectArgs& from);
+  ConnectArgs(ConnectArgs&& from) noexcept
+    : ConnectArgs() {
+    *this = ::std::move(from);
+  }
+
+  inline ConnectArgs& operator=(const ConnectArgs& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline ConnectArgs& operator=(ConnectArgs&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetOwningArena() == from.GetOwningArena()
+  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
+        && GetOwningArena() != nullptr
+  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
+    ) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance);
+  }
+  inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const ConnectArgs& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const ConnectArgs* internal_default_instance() {
+    return reinterpret_cast<const ConnectArgs*>(
+               &_ConnectArgs_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    10;
+
+  friend void swap(ConnectArgs& a, ConnectArgs& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(ConnectArgs* other) {
+    if (other == this) return;
+  #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() != nullptr &&
+        GetOwningArena() == other->GetOwningArena()) {
+   #else  // PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() == other->GetOwningArena()) {
+  #endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(ConnectArgs* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  ConnectArgs* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<ConnectArgs>(arena);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CopyFrom(const ConnectArgs& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom(const ConnectArgs& from);
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to, const ::PROTOBUF_NAMESPACE_ID::Message& from);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  uint8_t* _InternalSerialize(
+      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(ConnectArgs* other);
+
+  private:
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "ConnectArgs";
+  }
+  protected:
+  explicit ConnectArgs(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                       bool is_message_owned = false);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kHostFieldNumber = 1,
+  };
+  // required string host = 1;
+  bool has_host() const;
+  private:
+  bool _internal_has_host() const;
+  public:
+  void clear_host();
+  const std::string& host() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_host(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_host();
+  PROTOBUF_NODISCARD std::string* release_host();
+  void set_allocated_host(std::string* host);
+  private:
+  const std::string& _internal_host() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_host(const std::string& value);
+  std::string* _internal_mutable_host();
+  public:
+
+  // @@protoc_insertion_point(class_scope:ConnectArgs)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr host_;
+  friend struct ::TableStruct_shardkv_2eproto;
+};
+// -------------------------------------------------------------------
+
+class ConnectReply final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:ConnectReply) */ {
+ public:
+  inline ConnectReply() : ConnectReply(nullptr) {}
+  ~ConnectReply() override;
+  explicit constexpr ConnectReply(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  ConnectReply(const ConnectReply& from);
+  ConnectReply(ConnectReply&& from) noexcept
+    : ConnectReply() {
+    *this = ::std::move(from);
+  }
+
+  inline ConnectReply& operator=(const ConnectReply& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline ConnectReply& operator=(ConnectReply&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetOwningArena() == from.GetOwningArena()
+  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
+        && GetOwningArena() != nullptr
+  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
+    ) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance);
+  }
+  inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const ConnectReply& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const ConnectReply* internal_default_instance() {
+    return reinterpret_cast<const ConnectReply*>(
+               &_ConnectReply_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    11;
+
+  friend void swap(ConnectReply& a, ConnectReply& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(ConnectReply* other) {
+    if (other == this) return;
+  #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() != nullptr &&
+        GetOwningArena() == other->GetOwningArena()) {
+   #else  // PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() == other->GetOwningArena()) {
+  #endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(ConnectReply* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  ConnectReply* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<ConnectReply>(arena);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CopyFrom(const ConnectReply& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom(const ConnectReply& from);
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to, const ::PROTOBUF_NAMESPACE_ID::Message& from);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  uint8_t* _InternalSerialize(
+      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(ConnectReply* other);
+
+  private:
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "ConnectReply";
+  }
+  protected:
+  explicit ConnectReply(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                       bool is_message_owned = false);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kErrFieldNumber = 1,
+  };
+  // required int32 err = 1;
+  bool has_err() const;
+  private:
+  bool _internal_has_err() const;
+  public:
+  void clear_err();
+  int32_t err() const;
+  void set_err(int32_t value);
+  private:
+  int32_t _internal_err() const;
+  void _internal_set_err(int32_t value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:ConnectReply)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  int32_t err_;
+  friend struct ::TableStruct_shardkv_2eproto;
+};
 // ===================================================================
 
 class ShardKvBase_Stub;
@@ -1830,6 +2156,10 @@ class ShardKvBase : public ::PROTOBUF_NAMESPACE_ID::Service {
   virtual void ABORT(::PROTOBUF_NAMESPACE_ID::RpcController* controller,
                        const ::AbortArgs* request,
                        ::AbortReply* response,
+                       ::google::protobuf::Closure* done);
+  virtual void CONNECT(::PROTOBUF_NAMESPACE_ID::RpcController* controller,
+                       const ::ConnectArgs* request,
+                       ::ConnectReply* response,
                        ::google::protobuf::Closure* done);
 
   // implements Service ----------------------------------------------
@@ -1879,6 +2209,10 @@ class ShardKvBase_Stub : public ShardKvBase {
   void ABORT(::PROTOBUF_NAMESPACE_ID::RpcController* controller,
                        const ::AbortArgs* request,
                        ::AbortReply* response,
+                       ::google::protobuf::Closure* done);
+  void CONNECT(::PROTOBUF_NAMESPACE_ID::RpcController* controller,
+                       const ::ConnectArgs* request,
+                       ::ConnectReply* response,
                        ::google::protobuf::Closure* done);
  private:
   ::PROTOBUF_NAMESPACE_ID::RpcChannel* channel_;
@@ -2219,7 +2553,7 @@ inline void ReadReply::set_err(int32_t value) {
   // @@protoc_insertion_point(field_set:ReadReply.err)
 }
 
-// required string value = 2;
+// optional string value = 2;
 inline bool ReadReply::_internal_has_value() const {
   bool value = (_has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2546,9 +2880,118 @@ inline void WriteReply::set_err(int32_t value) {
   // @@protoc_insertion_point(field_set:WriteReply.err)
 }
 
+// -------------------------------------------------------------------
+
+// ConnectArgs
+
+// required string host = 1;
+inline bool ConnectArgs::_internal_has_host() const {
+  bool value = (_has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool ConnectArgs::has_host() const {
+  return _internal_has_host();
+}
+inline void ConnectArgs::clear_host() {
+  host_.ClearToEmpty();
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline const std::string& ConnectArgs::host() const {
+  // @@protoc_insertion_point(field_get:ConnectArgs.host)
+  return _internal_host();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void ConnectArgs::set_host(ArgT0&& arg0, ArgT... args) {
+ _has_bits_[0] |= 0x00000001u;
+ host_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:ConnectArgs.host)
+}
+inline std::string* ConnectArgs::mutable_host() {
+  std::string* _s = _internal_mutable_host();
+  // @@protoc_insertion_point(field_mutable:ConnectArgs.host)
+  return _s;
+}
+inline const std::string& ConnectArgs::_internal_host() const {
+  return host_.Get();
+}
+inline void ConnectArgs::_internal_set_host(const std::string& value) {
+  _has_bits_[0] |= 0x00000001u;
+  host_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
+}
+inline std::string* ConnectArgs::_internal_mutable_host() {
+  _has_bits_[0] |= 0x00000001u;
+  return host_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
+}
+inline std::string* ConnectArgs::release_host() {
+  // @@protoc_insertion_point(field_release:ConnectArgs.host)
+  if (!_internal_has_host()) {
+    return nullptr;
+  }
+  _has_bits_[0] &= ~0x00000001u;
+  auto* p = host_.ReleaseNonDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (host_.IsDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited())) {
+    host_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), "", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
+}
+inline void ConnectArgs::set_allocated_host(std::string* host) {
+  if (host != nullptr) {
+    _has_bits_[0] |= 0x00000001u;
+  } else {
+    _has_bits_[0] &= ~0x00000001u;
+  }
+  host_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), host,
+      GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (host_.IsDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited())) {
+    host_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), "", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:ConnectArgs.host)
+}
+
+// -------------------------------------------------------------------
+
+// ConnectReply
+
+// required int32 err = 1;
+inline bool ConnectReply::_internal_has_err() const {
+  bool value = (_has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool ConnectReply::has_err() const {
+  return _internal_has_err();
+}
+inline void ConnectReply::clear_err() {
+  err_ = 0;
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline int32_t ConnectReply::_internal_err() const {
+  return err_;
+}
+inline int32_t ConnectReply::err() const {
+  // @@protoc_insertion_point(field_get:ConnectReply.err)
+  return _internal_err();
+}
+inline void ConnectReply::_internal_set_err(int32_t value) {
+  _has_bits_[0] |= 0x00000001u;
+  err_ = value;
+}
+inline void ConnectReply::set_err(int32_t value) {
+  _internal_set_err(value);
+  // @@protoc_insertion_point(field_set:ConnectReply.err)
+}
+
 #ifdef __GNUC__
   #pragma GCC diagnostic pop
 #endif  // __GNUC__
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
 // -------------------------------------------------------------------
 
 // -------------------------------------------------------------------
