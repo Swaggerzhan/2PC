@@ -15,22 +15,22 @@ typedef std::pair<int, std::shared_ptr<TransactionContext>> TMapRecord;
 
 class ShardKv : public ShardKvBase {
 public:
-  void BEGIN(::google::protobuf::RpcController*, const ::BeginArgs*, ::BeginReply*,
+  void BEGIN(::google::protobuf::RpcController*, const ::ShardBeginArgs*, ::ShardBeginReply*,
              ::google::protobuf::Closure*) override;
 
 
-  void END(::google::protobuf::RpcController*, const ::EndArgs*, ::EndReply*,
+  void END(::google::protobuf::RpcController*, const ::ShardEndArgs*, ::ShardEndReply*,
            ::google::protobuf::Closure*) override;
 
   void PrepareRead(::google::protobuf::RpcController*,
-           const ::ReadArgs*, ::ReadReply*, ::google::protobuf::Closure*) override;
+           const ::ShardReadArgs*, ::ShardReadReply*, ::google::protobuf::Closure*) override;
 
   void PrepareWrite(::google::protobuf::RpcController*,
-           const ::WriteArgs*, ::WriteReply*, ::google::protobuf::Closure*) override;
+           const ::ShardWriteArgs*, ::ShardWriteReply*, ::google::protobuf::Closure*) override;
 
   // TODO:ABORT
   void ABORT(::google::protobuf::RpcController*,
-             const ::AbortArgs*, ::AbortReply*, ::google::protobuf::Closure*) override;
+             const ::ShardAbortArgs*, ::ShardAbortReply*, ::google::protobuf::Closure*) override;
 
 private:
 

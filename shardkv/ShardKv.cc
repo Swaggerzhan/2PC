@@ -17,7 +17,7 @@ using std::cout;
 using std::endl;
 
 
-void ShardKv::BEGIN(::google::protobuf::RpcController* c, const ::BeginArgs* args, ::BeginReply* reply,
+void ShardKv::BEGIN(::google::protobuf::RpcController* c, const ::ShardBeginArgs* args, ::ShardBeginReply* reply,
                     ::google::protobuf::Closure* done) {
   brpc::ClosureGuard done_guard(done);
   //brpc::Controller* ctnl = static_cast<brpc::Controller*>(c);
@@ -32,7 +32,7 @@ void ShardKv::BEGIN(::google::protobuf::RpcController* c, const ::BeginArgs* arg
 }
 
 
-void ShardKv::END(::google::protobuf::RpcController* c, const ::EndArgs* args, ::EndReply* reply,
+void ShardKv::END(::google::protobuf::RpcController* c, const ::ShardEndArgs* args, ::ShardEndReply* reply,
                   ::google::protobuf::Closure* done) {
   brpc::ClosureGuard done_guard(done);
   brpc::Controller* ctnl = static_cast<brpc::Controller*>(c);
@@ -59,8 +59,8 @@ void ShardKv::END(::google::protobuf::RpcController* c, const ::EndArgs* args, :
 }
 
 
-void ShardKv::PrepareRead(::google::protobuf::RpcController *c, const ::ReadArgs *args,
-                          ::ReadReply *reply, ::google::protobuf::Closure *done) {
+void ShardKv::PrepareRead(::google::protobuf::RpcController *c, const ::ShardReadArgs *args,
+                          ::ShardReadReply *reply, ::google::protobuf::Closure *done) {
   brpc::ClosureGuard done_guard(done);
   brpc::Controller* cntl = static_cast<brpc::Controller*>(c);
 
@@ -82,7 +82,7 @@ void ShardKv::PrepareRead(::google::protobuf::RpcController *c, const ::ReadArgs
   std::string value;
   State s = Engine::read(Tctx, key, value);
   if ( s == KeyNotExist ) {
-    reply->set_err(Prepare_Failed);
+    reply->set_err(Prepare_KeyNotExist);
     Engine::ABORT(Tctx);
     removeContext(args->tid());
     return;
@@ -99,7 +99,7 @@ void ShardKv::PrepareRead(::google::protobuf::RpcController *c, const ::ReadArgs
 }
 
 
-void ShardKv::PrepareWrite(::google::protobuf::RpcController* c, const ::WriteArgs* args, ::WriteReply* reply,
+void ShardKv::PrepareWrite(::google::protobuf::RpcController* c, const ::ShardWriteArgs* args, ::ShardWriteReply* reply,
                            ::google::protobuf::Closure* done) {
   brpc::ClosureGuard done_guard(done);
   brpc::Controller* ctnl = static_cast<brpc::Controller*>(c);
@@ -129,8 +129,8 @@ void ShardKv::PrepareWrite(::google::protobuf::RpcController* c, const ::WriteAr
 
 }
 
-void ShardKv::ABORT(::google::protobuf::RpcController*, const ::AbortArgs* args,
-                    ::AbortReply* reply,
+void ShardKv::ABORT(::google::protobuf::RpcController*, const ::ShardAbortArgs* args,
+                    ::ShardAbortReply* reply,
                     ::google::protobuf::Closure* done) {
   brpc::ClosureGuard done_guard(done);
 

@@ -16,132 +16,132 @@
 #include <google/protobuf/port_def.inc>
 
 PROTOBUF_PRAGMA_INIT_SEG
-constexpr BeginArgs::BeginArgs(
+constexpr ShardBeginArgs::ShardBeginArgs(
   ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
   : tid_(0){}
-struct BeginArgsDefaultTypeInternal {
-  constexpr BeginArgsDefaultTypeInternal()
+struct ShardBeginArgsDefaultTypeInternal {
+  constexpr ShardBeginArgsDefaultTypeInternal()
     : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
-  ~BeginArgsDefaultTypeInternal() {}
+  ~ShardBeginArgsDefaultTypeInternal() {}
   union {
-    BeginArgs _instance;
+    ShardBeginArgs _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT BeginArgsDefaultTypeInternal _BeginArgs_default_instance_;
-constexpr BeginReply::BeginReply(
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT ShardBeginArgsDefaultTypeInternal _ShardBeginArgs_default_instance_;
+constexpr ShardBeginReply::ShardBeginReply(
   ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
   : err_(0){}
-struct BeginReplyDefaultTypeInternal {
-  constexpr BeginReplyDefaultTypeInternal()
+struct ShardBeginReplyDefaultTypeInternal {
+  constexpr ShardBeginReplyDefaultTypeInternal()
     : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
-  ~BeginReplyDefaultTypeInternal() {}
+  ~ShardBeginReplyDefaultTypeInternal() {}
   union {
-    BeginReply _instance;
+    ShardBeginReply _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT BeginReplyDefaultTypeInternal _BeginReply_default_instance_;
-constexpr EndArgs::EndArgs(
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT ShardBeginReplyDefaultTypeInternal _ShardBeginReply_default_instance_;
+constexpr ShardEndArgs::ShardEndArgs(
   ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
   : tid_(0){}
-struct EndArgsDefaultTypeInternal {
-  constexpr EndArgsDefaultTypeInternal()
+struct ShardEndArgsDefaultTypeInternal {
+  constexpr ShardEndArgsDefaultTypeInternal()
     : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
-  ~EndArgsDefaultTypeInternal() {}
+  ~ShardEndArgsDefaultTypeInternal() {}
   union {
-    EndArgs _instance;
+    ShardEndArgs _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT EndArgsDefaultTypeInternal _EndArgs_default_instance_;
-constexpr EndReply::EndReply(
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT ShardEndArgsDefaultTypeInternal _ShardEndArgs_default_instance_;
+constexpr ShardEndReply::ShardEndReply(
   ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
   : err_(0){}
-struct EndReplyDefaultTypeInternal {
-  constexpr EndReplyDefaultTypeInternal()
+struct ShardEndReplyDefaultTypeInternal {
+  constexpr ShardEndReplyDefaultTypeInternal()
     : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
-  ~EndReplyDefaultTypeInternal() {}
+  ~ShardEndReplyDefaultTypeInternal() {}
   union {
-    EndReply _instance;
+    ShardEndReply _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT EndReplyDefaultTypeInternal _EndReply_default_instance_;
-constexpr AbortArgs::AbortArgs(
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT ShardEndReplyDefaultTypeInternal _ShardEndReply_default_instance_;
+constexpr ShardAbortArgs::ShardAbortArgs(
   ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
   : tid_(0){}
-struct AbortArgsDefaultTypeInternal {
-  constexpr AbortArgsDefaultTypeInternal()
+struct ShardAbortArgsDefaultTypeInternal {
+  constexpr ShardAbortArgsDefaultTypeInternal()
     : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
-  ~AbortArgsDefaultTypeInternal() {}
+  ~ShardAbortArgsDefaultTypeInternal() {}
   union {
-    AbortArgs _instance;
+    ShardAbortArgs _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT AbortArgsDefaultTypeInternal _AbortArgs_default_instance_;
-constexpr AbortReply::AbortReply(
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT ShardAbortArgsDefaultTypeInternal _ShardAbortArgs_default_instance_;
+constexpr ShardAbortReply::ShardAbortReply(
   ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
   : err_(0){}
-struct AbortReplyDefaultTypeInternal {
-  constexpr AbortReplyDefaultTypeInternal()
+struct ShardAbortReplyDefaultTypeInternal {
+  constexpr ShardAbortReplyDefaultTypeInternal()
     : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
-  ~AbortReplyDefaultTypeInternal() {}
+  ~ShardAbortReplyDefaultTypeInternal() {}
   union {
-    AbortReply _instance;
+    ShardAbortReply _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT AbortReplyDefaultTypeInternal _AbortReply_default_instance_;
-constexpr ReadArgs::ReadArgs(
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT ShardAbortReplyDefaultTypeInternal _ShardAbortReply_default_instance_;
+constexpr ShardReadArgs::ShardReadArgs(
   ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
   : key_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
   , tid_(0){}
-struct ReadArgsDefaultTypeInternal {
-  constexpr ReadArgsDefaultTypeInternal()
+struct ShardReadArgsDefaultTypeInternal {
+  constexpr ShardReadArgsDefaultTypeInternal()
     : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
-  ~ReadArgsDefaultTypeInternal() {}
+  ~ShardReadArgsDefaultTypeInternal() {}
   union {
-    ReadArgs _instance;
+    ShardReadArgs _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT ReadArgsDefaultTypeInternal _ReadArgs_default_instance_;
-constexpr ReadReply::ReadReply(
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT ShardReadArgsDefaultTypeInternal _ShardReadArgs_default_instance_;
+constexpr ShardReadReply::ShardReadReply(
   ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
   : value_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
   , err_(0){}
-struct ReadReplyDefaultTypeInternal {
-  constexpr ReadReplyDefaultTypeInternal()
+struct ShardReadReplyDefaultTypeInternal {
+  constexpr ShardReadReplyDefaultTypeInternal()
     : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
-  ~ReadReplyDefaultTypeInternal() {}
+  ~ShardReadReplyDefaultTypeInternal() {}
   union {
-    ReadReply _instance;
+    ShardReadReply _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT ReadReplyDefaultTypeInternal _ReadReply_default_instance_;
-constexpr WriteArgs::WriteArgs(
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT ShardReadReplyDefaultTypeInternal _ShardReadReply_default_instance_;
+constexpr ShardWriteArgs::ShardWriteArgs(
   ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
   : key_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
   , value_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
   , clientid_(int64_t{0})
   , seqid_(int64_t{0})
   , tid_(0){}
-struct WriteArgsDefaultTypeInternal {
-  constexpr WriteArgsDefaultTypeInternal()
+struct ShardWriteArgsDefaultTypeInternal {
+  constexpr ShardWriteArgsDefaultTypeInternal()
     : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
-  ~WriteArgsDefaultTypeInternal() {}
+  ~ShardWriteArgsDefaultTypeInternal() {}
   union {
-    WriteArgs _instance;
+    ShardWriteArgs _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT WriteArgsDefaultTypeInternal _WriteArgs_default_instance_;
-constexpr WriteReply::WriteReply(
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT ShardWriteArgsDefaultTypeInternal _ShardWriteArgs_default_instance_;
+constexpr ShardWriteReply::ShardWriteReply(
   ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
   : err_(0){}
-struct WriteReplyDefaultTypeInternal {
-  constexpr WriteReplyDefaultTypeInternal()
+struct ShardWriteReplyDefaultTypeInternal {
+  constexpr ShardWriteReplyDefaultTypeInternal()
     : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
-  ~WriteReplyDefaultTypeInternal() {}
+  ~ShardWriteReplyDefaultTypeInternal() {}
   union {
-    WriteReply _instance;
+    ShardWriteReply _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT WriteReplyDefaultTypeInternal _WriteReply_default_instance_;
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT ShardWriteReplyDefaultTypeInternal _ShardWriteReply_default_instance_;
 constexpr ConnectArgs::ConnectArgs(
   ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
   : host_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string){}
@@ -171,97 +171,97 @@ static constexpr ::PROTOBUF_NAMESPACE_ID::EnumDescriptor const** file_level_enum
 static const ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor* file_level_service_descriptors_shardkv_2eproto[1];
 
 const uint32_t TableStruct_shardkv_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  PROTOBUF_FIELD_OFFSET(::BeginArgs, _has_bits_),
-  PROTOBUF_FIELD_OFFSET(::BeginArgs, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::ShardBeginArgs, _has_bits_),
+  PROTOBUF_FIELD_OFFSET(::ShardBeginArgs, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::BeginArgs, tid_),
+  PROTOBUF_FIELD_OFFSET(::ShardBeginArgs, tid_),
   0,
-  PROTOBUF_FIELD_OFFSET(::BeginReply, _has_bits_),
-  PROTOBUF_FIELD_OFFSET(::BeginReply, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::ShardBeginReply, _has_bits_),
+  PROTOBUF_FIELD_OFFSET(::ShardBeginReply, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::BeginReply, err_),
+  PROTOBUF_FIELD_OFFSET(::ShardBeginReply, err_),
   0,
-  PROTOBUF_FIELD_OFFSET(::EndArgs, _has_bits_),
-  PROTOBUF_FIELD_OFFSET(::EndArgs, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::ShardEndArgs, _has_bits_),
+  PROTOBUF_FIELD_OFFSET(::ShardEndArgs, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::EndArgs, tid_),
+  PROTOBUF_FIELD_OFFSET(::ShardEndArgs, tid_),
   0,
-  PROTOBUF_FIELD_OFFSET(::EndReply, _has_bits_),
-  PROTOBUF_FIELD_OFFSET(::EndReply, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::ShardEndReply, _has_bits_),
+  PROTOBUF_FIELD_OFFSET(::ShardEndReply, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::EndReply, err_),
+  PROTOBUF_FIELD_OFFSET(::ShardEndReply, err_),
   0,
-  PROTOBUF_FIELD_OFFSET(::AbortArgs, _has_bits_),
-  PROTOBUF_FIELD_OFFSET(::AbortArgs, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::ShardAbortArgs, _has_bits_),
+  PROTOBUF_FIELD_OFFSET(::ShardAbortArgs, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::AbortArgs, tid_),
+  PROTOBUF_FIELD_OFFSET(::ShardAbortArgs, tid_),
   0,
-  PROTOBUF_FIELD_OFFSET(::AbortReply, _has_bits_),
-  PROTOBUF_FIELD_OFFSET(::AbortReply, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::ShardAbortReply, _has_bits_),
+  PROTOBUF_FIELD_OFFSET(::ShardAbortReply, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::AbortReply, err_),
+  PROTOBUF_FIELD_OFFSET(::ShardAbortReply, err_),
   0,
-  PROTOBUF_FIELD_OFFSET(::ReadArgs, _has_bits_),
-  PROTOBUF_FIELD_OFFSET(::ReadArgs, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::ShardReadArgs, _has_bits_),
+  PROTOBUF_FIELD_OFFSET(::ShardReadArgs, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::ReadArgs, tid_),
-  PROTOBUF_FIELD_OFFSET(::ReadArgs, key_),
+  PROTOBUF_FIELD_OFFSET(::ShardReadArgs, tid_),
+  PROTOBUF_FIELD_OFFSET(::ShardReadArgs, key_),
   1,
   0,
-  PROTOBUF_FIELD_OFFSET(::ReadReply, _has_bits_),
-  PROTOBUF_FIELD_OFFSET(::ReadReply, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::ShardReadReply, _has_bits_),
+  PROTOBUF_FIELD_OFFSET(::ShardReadReply, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::ReadReply, err_),
-  PROTOBUF_FIELD_OFFSET(::ReadReply, value_),
+  PROTOBUF_FIELD_OFFSET(::ShardReadReply, err_),
+  PROTOBUF_FIELD_OFFSET(::ShardReadReply, value_),
   1,
   0,
-  PROTOBUF_FIELD_OFFSET(::WriteArgs, _has_bits_),
-  PROTOBUF_FIELD_OFFSET(::WriteArgs, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::ShardWriteArgs, _has_bits_),
+  PROTOBUF_FIELD_OFFSET(::ShardWriteArgs, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::WriteArgs, tid_),
-  PROTOBUF_FIELD_OFFSET(::WriteArgs, key_),
-  PROTOBUF_FIELD_OFFSET(::WriteArgs, value_),
-  PROTOBUF_FIELD_OFFSET(::WriteArgs, clientid_),
-  PROTOBUF_FIELD_OFFSET(::WriteArgs, seqid_),
+  PROTOBUF_FIELD_OFFSET(::ShardWriteArgs, tid_),
+  PROTOBUF_FIELD_OFFSET(::ShardWriteArgs, key_),
+  PROTOBUF_FIELD_OFFSET(::ShardWriteArgs, value_),
+  PROTOBUF_FIELD_OFFSET(::ShardWriteArgs, clientid_),
+  PROTOBUF_FIELD_OFFSET(::ShardWriteArgs, seqid_),
   4,
   0,
   1,
   2,
   3,
-  PROTOBUF_FIELD_OFFSET(::WriteReply, _has_bits_),
-  PROTOBUF_FIELD_OFFSET(::WriteReply, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::ShardWriteReply, _has_bits_),
+  PROTOBUF_FIELD_OFFSET(::ShardWriteReply, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::WriteReply, err_),
+  PROTOBUF_FIELD_OFFSET(::ShardWriteReply, err_),
   0,
   PROTOBUF_FIELD_OFFSET(::ConnectArgs, _has_bits_),
   PROTOBUF_FIELD_OFFSET(::ConnectArgs, _internal_metadata_),
@@ -281,57 +281,59 @@ const uint32_t TableStruct_shardkv_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(
   0,
 };
 static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, 7, -1, sizeof(::BeginArgs)},
-  { 8, 15, -1, sizeof(::BeginReply)},
-  { 16, 23, -1, sizeof(::EndArgs)},
-  { 24, 31, -1, sizeof(::EndReply)},
-  { 32, 39, -1, sizeof(::AbortArgs)},
-  { 40, 47, -1, sizeof(::AbortReply)},
-  { 48, 56, -1, sizeof(::ReadArgs)},
-  { 58, 66, -1, sizeof(::ReadReply)},
-  { 68, 79, -1, sizeof(::WriteArgs)},
-  { 84, 91, -1, sizeof(::WriteReply)},
+  { 0, 7, -1, sizeof(::ShardBeginArgs)},
+  { 8, 15, -1, sizeof(::ShardBeginReply)},
+  { 16, 23, -1, sizeof(::ShardEndArgs)},
+  { 24, 31, -1, sizeof(::ShardEndReply)},
+  { 32, 39, -1, sizeof(::ShardAbortArgs)},
+  { 40, 47, -1, sizeof(::ShardAbortReply)},
+  { 48, 56, -1, sizeof(::ShardReadArgs)},
+  { 58, 66, -1, sizeof(::ShardReadReply)},
+  { 68, 79, -1, sizeof(::ShardWriteArgs)},
+  { 84, 91, -1, sizeof(::ShardWriteReply)},
   { 92, 99, -1, sizeof(::ConnectArgs)},
   { 100, 107, -1, sizeof(::ConnectReply)},
 };
 
 static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::_BeginArgs_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::_BeginReply_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::_EndArgs_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::_EndReply_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::_AbortArgs_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::_AbortReply_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::_ReadArgs_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::_ReadReply_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::_WriteArgs_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::_WriteReply_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::_ShardBeginArgs_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::_ShardBeginReply_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::_ShardEndArgs_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::_ShardEndReply_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::_ShardAbortArgs_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::_ShardAbortReply_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::_ShardReadArgs_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::_ShardReadReply_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::_ShardWriteArgs_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::_ShardWriteReply_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::_ConnectArgs_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::_ConnectReply_default_instance_),
 };
 
 const char descriptor_table_protodef_shardkv_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
-  "\n\rshardkv.proto\"\030\n\tBeginArgs\022\013\n\003Tid\030\001 \002("
-  "\005\"\031\n\nBeginReply\022\013\n\003err\030\001 \002(\005\"\026\n\007EndArgs\022"
-  "\013\n\003Tid\030\001 \002(\005\"\027\n\010EndReply\022\013\n\003err\030\001 \002(\005\"\030\n"
-  "\tAbortArgs\022\013\n\003Tid\030\001 \002(\005\"\031\n\nAbortReply\022\013\n"
-  "\003err\030\001 \002(\005\"$\n\010ReadArgs\022\013\n\003Tid\030\001 \002(\005\022\013\n\003k"
-  "ey\030\002 \002(\t\"\'\n\tReadReply\022\013\n\003err\030\001 \002(\005\022\r\n\005va"
-  "lue\030\002 \001(\t\"U\n\tWriteArgs\022\013\n\003Tid\030\001 \002(\005\022\013\n\003k"
-  "ey\030\002 \002(\t\022\r\n\005value\030\003 \002(\t\022\020\n\010clientID\030\004 \001("
-  "\003\022\r\n\005seqID\030\005 \001(\003\"\031\n\nWriteReply\022\013\n\003err\030\001 "
-  "\002(\005\"\033\n\013ConnectArgs\022\014\n\004host\030\001 \002(\t\"\033\n\014Conn"
-  "ectReply\022\013\n\003err\030\001 \002(\0052\344\001\n\013ShardKvBase\022$\n"
-  "\013PrepareRead\022\t.ReadArgs\032\n.ReadReply\022\'\n\014P"
-  "repareWrite\022\n.WriteArgs\032\013.WriteReply\022 \n\005"
-  "BEGIN\022\n.BeginArgs\032\013.BeginReply\022\032\n\003END\022\010."
-  "EndArgs\032\t.EndReply\022 \n\005ABORT\022\n.AbortArgs\032"
-  "\013.AbortReply\022&\n\007CONNECT\022\014.ConnectArgs\032\r."
-  "ConnectReplyB\003\200\001\001"
+  "\n\rshardkv.proto\"\035\n\016ShardBeginArgs\022\013\n\003Tid"
+  "\030\001 \002(\005\"\036\n\017ShardBeginReply\022\013\n\003err\030\001 \002(\005\"\033"
+  "\n\014ShardEndArgs\022\013\n\003Tid\030\001 \002(\005\"\034\n\rShardEndR"
+  "eply\022\013\n\003err\030\001 \002(\005\"\035\n\016ShardAbortArgs\022\013\n\003T"
+  "id\030\001 \002(\005\"\036\n\017ShardAbortReply\022\013\n\003err\030\001 \002(\005"
+  "\")\n\rShardReadArgs\022\013\n\003Tid\030\001 \002(\005\022\013\n\003key\030\002 "
+  "\002(\t\",\n\016ShardReadReply\022\013\n\003err\030\001 \002(\005\022\r\n\005va"
+  "lue\030\002 \001(\t\"Z\n\016ShardWriteArgs\022\013\n\003Tid\030\001 \002(\005"
+  "\022\013\n\003key\030\002 \002(\t\022\r\n\005value\030\003 \002(\t\022\020\n\010clientID"
+  "\030\004 \001(\003\022\r\n\005seqID\030\005 \001(\003\"\036\n\017ShardWriteReply"
+  "\022\013\n\003err\030\001 \002(\005\"\033\n\013ConnectArgs\022\014\n\004host\030\001 \002"
+  "(\t\"\033\n\014ConnectReply\022\013\n\003err\030\001 \002(\0052\226\002\n\013Shar"
+  "dKvBase\022.\n\013PrepareRead\022\016.ShardReadArgs\032\017"
+  ".ShardReadReply\0221\n\014PrepareWrite\022\017.ShardW"
+  "riteArgs\032\020.ShardWriteReply\022*\n\005BEGIN\022\017.Sh"
+  "ardBeginArgs\032\020.ShardBeginReply\022$\n\003END\022\r."
+  "ShardEndArgs\032\016.ShardEndReply\022*\n\005ABORT\022\017."
+  "ShardAbortArgs\032\020.ShardAbortReply\022&\n\007CONN"
+  "ECT\022\014.ConnectArgs\032\r.ConnectReplyB\003\200\001\001"
   ;
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_shardkv_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_shardkv_2eproto = {
-  false, false, 657, descriptor_table_protodef_shardkv_2eproto, "shardkv.proto", 
+  false, false, 757, descriptor_table_protodef_shardkv_2eproto, "shardkv.proto", 
   &descriptor_table_shardkv_2eproto_once, nullptr, 0, 12,
   schemas, file_default_instances, TableStruct_shardkv_2eproto::offsets,
   file_level_metadata_shardkv_2eproto, file_level_enum_descriptors_shardkv_2eproto, file_level_service_descriptors_shardkv_2eproto,
@@ -345,9 +347,9 @@ PROTOBUF_ATTRIBUTE_INIT_PRIORITY static ::PROTOBUF_NAMESPACE_ID::internal::AddDe
 
 // ===================================================================
 
-class BeginArgs::_Internal {
+class ShardBeginArgs::_Internal {
  public:
-  using HasBits = decltype(std::declval<BeginArgs>()._has_bits_);
+  using HasBits = decltype(std::declval<ShardBeginArgs>()._has_bits_);
   static void set_has_tid(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
@@ -356,50 +358,50 @@ class BeginArgs::_Internal {
   }
 };
 
-BeginArgs::BeginArgs(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+ShardBeginArgs::ShardBeginArgs(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor();
   if (!is_message_owned) {
     RegisterArenaDtor(arena);
   }
-  // @@protoc_insertion_point(arena_constructor:BeginArgs)
+  // @@protoc_insertion_point(arena_constructor:ShardBeginArgs)
 }
-BeginArgs::BeginArgs(const BeginArgs& from)
+ShardBeginArgs::ShardBeginArgs(const ShardBeginArgs& from)
   : ::PROTOBUF_NAMESPACE_ID::Message(),
       _has_bits_(from._has_bits_) {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   tid_ = from.tid_;
-  // @@protoc_insertion_point(copy_constructor:BeginArgs)
+  // @@protoc_insertion_point(copy_constructor:ShardBeginArgs)
 }
 
-inline void BeginArgs::SharedCtor() {
+inline void ShardBeginArgs::SharedCtor() {
 tid_ = 0;
 }
 
-BeginArgs::~BeginArgs() {
-  // @@protoc_insertion_point(destructor:BeginArgs)
+ShardBeginArgs::~ShardBeginArgs() {
+  // @@protoc_insertion_point(destructor:ShardBeginArgs)
   if (GetArenaForAllocation() != nullptr) return;
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-inline void BeginArgs::SharedDtor() {
+inline void ShardBeginArgs::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
 }
 
-void BeginArgs::ArenaDtor(void* object) {
-  BeginArgs* _this = reinterpret_cast< BeginArgs* >(object);
+void ShardBeginArgs::ArenaDtor(void* object) {
+  ShardBeginArgs* _this = reinterpret_cast< ShardBeginArgs* >(object);
   (void)_this;
 }
-void BeginArgs::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+void ShardBeginArgs::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
 }
-void BeginArgs::SetCachedSize(int size) const {
+void ShardBeginArgs::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
 
-void BeginArgs::Clear() {
-// @@protoc_insertion_point(message_clear_start:BeginArgs)
+void ShardBeginArgs::Clear() {
+// @@protoc_insertion_point(message_clear_start:ShardBeginArgs)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -409,7 +411,7 @@ void BeginArgs::Clear() {
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* BeginArgs::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* ShardBeginArgs::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
@@ -449,9 +451,9 @@ failure:
 #undef CHK_
 }
 
-uint8_t* BeginArgs::_InternalSerialize(
+uint8_t* ShardBeginArgs::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:BeginArgs)
+  // @@protoc_insertion_point(serialize_to_array_start:ShardBeginArgs)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -466,12 +468,12 @@ uint8_t* BeginArgs::_InternalSerialize(
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:BeginArgs)
+  // @@protoc_insertion_point(serialize_to_array_end:ShardBeginArgs)
   return target;
 }
 
-size_t BeginArgs::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:BeginArgs)
+size_t ShardBeginArgs::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:ShardBeginArgs)
   size_t total_size = 0;
 
   // required int32 Tid = 1;
@@ -485,21 +487,21 @@ size_t BeginArgs::ByteSizeLong() const {
   return MaybeComputeUnknownFieldsSize(total_size, &_cached_size_);
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData BeginArgs::_class_data_ = {
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData ShardBeginArgs::_class_data_ = {
     ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
-    BeginArgs::MergeImpl
+    ShardBeginArgs::MergeImpl
 };
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*BeginArgs::GetClassData() const { return &_class_data_; }
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*ShardBeginArgs::GetClassData() const { return &_class_data_; }
 
-void BeginArgs::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
+void ShardBeginArgs::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
                       const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-  static_cast<BeginArgs *>(to)->MergeFrom(
-      static_cast<const BeginArgs &>(from));
+  static_cast<ShardBeginArgs *>(to)->MergeFrom(
+      static_cast<const ShardBeginArgs &>(from));
 }
 
 
-void BeginArgs::MergeFrom(const BeginArgs& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:BeginArgs)
+void ShardBeginArgs::MergeFrom(const ShardBeginArgs& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:ShardBeginArgs)
   GOOGLE_DCHECK_NE(&from, this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -510,26 +512,26 @@ void BeginArgs::MergeFrom(const BeginArgs& from) {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
-void BeginArgs::CopyFrom(const BeginArgs& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:BeginArgs)
+void ShardBeginArgs::CopyFrom(const ShardBeginArgs& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:ShardBeginArgs)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-bool BeginArgs::IsInitialized() const {
+bool ShardBeginArgs::IsInitialized() const {
   if (_Internal::MissingRequiredFields(_has_bits_)) return false;
   return true;
 }
 
-void BeginArgs::InternalSwap(BeginArgs* other) {
+void ShardBeginArgs::InternalSwap(ShardBeginArgs* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_has_bits_[0], other->_has_bits_[0]);
   swap(tid_, other->tid_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata BeginArgs::GetMetadata() const {
+::PROTOBUF_NAMESPACE_ID::Metadata ShardBeginArgs::GetMetadata() const {
   return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
       &descriptor_table_shardkv_2eproto_getter, &descriptor_table_shardkv_2eproto_once,
       file_level_metadata_shardkv_2eproto[0]);
@@ -537,9 +539,9 @@ void BeginArgs::InternalSwap(BeginArgs* other) {
 
 // ===================================================================
 
-class BeginReply::_Internal {
+class ShardBeginReply::_Internal {
  public:
-  using HasBits = decltype(std::declval<BeginReply>()._has_bits_);
+  using HasBits = decltype(std::declval<ShardBeginReply>()._has_bits_);
   static void set_has_err(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
@@ -548,50 +550,50 @@ class BeginReply::_Internal {
   }
 };
 
-BeginReply::BeginReply(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+ShardBeginReply::ShardBeginReply(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor();
   if (!is_message_owned) {
     RegisterArenaDtor(arena);
   }
-  // @@protoc_insertion_point(arena_constructor:BeginReply)
+  // @@protoc_insertion_point(arena_constructor:ShardBeginReply)
 }
-BeginReply::BeginReply(const BeginReply& from)
+ShardBeginReply::ShardBeginReply(const ShardBeginReply& from)
   : ::PROTOBUF_NAMESPACE_ID::Message(),
       _has_bits_(from._has_bits_) {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   err_ = from.err_;
-  // @@protoc_insertion_point(copy_constructor:BeginReply)
+  // @@protoc_insertion_point(copy_constructor:ShardBeginReply)
 }
 
-inline void BeginReply::SharedCtor() {
+inline void ShardBeginReply::SharedCtor() {
 err_ = 0;
 }
 
-BeginReply::~BeginReply() {
-  // @@protoc_insertion_point(destructor:BeginReply)
+ShardBeginReply::~ShardBeginReply() {
+  // @@protoc_insertion_point(destructor:ShardBeginReply)
   if (GetArenaForAllocation() != nullptr) return;
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-inline void BeginReply::SharedDtor() {
+inline void ShardBeginReply::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
 }
 
-void BeginReply::ArenaDtor(void* object) {
-  BeginReply* _this = reinterpret_cast< BeginReply* >(object);
+void ShardBeginReply::ArenaDtor(void* object) {
+  ShardBeginReply* _this = reinterpret_cast< ShardBeginReply* >(object);
   (void)_this;
 }
-void BeginReply::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+void ShardBeginReply::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
 }
-void BeginReply::SetCachedSize(int size) const {
+void ShardBeginReply::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
 
-void BeginReply::Clear() {
-// @@protoc_insertion_point(message_clear_start:BeginReply)
+void ShardBeginReply::Clear() {
+// @@protoc_insertion_point(message_clear_start:ShardBeginReply)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -601,7 +603,7 @@ void BeginReply::Clear() {
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* BeginReply::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* ShardBeginReply::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
@@ -641,9 +643,9 @@ failure:
 #undef CHK_
 }
 
-uint8_t* BeginReply::_InternalSerialize(
+uint8_t* ShardBeginReply::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:BeginReply)
+  // @@protoc_insertion_point(serialize_to_array_start:ShardBeginReply)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -658,12 +660,12 @@ uint8_t* BeginReply::_InternalSerialize(
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:BeginReply)
+  // @@protoc_insertion_point(serialize_to_array_end:ShardBeginReply)
   return target;
 }
 
-size_t BeginReply::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:BeginReply)
+size_t ShardBeginReply::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:ShardBeginReply)
   size_t total_size = 0;
 
   // required int32 err = 1;
@@ -677,21 +679,21 @@ size_t BeginReply::ByteSizeLong() const {
   return MaybeComputeUnknownFieldsSize(total_size, &_cached_size_);
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData BeginReply::_class_data_ = {
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData ShardBeginReply::_class_data_ = {
     ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
-    BeginReply::MergeImpl
+    ShardBeginReply::MergeImpl
 };
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*BeginReply::GetClassData() const { return &_class_data_; }
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*ShardBeginReply::GetClassData() const { return &_class_data_; }
 
-void BeginReply::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
+void ShardBeginReply::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
                       const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-  static_cast<BeginReply *>(to)->MergeFrom(
-      static_cast<const BeginReply &>(from));
+  static_cast<ShardBeginReply *>(to)->MergeFrom(
+      static_cast<const ShardBeginReply &>(from));
 }
 
 
-void BeginReply::MergeFrom(const BeginReply& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:BeginReply)
+void ShardBeginReply::MergeFrom(const ShardBeginReply& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:ShardBeginReply)
   GOOGLE_DCHECK_NE(&from, this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -702,26 +704,26 @@ void BeginReply::MergeFrom(const BeginReply& from) {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
-void BeginReply::CopyFrom(const BeginReply& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:BeginReply)
+void ShardBeginReply::CopyFrom(const ShardBeginReply& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:ShardBeginReply)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-bool BeginReply::IsInitialized() const {
+bool ShardBeginReply::IsInitialized() const {
   if (_Internal::MissingRequiredFields(_has_bits_)) return false;
   return true;
 }
 
-void BeginReply::InternalSwap(BeginReply* other) {
+void ShardBeginReply::InternalSwap(ShardBeginReply* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_has_bits_[0], other->_has_bits_[0]);
   swap(err_, other->err_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata BeginReply::GetMetadata() const {
+::PROTOBUF_NAMESPACE_ID::Metadata ShardBeginReply::GetMetadata() const {
   return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
       &descriptor_table_shardkv_2eproto_getter, &descriptor_table_shardkv_2eproto_once,
       file_level_metadata_shardkv_2eproto[1]);
@@ -729,9 +731,9 @@ void BeginReply::InternalSwap(BeginReply* other) {
 
 // ===================================================================
 
-class EndArgs::_Internal {
+class ShardEndArgs::_Internal {
  public:
-  using HasBits = decltype(std::declval<EndArgs>()._has_bits_);
+  using HasBits = decltype(std::declval<ShardEndArgs>()._has_bits_);
   static void set_has_tid(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
@@ -740,50 +742,50 @@ class EndArgs::_Internal {
   }
 };
 
-EndArgs::EndArgs(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+ShardEndArgs::ShardEndArgs(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor();
   if (!is_message_owned) {
     RegisterArenaDtor(arena);
   }
-  // @@protoc_insertion_point(arena_constructor:EndArgs)
+  // @@protoc_insertion_point(arena_constructor:ShardEndArgs)
 }
-EndArgs::EndArgs(const EndArgs& from)
+ShardEndArgs::ShardEndArgs(const ShardEndArgs& from)
   : ::PROTOBUF_NAMESPACE_ID::Message(),
       _has_bits_(from._has_bits_) {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   tid_ = from.tid_;
-  // @@protoc_insertion_point(copy_constructor:EndArgs)
+  // @@protoc_insertion_point(copy_constructor:ShardEndArgs)
 }
 
-inline void EndArgs::SharedCtor() {
+inline void ShardEndArgs::SharedCtor() {
 tid_ = 0;
 }
 
-EndArgs::~EndArgs() {
-  // @@protoc_insertion_point(destructor:EndArgs)
+ShardEndArgs::~ShardEndArgs() {
+  // @@protoc_insertion_point(destructor:ShardEndArgs)
   if (GetArenaForAllocation() != nullptr) return;
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-inline void EndArgs::SharedDtor() {
+inline void ShardEndArgs::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
 }
 
-void EndArgs::ArenaDtor(void* object) {
-  EndArgs* _this = reinterpret_cast< EndArgs* >(object);
+void ShardEndArgs::ArenaDtor(void* object) {
+  ShardEndArgs* _this = reinterpret_cast< ShardEndArgs* >(object);
   (void)_this;
 }
-void EndArgs::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+void ShardEndArgs::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
 }
-void EndArgs::SetCachedSize(int size) const {
+void ShardEndArgs::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
 
-void EndArgs::Clear() {
-// @@protoc_insertion_point(message_clear_start:EndArgs)
+void ShardEndArgs::Clear() {
+// @@protoc_insertion_point(message_clear_start:ShardEndArgs)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -793,7 +795,7 @@ void EndArgs::Clear() {
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* EndArgs::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* ShardEndArgs::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
@@ -833,9 +835,9 @@ failure:
 #undef CHK_
 }
 
-uint8_t* EndArgs::_InternalSerialize(
+uint8_t* ShardEndArgs::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:EndArgs)
+  // @@protoc_insertion_point(serialize_to_array_start:ShardEndArgs)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -850,12 +852,12 @@ uint8_t* EndArgs::_InternalSerialize(
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:EndArgs)
+  // @@protoc_insertion_point(serialize_to_array_end:ShardEndArgs)
   return target;
 }
 
-size_t EndArgs::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:EndArgs)
+size_t ShardEndArgs::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:ShardEndArgs)
   size_t total_size = 0;
 
   // required int32 Tid = 1;
@@ -869,21 +871,21 @@ size_t EndArgs::ByteSizeLong() const {
   return MaybeComputeUnknownFieldsSize(total_size, &_cached_size_);
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData EndArgs::_class_data_ = {
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData ShardEndArgs::_class_data_ = {
     ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
-    EndArgs::MergeImpl
+    ShardEndArgs::MergeImpl
 };
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*EndArgs::GetClassData() const { return &_class_data_; }
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*ShardEndArgs::GetClassData() const { return &_class_data_; }
 
-void EndArgs::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
+void ShardEndArgs::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
                       const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-  static_cast<EndArgs *>(to)->MergeFrom(
-      static_cast<const EndArgs &>(from));
+  static_cast<ShardEndArgs *>(to)->MergeFrom(
+      static_cast<const ShardEndArgs &>(from));
 }
 
 
-void EndArgs::MergeFrom(const EndArgs& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:EndArgs)
+void ShardEndArgs::MergeFrom(const ShardEndArgs& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:ShardEndArgs)
   GOOGLE_DCHECK_NE(&from, this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -894,26 +896,26 @@ void EndArgs::MergeFrom(const EndArgs& from) {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
-void EndArgs::CopyFrom(const EndArgs& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:EndArgs)
+void ShardEndArgs::CopyFrom(const ShardEndArgs& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:ShardEndArgs)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-bool EndArgs::IsInitialized() const {
+bool ShardEndArgs::IsInitialized() const {
   if (_Internal::MissingRequiredFields(_has_bits_)) return false;
   return true;
 }
 
-void EndArgs::InternalSwap(EndArgs* other) {
+void ShardEndArgs::InternalSwap(ShardEndArgs* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_has_bits_[0], other->_has_bits_[0]);
   swap(tid_, other->tid_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata EndArgs::GetMetadata() const {
+::PROTOBUF_NAMESPACE_ID::Metadata ShardEndArgs::GetMetadata() const {
   return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
       &descriptor_table_shardkv_2eproto_getter, &descriptor_table_shardkv_2eproto_once,
       file_level_metadata_shardkv_2eproto[2]);
@@ -921,9 +923,9 @@ void EndArgs::InternalSwap(EndArgs* other) {
 
 // ===================================================================
 
-class EndReply::_Internal {
+class ShardEndReply::_Internal {
  public:
-  using HasBits = decltype(std::declval<EndReply>()._has_bits_);
+  using HasBits = decltype(std::declval<ShardEndReply>()._has_bits_);
   static void set_has_err(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
@@ -932,50 +934,50 @@ class EndReply::_Internal {
   }
 };
 
-EndReply::EndReply(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+ShardEndReply::ShardEndReply(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor();
   if (!is_message_owned) {
     RegisterArenaDtor(arena);
   }
-  // @@protoc_insertion_point(arena_constructor:EndReply)
+  // @@protoc_insertion_point(arena_constructor:ShardEndReply)
 }
-EndReply::EndReply(const EndReply& from)
+ShardEndReply::ShardEndReply(const ShardEndReply& from)
   : ::PROTOBUF_NAMESPACE_ID::Message(),
       _has_bits_(from._has_bits_) {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   err_ = from.err_;
-  // @@protoc_insertion_point(copy_constructor:EndReply)
+  // @@protoc_insertion_point(copy_constructor:ShardEndReply)
 }
 
-inline void EndReply::SharedCtor() {
+inline void ShardEndReply::SharedCtor() {
 err_ = 0;
 }
 
-EndReply::~EndReply() {
-  // @@protoc_insertion_point(destructor:EndReply)
+ShardEndReply::~ShardEndReply() {
+  // @@protoc_insertion_point(destructor:ShardEndReply)
   if (GetArenaForAllocation() != nullptr) return;
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-inline void EndReply::SharedDtor() {
+inline void ShardEndReply::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
 }
 
-void EndReply::ArenaDtor(void* object) {
-  EndReply* _this = reinterpret_cast< EndReply* >(object);
+void ShardEndReply::ArenaDtor(void* object) {
+  ShardEndReply* _this = reinterpret_cast< ShardEndReply* >(object);
   (void)_this;
 }
-void EndReply::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+void ShardEndReply::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
 }
-void EndReply::SetCachedSize(int size) const {
+void ShardEndReply::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
 
-void EndReply::Clear() {
-// @@protoc_insertion_point(message_clear_start:EndReply)
+void ShardEndReply::Clear() {
+// @@protoc_insertion_point(message_clear_start:ShardEndReply)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -985,7 +987,7 @@ void EndReply::Clear() {
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* EndReply::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* ShardEndReply::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
@@ -1025,9 +1027,9 @@ failure:
 #undef CHK_
 }
 
-uint8_t* EndReply::_InternalSerialize(
+uint8_t* ShardEndReply::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:EndReply)
+  // @@protoc_insertion_point(serialize_to_array_start:ShardEndReply)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -1042,12 +1044,12 @@ uint8_t* EndReply::_InternalSerialize(
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:EndReply)
+  // @@protoc_insertion_point(serialize_to_array_end:ShardEndReply)
   return target;
 }
 
-size_t EndReply::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:EndReply)
+size_t ShardEndReply::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:ShardEndReply)
   size_t total_size = 0;
 
   // required int32 err = 1;
@@ -1061,21 +1063,21 @@ size_t EndReply::ByteSizeLong() const {
   return MaybeComputeUnknownFieldsSize(total_size, &_cached_size_);
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData EndReply::_class_data_ = {
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData ShardEndReply::_class_data_ = {
     ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
-    EndReply::MergeImpl
+    ShardEndReply::MergeImpl
 };
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*EndReply::GetClassData() const { return &_class_data_; }
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*ShardEndReply::GetClassData() const { return &_class_data_; }
 
-void EndReply::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
+void ShardEndReply::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
                       const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-  static_cast<EndReply *>(to)->MergeFrom(
-      static_cast<const EndReply &>(from));
+  static_cast<ShardEndReply *>(to)->MergeFrom(
+      static_cast<const ShardEndReply &>(from));
 }
 
 
-void EndReply::MergeFrom(const EndReply& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:EndReply)
+void ShardEndReply::MergeFrom(const ShardEndReply& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:ShardEndReply)
   GOOGLE_DCHECK_NE(&from, this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -1086,26 +1088,26 @@ void EndReply::MergeFrom(const EndReply& from) {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
-void EndReply::CopyFrom(const EndReply& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:EndReply)
+void ShardEndReply::CopyFrom(const ShardEndReply& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:ShardEndReply)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-bool EndReply::IsInitialized() const {
+bool ShardEndReply::IsInitialized() const {
   if (_Internal::MissingRequiredFields(_has_bits_)) return false;
   return true;
 }
 
-void EndReply::InternalSwap(EndReply* other) {
+void ShardEndReply::InternalSwap(ShardEndReply* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_has_bits_[0], other->_has_bits_[0]);
   swap(err_, other->err_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata EndReply::GetMetadata() const {
+::PROTOBUF_NAMESPACE_ID::Metadata ShardEndReply::GetMetadata() const {
   return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
       &descriptor_table_shardkv_2eproto_getter, &descriptor_table_shardkv_2eproto_once,
       file_level_metadata_shardkv_2eproto[3]);
@@ -1113,9 +1115,9 @@ void EndReply::InternalSwap(EndReply* other) {
 
 // ===================================================================
 
-class AbortArgs::_Internal {
+class ShardAbortArgs::_Internal {
  public:
-  using HasBits = decltype(std::declval<AbortArgs>()._has_bits_);
+  using HasBits = decltype(std::declval<ShardAbortArgs>()._has_bits_);
   static void set_has_tid(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
@@ -1124,50 +1126,50 @@ class AbortArgs::_Internal {
   }
 };
 
-AbortArgs::AbortArgs(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+ShardAbortArgs::ShardAbortArgs(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor();
   if (!is_message_owned) {
     RegisterArenaDtor(arena);
   }
-  // @@protoc_insertion_point(arena_constructor:AbortArgs)
+  // @@protoc_insertion_point(arena_constructor:ShardAbortArgs)
 }
-AbortArgs::AbortArgs(const AbortArgs& from)
+ShardAbortArgs::ShardAbortArgs(const ShardAbortArgs& from)
   : ::PROTOBUF_NAMESPACE_ID::Message(),
       _has_bits_(from._has_bits_) {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   tid_ = from.tid_;
-  // @@protoc_insertion_point(copy_constructor:AbortArgs)
+  // @@protoc_insertion_point(copy_constructor:ShardAbortArgs)
 }
 
-inline void AbortArgs::SharedCtor() {
+inline void ShardAbortArgs::SharedCtor() {
 tid_ = 0;
 }
 
-AbortArgs::~AbortArgs() {
-  // @@protoc_insertion_point(destructor:AbortArgs)
+ShardAbortArgs::~ShardAbortArgs() {
+  // @@protoc_insertion_point(destructor:ShardAbortArgs)
   if (GetArenaForAllocation() != nullptr) return;
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-inline void AbortArgs::SharedDtor() {
+inline void ShardAbortArgs::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
 }
 
-void AbortArgs::ArenaDtor(void* object) {
-  AbortArgs* _this = reinterpret_cast< AbortArgs* >(object);
+void ShardAbortArgs::ArenaDtor(void* object) {
+  ShardAbortArgs* _this = reinterpret_cast< ShardAbortArgs* >(object);
   (void)_this;
 }
-void AbortArgs::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+void ShardAbortArgs::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
 }
-void AbortArgs::SetCachedSize(int size) const {
+void ShardAbortArgs::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
 
-void AbortArgs::Clear() {
-// @@protoc_insertion_point(message_clear_start:AbortArgs)
+void ShardAbortArgs::Clear() {
+// @@protoc_insertion_point(message_clear_start:ShardAbortArgs)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -1177,7 +1179,7 @@ void AbortArgs::Clear() {
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* AbortArgs::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* ShardAbortArgs::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
@@ -1217,9 +1219,9 @@ failure:
 #undef CHK_
 }
 
-uint8_t* AbortArgs::_InternalSerialize(
+uint8_t* ShardAbortArgs::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:AbortArgs)
+  // @@protoc_insertion_point(serialize_to_array_start:ShardAbortArgs)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -1234,12 +1236,12 @@ uint8_t* AbortArgs::_InternalSerialize(
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:AbortArgs)
+  // @@protoc_insertion_point(serialize_to_array_end:ShardAbortArgs)
   return target;
 }
 
-size_t AbortArgs::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:AbortArgs)
+size_t ShardAbortArgs::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:ShardAbortArgs)
   size_t total_size = 0;
 
   // required int32 Tid = 1;
@@ -1253,21 +1255,21 @@ size_t AbortArgs::ByteSizeLong() const {
   return MaybeComputeUnknownFieldsSize(total_size, &_cached_size_);
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData AbortArgs::_class_data_ = {
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData ShardAbortArgs::_class_data_ = {
     ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
-    AbortArgs::MergeImpl
+    ShardAbortArgs::MergeImpl
 };
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*AbortArgs::GetClassData() const { return &_class_data_; }
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*ShardAbortArgs::GetClassData() const { return &_class_data_; }
 
-void AbortArgs::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
+void ShardAbortArgs::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
                       const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-  static_cast<AbortArgs *>(to)->MergeFrom(
-      static_cast<const AbortArgs &>(from));
+  static_cast<ShardAbortArgs *>(to)->MergeFrom(
+      static_cast<const ShardAbortArgs &>(from));
 }
 
 
-void AbortArgs::MergeFrom(const AbortArgs& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:AbortArgs)
+void ShardAbortArgs::MergeFrom(const ShardAbortArgs& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:ShardAbortArgs)
   GOOGLE_DCHECK_NE(&from, this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -1278,26 +1280,26 @@ void AbortArgs::MergeFrom(const AbortArgs& from) {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
-void AbortArgs::CopyFrom(const AbortArgs& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:AbortArgs)
+void ShardAbortArgs::CopyFrom(const ShardAbortArgs& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:ShardAbortArgs)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-bool AbortArgs::IsInitialized() const {
+bool ShardAbortArgs::IsInitialized() const {
   if (_Internal::MissingRequiredFields(_has_bits_)) return false;
   return true;
 }
 
-void AbortArgs::InternalSwap(AbortArgs* other) {
+void ShardAbortArgs::InternalSwap(ShardAbortArgs* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_has_bits_[0], other->_has_bits_[0]);
   swap(tid_, other->tid_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata AbortArgs::GetMetadata() const {
+::PROTOBUF_NAMESPACE_ID::Metadata ShardAbortArgs::GetMetadata() const {
   return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
       &descriptor_table_shardkv_2eproto_getter, &descriptor_table_shardkv_2eproto_once,
       file_level_metadata_shardkv_2eproto[4]);
@@ -1305,9 +1307,9 @@ void AbortArgs::InternalSwap(AbortArgs* other) {
 
 // ===================================================================
 
-class AbortReply::_Internal {
+class ShardAbortReply::_Internal {
  public:
-  using HasBits = decltype(std::declval<AbortReply>()._has_bits_);
+  using HasBits = decltype(std::declval<ShardAbortReply>()._has_bits_);
   static void set_has_err(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
@@ -1316,50 +1318,50 @@ class AbortReply::_Internal {
   }
 };
 
-AbortReply::AbortReply(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+ShardAbortReply::ShardAbortReply(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor();
   if (!is_message_owned) {
     RegisterArenaDtor(arena);
   }
-  // @@protoc_insertion_point(arena_constructor:AbortReply)
+  // @@protoc_insertion_point(arena_constructor:ShardAbortReply)
 }
-AbortReply::AbortReply(const AbortReply& from)
+ShardAbortReply::ShardAbortReply(const ShardAbortReply& from)
   : ::PROTOBUF_NAMESPACE_ID::Message(),
       _has_bits_(from._has_bits_) {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   err_ = from.err_;
-  // @@protoc_insertion_point(copy_constructor:AbortReply)
+  // @@protoc_insertion_point(copy_constructor:ShardAbortReply)
 }
 
-inline void AbortReply::SharedCtor() {
+inline void ShardAbortReply::SharedCtor() {
 err_ = 0;
 }
 
-AbortReply::~AbortReply() {
-  // @@protoc_insertion_point(destructor:AbortReply)
+ShardAbortReply::~ShardAbortReply() {
+  // @@protoc_insertion_point(destructor:ShardAbortReply)
   if (GetArenaForAllocation() != nullptr) return;
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-inline void AbortReply::SharedDtor() {
+inline void ShardAbortReply::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
 }
 
-void AbortReply::ArenaDtor(void* object) {
-  AbortReply* _this = reinterpret_cast< AbortReply* >(object);
+void ShardAbortReply::ArenaDtor(void* object) {
+  ShardAbortReply* _this = reinterpret_cast< ShardAbortReply* >(object);
   (void)_this;
 }
-void AbortReply::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+void ShardAbortReply::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
 }
-void AbortReply::SetCachedSize(int size) const {
+void ShardAbortReply::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
 
-void AbortReply::Clear() {
-// @@protoc_insertion_point(message_clear_start:AbortReply)
+void ShardAbortReply::Clear() {
+// @@protoc_insertion_point(message_clear_start:ShardAbortReply)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -1369,7 +1371,7 @@ void AbortReply::Clear() {
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* AbortReply::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* ShardAbortReply::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
@@ -1409,9 +1411,9 @@ failure:
 #undef CHK_
 }
 
-uint8_t* AbortReply::_InternalSerialize(
+uint8_t* ShardAbortReply::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:AbortReply)
+  // @@protoc_insertion_point(serialize_to_array_start:ShardAbortReply)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -1426,12 +1428,12 @@ uint8_t* AbortReply::_InternalSerialize(
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:AbortReply)
+  // @@protoc_insertion_point(serialize_to_array_end:ShardAbortReply)
   return target;
 }
 
-size_t AbortReply::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:AbortReply)
+size_t ShardAbortReply::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:ShardAbortReply)
   size_t total_size = 0;
 
   // required int32 err = 1;
@@ -1445,21 +1447,21 @@ size_t AbortReply::ByteSizeLong() const {
   return MaybeComputeUnknownFieldsSize(total_size, &_cached_size_);
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData AbortReply::_class_data_ = {
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData ShardAbortReply::_class_data_ = {
     ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
-    AbortReply::MergeImpl
+    ShardAbortReply::MergeImpl
 };
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*AbortReply::GetClassData() const { return &_class_data_; }
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*ShardAbortReply::GetClassData() const { return &_class_data_; }
 
-void AbortReply::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
+void ShardAbortReply::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
                       const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-  static_cast<AbortReply *>(to)->MergeFrom(
-      static_cast<const AbortReply &>(from));
+  static_cast<ShardAbortReply *>(to)->MergeFrom(
+      static_cast<const ShardAbortReply &>(from));
 }
 
 
-void AbortReply::MergeFrom(const AbortReply& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:AbortReply)
+void ShardAbortReply::MergeFrom(const ShardAbortReply& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:ShardAbortReply)
   GOOGLE_DCHECK_NE(&from, this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -1470,26 +1472,26 @@ void AbortReply::MergeFrom(const AbortReply& from) {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
-void AbortReply::CopyFrom(const AbortReply& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:AbortReply)
+void ShardAbortReply::CopyFrom(const ShardAbortReply& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:ShardAbortReply)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-bool AbortReply::IsInitialized() const {
+bool ShardAbortReply::IsInitialized() const {
   if (_Internal::MissingRequiredFields(_has_bits_)) return false;
   return true;
 }
 
-void AbortReply::InternalSwap(AbortReply* other) {
+void ShardAbortReply::InternalSwap(ShardAbortReply* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_has_bits_[0], other->_has_bits_[0]);
   swap(err_, other->err_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata AbortReply::GetMetadata() const {
+::PROTOBUF_NAMESPACE_ID::Metadata ShardAbortReply::GetMetadata() const {
   return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
       &descriptor_table_shardkv_2eproto_getter, &descriptor_table_shardkv_2eproto_once,
       file_level_metadata_shardkv_2eproto[5]);
@@ -1497,9 +1499,9 @@ void AbortReply::InternalSwap(AbortReply* other) {
 
 // ===================================================================
 
-class ReadArgs::_Internal {
+class ShardReadArgs::_Internal {
  public:
-  using HasBits = decltype(std::declval<ReadArgs>()._has_bits_);
+  using HasBits = decltype(std::declval<ShardReadArgs>()._has_bits_);
   static void set_has_tid(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
@@ -1511,16 +1513,16 @@ class ReadArgs::_Internal {
   }
 };
 
-ReadArgs::ReadArgs(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+ShardReadArgs::ShardReadArgs(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor();
   if (!is_message_owned) {
     RegisterArenaDtor(arena);
   }
-  // @@protoc_insertion_point(arena_constructor:ReadArgs)
+  // @@protoc_insertion_point(arena_constructor:ShardReadArgs)
 }
-ReadArgs::ReadArgs(const ReadArgs& from)
+ShardReadArgs::ShardReadArgs(const ShardReadArgs& from)
   : ::PROTOBUF_NAMESPACE_ID::Message(),
       _has_bits_(from._has_bits_) {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
@@ -1533,10 +1535,10 @@ ReadArgs::ReadArgs(const ReadArgs& from)
       GetArenaForAllocation());
   }
   tid_ = from.tid_;
-  // @@protoc_insertion_point(copy_constructor:ReadArgs)
+  // @@protoc_insertion_point(copy_constructor:ShardReadArgs)
 }
 
-inline void ReadArgs::SharedCtor() {
+inline void ShardReadArgs::SharedCtor() {
 key_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
   key_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), "", GetArenaForAllocation());
@@ -1544,30 +1546,30 @@ key_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyI
 tid_ = 0;
 }
 
-ReadArgs::~ReadArgs() {
-  // @@protoc_insertion_point(destructor:ReadArgs)
+ShardReadArgs::~ShardReadArgs() {
+  // @@protoc_insertion_point(destructor:ShardReadArgs)
   if (GetArenaForAllocation() != nullptr) return;
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-inline void ReadArgs::SharedDtor() {
+inline void ShardReadArgs::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
   key_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
-void ReadArgs::ArenaDtor(void* object) {
-  ReadArgs* _this = reinterpret_cast< ReadArgs* >(object);
+void ShardReadArgs::ArenaDtor(void* object) {
+  ShardReadArgs* _this = reinterpret_cast< ShardReadArgs* >(object);
   (void)_this;
 }
-void ReadArgs::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+void ShardReadArgs::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
 }
-void ReadArgs::SetCachedSize(int size) const {
+void ShardReadArgs::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
 
-void ReadArgs::Clear() {
-// @@protoc_insertion_point(message_clear_start:ReadArgs)
+void ShardReadArgs::Clear() {
+// @@protoc_insertion_point(message_clear_start:ShardReadArgs)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -1581,7 +1583,7 @@ void ReadArgs::Clear() {
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* ReadArgs::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* ShardReadArgs::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
@@ -1603,7 +1605,7 @@ const char* ReadArgs::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::i
           auto str = _internal_mutable_key();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
           #ifndef NDEBUG
-          ::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "ReadArgs.key");
+          ::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "ShardReadArgs.key");
           #endif  // !NDEBUG
           CHK_(ptr);
         } else
@@ -1633,9 +1635,9 @@ failure:
 #undef CHK_
 }
 
-uint8_t* ReadArgs::_InternalSerialize(
+uint8_t* ShardReadArgs::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:ReadArgs)
+  // @@protoc_insertion_point(serialize_to_array_start:ShardReadArgs)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -1651,7 +1653,7 @@ uint8_t* ReadArgs::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
       this->_internal_key().data(), static_cast<int>(this->_internal_key().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "ReadArgs.key");
+      "ShardReadArgs.key");
     target = stream->WriteStringMaybeAliased(
         2, this->_internal_key(), target);
   }
@@ -1660,12 +1662,12 @@ uint8_t* ReadArgs::_InternalSerialize(
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:ReadArgs)
+  // @@protoc_insertion_point(serialize_to_array_end:ShardReadArgs)
   return target;
 }
 
-size_t ReadArgs::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:ReadArgs)
+size_t ShardReadArgs::RequiredFieldsByteSizeFallback() const {
+// @@protoc_insertion_point(required_fields_byte_size_fallback_start:ShardReadArgs)
   size_t total_size = 0;
 
   if (_internal_has_key()) {
@@ -1682,8 +1684,8 @@ size_t ReadArgs::RequiredFieldsByteSizeFallback() const {
 
   return total_size;
 }
-size_t ReadArgs::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:ReadArgs)
+size_t ShardReadArgs::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:ShardReadArgs)
   size_t total_size = 0;
 
   if (((_has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
@@ -1705,21 +1707,21 @@ size_t ReadArgs::ByteSizeLong() const {
   return MaybeComputeUnknownFieldsSize(total_size, &_cached_size_);
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData ReadArgs::_class_data_ = {
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData ShardReadArgs::_class_data_ = {
     ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
-    ReadArgs::MergeImpl
+    ShardReadArgs::MergeImpl
 };
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*ReadArgs::GetClassData() const { return &_class_data_; }
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*ShardReadArgs::GetClassData() const { return &_class_data_; }
 
-void ReadArgs::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
+void ShardReadArgs::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
                       const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-  static_cast<ReadArgs *>(to)->MergeFrom(
-      static_cast<const ReadArgs &>(from));
+  static_cast<ShardReadArgs *>(to)->MergeFrom(
+      static_cast<const ShardReadArgs &>(from));
 }
 
 
-void ReadArgs::MergeFrom(const ReadArgs& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:ReadArgs)
+void ShardReadArgs::MergeFrom(const ShardReadArgs& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:ShardReadArgs)
   GOOGLE_DCHECK_NE(&from, this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -1737,19 +1739,19 @@ void ReadArgs::MergeFrom(const ReadArgs& from) {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
-void ReadArgs::CopyFrom(const ReadArgs& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:ReadArgs)
+void ShardReadArgs::CopyFrom(const ShardReadArgs& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:ShardReadArgs)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-bool ReadArgs::IsInitialized() const {
+bool ShardReadArgs::IsInitialized() const {
   if (_Internal::MissingRequiredFields(_has_bits_)) return false;
   return true;
 }
 
-void ReadArgs::InternalSwap(ReadArgs* other) {
+void ShardReadArgs::InternalSwap(ShardReadArgs* other) {
   using std::swap;
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
@@ -1763,7 +1765,7 @@ void ReadArgs::InternalSwap(ReadArgs* other) {
   swap(tid_, other->tid_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata ReadArgs::GetMetadata() const {
+::PROTOBUF_NAMESPACE_ID::Metadata ShardReadArgs::GetMetadata() const {
   return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
       &descriptor_table_shardkv_2eproto_getter, &descriptor_table_shardkv_2eproto_once,
       file_level_metadata_shardkv_2eproto[6]);
@@ -1771,9 +1773,9 @@ void ReadArgs::InternalSwap(ReadArgs* other) {
 
 // ===================================================================
 
-class ReadReply::_Internal {
+class ShardReadReply::_Internal {
  public:
-  using HasBits = decltype(std::declval<ReadReply>()._has_bits_);
+  using HasBits = decltype(std::declval<ShardReadReply>()._has_bits_);
   static void set_has_err(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
@@ -1785,16 +1787,16 @@ class ReadReply::_Internal {
   }
 };
 
-ReadReply::ReadReply(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+ShardReadReply::ShardReadReply(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor();
   if (!is_message_owned) {
     RegisterArenaDtor(arena);
   }
-  // @@protoc_insertion_point(arena_constructor:ReadReply)
+  // @@protoc_insertion_point(arena_constructor:ShardReadReply)
 }
-ReadReply::ReadReply(const ReadReply& from)
+ShardReadReply::ShardReadReply(const ShardReadReply& from)
   : ::PROTOBUF_NAMESPACE_ID::Message(),
       _has_bits_(from._has_bits_) {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
@@ -1807,10 +1809,10 @@ ReadReply::ReadReply(const ReadReply& from)
       GetArenaForAllocation());
   }
   err_ = from.err_;
-  // @@protoc_insertion_point(copy_constructor:ReadReply)
+  // @@protoc_insertion_point(copy_constructor:ShardReadReply)
 }
 
-inline void ReadReply::SharedCtor() {
+inline void ShardReadReply::SharedCtor() {
 value_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
   value_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), "", GetArenaForAllocation());
@@ -1818,30 +1820,30 @@ value_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlread
 err_ = 0;
 }
 
-ReadReply::~ReadReply() {
-  // @@protoc_insertion_point(destructor:ReadReply)
+ShardReadReply::~ShardReadReply() {
+  // @@protoc_insertion_point(destructor:ShardReadReply)
   if (GetArenaForAllocation() != nullptr) return;
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-inline void ReadReply::SharedDtor() {
+inline void ShardReadReply::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
   value_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
-void ReadReply::ArenaDtor(void* object) {
-  ReadReply* _this = reinterpret_cast< ReadReply* >(object);
+void ShardReadReply::ArenaDtor(void* object) {
+  ShardReadReply* _this = reinterpret_cast< ShardReadReply* >(object);
   (void)_this;
 }
-void ReadReply::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+void ShardReadReply::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
 }
-void ReadReply::SetCachedSize(int size) const {
+void ShardReadReply::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
 
-void ReadReply::Clear() {
-// @@protoc_insertion_point(message_clear_start:ReadReply)
+void ShardReadReply::Clear() {
+// @@protoc_insertion_point(message_clear_start:ShardReadReply)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -1855,7 +1857,7 @@ void ReadReply::Clear() {
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* ReadReply::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* ShardReadReply::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
@@ -1877,7 +1879,7 @@ const char* ReadReply::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::
           auto str = _internal_mutable_value();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
           #ifndef NDEBUG
-          ::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "ReadReply.value");
+          ::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "ShardReadReply.value");
           #endif  // !NDEBUG
           CHK_(ptr);
         } else
@@ -1907,9 +1909,9 @@ failure:
 #undef CHK_
 }
 
-uint8_t* ReadReply::_InternalSerialize(
+uint8_t* ShardReadReply::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:ReadReply)
+  // @@protoc_insertion_point(serialize_to_array_start:ShardReadReply)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -1925,7 +1927,7 @@ uint8_t* ReadReply::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
       this->_internal_value().data(), static_cast<int>(this->_internal_value().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "ReadReply.value");
+      "ShardReadReply.value");
     target = stream->WriteStringMaybeAliased(
         2, this->_internal_value(), target);
   }
@@ -1934,12 +1936,12 @@ uint8_t* ReadReply::_InternalSerialize(
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:ReadReply)
+  // @@protoc_insertion_point(serialize_to_array_end:ShardReadReply)
   return target;
 }
 
-size_t ReadReply::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:ReadReply)
+size_t ShardReadReply::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:ShardReadReply)
   size_t total_size = 0;
 
   // required int32 err = 1;
@@ -1961,21 +1963,21 @@ size_t ReadReply::ByteSizeLong() const {
   return MaybeComputeUnknownFieldsSize(total_size, &_cached_size_);
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData ReadReply::_class_data_ = {
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData ShardReadReply::_class_data_ = {
     ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
-    ReadReply::MergeImpl
+    ShardReadReply::MergeImpl
 };
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*ReadReply::GetClassData() const { return &_class_data_; }
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*ShardReadReply::GetClassData() const { return &_class_data_; }
 
-void ReadReply::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
+void ShardReadReply::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
                       const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-  static_cast<ReadReply *>(to)->MergeFrom(
-      static_cast<const ReadReply &>(from));
+  static_cast<ShardReadReply *>(to)->MergeFrom(
+      static_cast<const ShardReadReply &>(from));
 }
 
 
-void ReadReply::MergeFrom(const ReadReply& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:ReadReply)
+void ShardReadReply::MergeFrom(const ShardReadReply& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:ShardReadReply)
   GOOGLE_DCHECK_NE(&from, this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -1993,19 +1995,19 @@ void ReadReply::MergeFrom(const ReadReply& from) {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
-void ReadReply::CopyFrom(const ReadReply& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:ReadReply)
+void ShardReadReply::CopyFrom(const ShardReadReply& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:ShardReadReply)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-bool ReadReply::IsInitialized() const {
+bool ShardReadReply::IsInitialized() const {
   if (_Internal::MissingRequiredFields(_has_bits_)) return false;
   return true;
 }
 
-void ReadReply::InternalSwap(ReadReply* other) {
+void ShardReadReply::InternalSwap(ShardReadReply* other) {
   using std::swap;
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
@@ -2019,7 +2021,7 @@ void ReadReply::InternalSwap(ReadReply* other) {
   swap(err_, other->err_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata ReadReply::GetMetadata() const {
+::PROTOBUF_NAMESPACE_ID::Metadata ShardReadReply::GetMetadata() const {
   return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
       &descriptor_table_shardkv_2eproto_getter, &descriptor_table_shardkv_2eproto_once,
       file_level_metadata_shardkv_2eproto[7]);
@@ -2027,9 +2029,9 @@ void ReadReply::InternalSwap(ReadReply* other) {
 
 // ===================================================================
 
-class WriteArgs::_Internal {
+class ShardWriteArgs::_Internal {
  public:
-  using HasBits = decltype(std::declval<WriteArgs>()._has_bits_);
+  using HasBits = decltype(std::declval<ShardWriteArgs>()._has_bits_);
   static void set_has_tid(HasBits* has_bits) {
     (*has_bits)[0] |= 16u;
   }
@@ -2050,16 +2052,16 @@ class WriteArgs::_Internal {
   }
 };
 
-WriteArgs::WriteArgs(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+ShardWriteArgs::ShardWriteArgs(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor();
   if (!is_message_owned) {
     RegisterArenaDtor(arena);
   }
-  // @@protoc_insertion_point(arena_constructor:WriteArgs)
+  // @@protoc_insertion_point(arena_constructor:ShardWriteArgs)
 }
-WriteArgs::WriteArgs(const WriteArgs& from)
+ShardWriteArgs::ShardWriteArgs(const ShardWriteArgs& from)
   : ::PROTOBUF_NAMESPACE_ID::Message(),
       _has_bits_(from._has_bits_) {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
@@ -2082,10 +2084,10 @@ WriteArgs::WriteArgs(const WriteArgs& from)
   ::memcpy(&clientid_, &from.clientid_,
     static_cast<size_t>(reinterpret_cast<char*>(&tid_) -
     reinterpret_cast<char*>(&clientid_)) + sizeof(tid_));
-  // @@protoc_insertion_point(copy_constructor:WriteArgs)
+  // @@protoc_insertion_point(copy_constructor:ShardWriteArgs)
 }
 
-inline void WriteArgs::SharedCtor() {
+inline void ShardWriteArgs::SharedCtor() {
 key_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
   key_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), "", GetArenaForAllocation());
@@ -2100,31 +2102,31 @@ value_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlread
     reinterpret_cast<char*>(&clientid_)) + sizeof(tid_));
 }
 
-WriteArgs::~WriteArgs() {
-  // @@protoc_insertion_point(destructor:WriteArgs)
+ShardWriteArgs::~ShardWriteArgs() {
+  // @@protoc_insertion_point(destructor:ShardWriteArgs)
   if (GetArenaForAllocation() != nullptr) return;
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-inline void WriteArgs::SharedDtor() {
+inline void ShardWriteArgs::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
   key_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   value_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
-void WriteArgs::ArenaDtor(void* object) {
-  WriteArgs* _this = reinterpret_cast< WriteArgs* >(object);
+void ShardWriteArgs::ArenaDtor(void* object) {
+  ShardWriteArgs* _this = reinterpret_cast< ShardWriteArgs* >(object);
   (void)_this;
 }
-void WriteArgs::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+void ShardWriteArgs::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
 }
-void WriteArgs::SetCachedSize(int size) const {
+void ShardWriteArgs::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
 
-void WriteArgs::Clear() {
-// @@protoc_insertion_point(message_clear_start:WriteArgs)
+void ShardWriteArgs::Clear() {
+// @@protoc_insertion_point(message_clear_start:ShardWriteArgs)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -2147,7 +2149,7 @@ void WriteArgs::Clear() {
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* WriteArgs::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* ShardWriteArgs::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
@@ -2169,7 +2171,7 @@ const char* WriteArgs::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::
           auto str = _internal_mutable_key();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
           #ifndef NDEBUG
-          ::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "WriteArgs.key");
+          ::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "ShardWriteArgs.key");
           #endif  // !NDEBUG
           CHK_(ptr);
         } else
@@ -2181,7 +2183,7 @@ const char* WriteArgs::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::
           auto str = _internal_mutable_value();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
           #ifndef NDEBUG
-          ::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "WriteArgs.value");
+          ::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "ShardWriteArgs.value");
           #endif  // !NDEBUG
           CHK_(ptr);
         } else
@@ -2229,9 +2231,9 @@ failure:
 #undef CHK_
 }
 
-uint8_t* WriteArgs::_InternalSerialize(
+uint8_t* ShardWriteArgs::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:WriteArgs)
+  // @@protoc_insertion_point(serialize_to_array_start:ShardWriteArgs)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -2247,7 +2249,7 @@ uint8_t* WriteArgs::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
       this->_internal_key().data(), static_cast<int>(this->_internal_key().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "WriteArgs.key");
+      "ShardWriteArgs.key");
     target = stream->WriteStringMaybeAliased(
         2, this->_internal_key(), target);
   }
@@ -2257,7 +2259,7 @@ uint8_t* WriteArgs::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
       this->_internal_value().data(), static_cast<int>(this->_internal_value().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
-      "WriteArgs.value");
+      "ShardWriteArgs.value");
     target = stream->WriteStringMaybeAliased(
         3, this->_internal_value(), target);
   }
@@ -2278,12 +2280,12 @@ uint8_t* WriteArgs::_InternalSerialize(
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:WriteArgs)
+  // @@protoc_insertion_point(serialize_to_array_end:ShardWriteArgs)
   return target;
 }
 
-size_t WriteArgs::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:WriteArgs)
+size_t ShardWriteArgs::RequiredFieldsByteSizeFallback() const {
+// @@protoc_insertion_point(required_fields_byte_size_fallback_start:ShardWriteArgs)
   size_t total_size = 0;
 
   if (_internal_has_key()) {
@@ -2307,8 +2309,8 @@ size_t WriteArgs::RequiredFieldsByteSizeFallback() const {
 
   return total_size;
 }
-size_t WriteArgs::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:WriteArgs)
+size_t ShardWriteArgs::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:ShardWriteArgs)
   size_t total_size = 0;
 
   if (((_has_bits_[0] & 0x00000013) ^ 0x00000013) == 0) {  // All required fields are present.
@@ -2348,21 +2350,21 @@ size_t WriteArgs::ByteSizeLong() const {
   return MaybeComputeUnknownFieldsSize(total_size, &_cached_size_);
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData WriteArgs::_class_data_ = {
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData ShardWriteArgs::_class_data_ = {
     ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
-    WriteArgs::MergeImpl
+    ShardWriteArgs::MergeImpl
 };
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*WriteArgs::GetClassData() const { return &_class_data_; }
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*ShardWriteArgs::GetClassData() const { return &_class_data_; }
 
-void WriteArgs::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
+void ShardWriteArgs::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
                       const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-  static_cast<WriteArgs *>(to)->MergeFrom(
-      static_cast<const WriteArgs &>(from));
+  static_cast<ShardWriteArgs *>(to)->MergeFrom(
+      static_cast<const ShardWriteArgs &>(from));
 }
 
 
-void WriteArgs::MergeFrom(const WriteArgs& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:WriteArgs)
+void ShardWriteArgs::MergeFrom(const ShardWriteArgs& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:ShardWriteArgs)
   GOOGLE_DCHECK_NE(&from, this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -2389,19 +2391,19 @@ void WriteArgs::MergeFrom(const WriteArgs& from) {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
-void WriteArgs::CopyFrom(const WriteArgs& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:WriteArgs)
+void ShardWriteArgs::CopyFrom(const ShardWriteArgs& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:ShardWriteArgs)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-bool WriteArgs::IsInitialized() const {
+bool ShardWriteArgs::IsInitialized() const {
   if (_Internal::MissingRequiredFields(_has_bits_)) return false;
   return true;
 }
 
-void WriteArgs::InternalSwap(WriteArgs* other) {
+void ShardWriteArgs::InternalSwap(ShardWriteArgs* other) {
   using std::swap;
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
@@ -2418,14 +2420,14 @@ void WriteArgs::InternalSwap(WriteArgs* other) {
       &other->value_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(WriteArgs, tid_)
-      + sizeof(WriteArgs::tid_)
-      - PROTOBUF_FIELD_OFFSET(WriteArgs, clientid_)>(
+      PROTOBUF_FIELD_OFFSET(ShardWriteArgs, tid_)
+      + sizeof(ShardWriteArgs::tid_)
+      - PROTOBUF_FIELD_OFFSET(ShardWriteArgs, clientid_)>(
           reinterpret_cast<char*>(&clientid_),
           reinterpret_cast<char*>(&other->clientid_));
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata WriteArgs::GetMetadata() const {
+::PROTOBUF_NAMESPACE_ID::Metadata ShardWriteArgs::GetMetadata() const {
   return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
       &descriptor_table_shardkv_2eproto_getter, &descriptor_table_shardkv_2eproto_once,
       file_level_metadata_shardkv_2eproto[8]);
@@ -2433,9 +2435,9 @@ void WriteArgs::InternalSwap(WriteArgs* other) {
 
 // ===================================================================
 
-class WriteReply::_Internal {
+class ShardWriteReply::_Internal {
  public:
-  using HasBits = decltype(std::declval<WriteReply>()._has_bits_);
+  using HasBits = decltype(std::declval<ShardWriteReply>()._has_bits_);
   static void set_has_err(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
@@ -2444,50 +2446,50 @@ class WriteReply::_Internal {
   }
 };
 
-WriteReply::WriteReply(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+ShardWriteReply::ShardWriteReply(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor();
   if (!is_message_owned) {
     RegisterArenaDtor(arena);
   }
-  // @@protoc_insertion_point(arena_constructor:WriteReply)
+  // @@protoc_insertion_point(arena_constructor:ShardWriteReply)
 }
-WriteReply::WriteReply(const WriteReply& from)
+ShardWriteReply::ShardWriteReply(const ShardWriteReply& from)
   : ::PROTOBUF_NAMESPACE_ID::Message(),
       _has_bits_(from._has_bits_) {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   err_ = from.err_;
-  // @@protoc_insertion_point(copy_constructor:WriteReply)
+  // @@protoc_insertion_point(copy_constructor:ShardWriteReply)
 }
 
-inline void WriteReply::SharedCtor() {
+inline void ShardWriteReply::SharedCtor() {
 err_ = 0;
 }
 
-WriteReply::~WriteReply() {
-  // @@protoc_insertion_point(destructor:WriteReply)
+ShardWriteReply::~ShardWriteReply() {
+  // @@protoc_insertion_point(destructor:ShardWriteReply)
   if (GetArenaForAllocation() != nullptr) return;
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-inline void WriteReply::SharedDtor() {
+inline void ShardWriteReply::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
 }
 
-void WriteReply::ArenaDtor(void* object) {
-  WriteReply* _this = reinterpret_cast< WriteReply* >(object);
+void ShardWriteReply::ArenaDtor(void* object) {
+  ShardWriteReply* _this = reinterpret_cast< ShardWriteReply* >(object);
   (void)_this;
 }
-void WriteReply::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+void ShardWriteReply::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
 }
-void WriteReply::SetCachedSize(int size) const {
+void ShardWriteReply::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
 
-void WriteReply::Clear() {
-// @@protoc_insertion_point(message_clear_start:WriteReply)
+void ShardWriteReply::Clear() {
+// @@protoc_insertion_point(message_clear_start:ShardWriteReply)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -2497,7 +2499,7 @@ void WriteReply::Clear() {
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* WriteReply::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* ShardWriteReply::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
@@ -2537,9 +2539,9 @@ failure:
 #undef CHK_
 }
 
-uint8_t* WriteReply::_InternalSerialize(
+uint8_t* ShardWriteReply::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:WriteReply)
+  // @@protoc_insertion_point(serialize_to_array_start:ShardWriteReply)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -2554,12 +2556,12 @@ uint8_t* WriteReply::_InternalSerialize(
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:WriteReply)
+  // @@protoc_insertion_point(serialize_to_array_end:ShardWriteReply)
   return target;
 }
 
-size_t WriteReply::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:WriteReply)
+size_t ShardWriteReply::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:ShardWriteReply)
   size_t total_size = 0;
 
   // required int32 err = 1;
@@ -2573,21 +2575,21 @@ size_t WriteReply::ByteSizeLong() const {
   return MaybeComputeUnknownFieldsSize(total_size, &_cached_size_);
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData WriteReply::_class_data_ = {
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData ShardWriteReply::_class_data_ = {
     ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
-    WriteReply::MergeImpl
+    ShardWriteReply::MergeImpl
 };
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*WriteReply::GetClassData() const { return &_class_data_; }
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*ShardWriteReply::GetClassData() const { return &_class_data_; }
 
-void WriteReply::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
+void ShardWriteReply::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
                       const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-  static_cast<WriteReply *>(to)->MergeFrom(
-      static_cast<const WriteReply &>(from));
+  static_cast<ShardWriteReply *>(to)->MergeFrom(
+      static_cast<const ShardWriteReply &>(from));
 }
 
 
-void WriteReply::MergeFrom(const WriteReply& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:WriteReply)
+void ShardWriteReply::MergeFrom(const ShardWriteReply& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:ShardWriteReply)
   GOOGLE_DCHECK_NE(&from, this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -2598,26 +2600,26 @@ void WriteReply::MergeFrom(const WriteReply& from) {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
-void WriteReply::CopyFrom(const WriteReply& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:WriteReply)
+void ShardWriteReply::CopyFrom(const ShardWriteReply& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:ShardWriteReply)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-bool WriteReply::IsInitialized() const {
+bool ShardWriteReply::IsInitialized() const {
   if (_Internal::MissingRequiredFields(_has_bits_)) return false;
   return true;
 }
 
-void WriteReply::InternalSwap(WriteReply* other) {
+void ShardWriteReply::InternalSwap(ShardWriteReply* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_has_bits_[0], other->_has_bits_[0]);
   swap(err_, other->err_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata WriteReply::GetMetadata() const {
+::PROTOBUF_NAMESPACE_ID::Metadata ShardWriteReply::GetMetadata() const {
   return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
       &descriptor_table_shardkv_2eproto_getter, &descriptor_table_shardkv_2eproto_once,
       file_level_metadata_shardkv_2eproto[9]);
@@ -3050,40 +3052,40 @@ const ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor* ShardKvBase::GetDescriptor() {
 }
 
 void ShardKvBase::PrepareRead(::PROTOBUF_NAMESPACE_ID::RpcController* controller,
-                         const ::ReadArgs*,
-                         ::ReadReply*,
+                         const ::ShardReadArgs*,
+                         ::ShardReadReply*,
                          ::google::protobuf::Closure* done) {
   controller->SetFailed("Method PrepareRead() not implemented.");
   done->Run();
 }
 
 void ShardKvBase::PrepareWrite(::PROTOBUF_NAMESPACE_ID::RpcController* controller,
-                         const ::WriteArgs*,
-                         ::WriteReply*,
+                         const ::ShardWriteArgs*,
+                         ::ShardWriteReply*,
                          ::google::protobuf::Closure* done) {
   controller->SetFailed("Method PrepareWrite() not implemented.");
   done->Run();
 }
 
 void ShardKvBase::BEGIN(::PROTOBUF_NAMESPACE_ID::RpcController* controller,
-                         const ::BeginArgs*,
-                         ::BeginReply*,
+                         const ::ShardBeginArgs*,
+                         ::ShardBeginReply*,
                          ::google::protobuf::Closure* done) {
   controller->SetFailed("Method BEGIN() not implemented.");
   done->Run();
 }
 
 void ShardKvBase::END(::PROTOBUF_NAMESPACE_ID::RpcController* controller,
-                         const ::EndArgs*,
-                         ::EndReply*,
+                         const ::ShardEndArgs*,
+                         ::ShardEndReply*,
                          ::google::protobuf::Closure* done) {
   controller->SetFailed("Method END() not implemented.");
   done->Run();
 }
 
 void ShardKvBase::ABORT(::PROTOBUF_NAMESPACE_ID::RpcController* controller,
-                         const ::AbortArgs*,
-                         ::AbortReply*,
+                         const ::ShardAbortArgs*,
+                         ::ShardAbortReply*,
                          ::google::protobuf::Closure* done) {
   controller->SetFailed("Method ABORT() not implemented.");
   done->Run();
@@ -3106,41 +3108,41 @@ void ShardKvBase::CallMethod(const ::PROTOBUF_NAMESPACE_ID::MethodDescriptor* me
   switch(method->index()) {
     case 0:
       PrepareRead(controller,
-             ::PROTOBUF_NAMESPACE_ID::internal::DownCast<const ::ReadArgs*>(
+             ::PROTOBUF_NAMESPACE_ID::internal::DownCast<const ::ShardReadArgs*>(
                  request),
-             ::PROTOBUF_NAMESPACE_ID::internal::DownCast<::ReadReply*>(
+             ::PROTOBUF_NAMESPACE_ID::internal::DownCast<::ShardReadReply*>(
                  response),
              done);
       break;
     case 1:
       PrepareWrite(controller,
-             ::PROTOBUF_NAMESPACE_ID::internal::DownCast<const ::WriteArgs*>(
+             ::PROTOBUF_NAMESPACE_ID::internal::DownCast<const ::ShardWriteArgs*>(
                  request),
-             ::PROTOBUF_NAMESPACE_ID::internal::DownCast<::WriteReply*>(
+             ::PROTOBUF_NAMESPACE_ID::internal::DownCast<::ShardWriteReply*>(
                  response),
              done);
       break;
     case 2:
       BEGIN(controller,
-             ::PROTOBUF_NAMESPACE_ID::internal::DownCast<const ::BeginArgs*>(
+             ::PROTOBUF_NAMESPACE_ID::internal::DownCast<const ::ShardBeginArgs*>(
                  request),
-             ::PROTOBUF_NAMESPACE_ID::internal::DownCast<::BeginReply*>(
+             ::PROTOBUF_NAMESPACE_ID::internal::DownCast<::ShardBeginReply*>(
                  response),
              done);
       break;
     case 3:
       END(controller,
-             ::PROTOBUF_NAMESPACE_ID::internal::DownCast<const ::EndArgs*>(
+             ::PROTOBUF_NAMESPACE_ID::internal::DownCast<const ::ShardEndArgs*>(
                  request),
-             ::PROTOBUF_NAMESPACE_ID::internal::DownCast<::EndReply*>(
+             ::PROTOBUF_NAMESPACE_ID::internal::DownCast<::ShardEndReply*>(
                  response),
              done);
       break;
     case 4:
       ABORT(controller,
-             ::PROTOBUF_NAMESPACE_ID::internal::DownCast<const ::AbortArgs*>(
+             ::PROTOBUF_NAMESPACE_ID::internal::DownCast<const ::ShardAbortArgs*>(
                  request),
-             ::PROTOBUF_NAMESPACE_ID::internal::DownCast<::AbortReply*>(
+             ::PROTOBUF_NAMESPACE_ID::internal::DownCast<::ShardAbortReply*>(
                  response),
              done);
       break;
@@ -3163,15 +3165,15 @@ const ::PROTOBUF_NAMESPACE_ID::Message& ShardKvBase::GetRequestPrototype(
   GOOGLE_DCHECK_EQ(method->service(), descriptor());
   switch(method->index()) {
     case 0:
-      return ::ReadArgs::default_instance();
+      return ::ShardReadArgs::default_instance();
     case 1:
-      return ::WriteArgs::default_instance();
+      return ::ShardWriteArgs::default_instance();
     case 2:
-      return ::BeginArgs::default_instance();
+      return ::ShardBeginArgs::default_instance();
     case 3:
-      return ::EndArgs::default_instance();
+      return ::ShardEndArgs::default_instance();
     case 4:
-      return ::AbortArgs::default_instance();
+      return ::ShardAbortArgs::default_instance();
     case 5:
       return ::ConnectArgs::default_instance();
     default:
@@ -3186,15 +3188,15 @@ const ::PROTOBUF_NAMESPACE_ID::Message& ShardKvBase::GetResponsePrototype(
   GOOGLE_DCHECK_EQ(method->service(), descriptor());
   switch(method->index()) {
     case 0:
-      return ::ReadReply::default_instance();
+      return ::ShardReadReply::default_instance();
     case 1:
-      return ::WriteReply::default_instance();
+      return ::ShardWriteReply::default_instance();
     case 2:
-      return ::BeginReply::default_instance();
+      return ::ShardBeginReply::default_instance();
     case 3:
-      return ::EndReply::default_instance();
+      return ::ShardEndReply::default_instance();
     case 4:
-      return ::AbortReply::default_instance();
+      return ::ShardAbortReply::default_instance();
     case 5:
       return ::ConnectReply::default_instance();
     default:
@@ -3216,36 +3218,36 @@ ShardKvBase_Stub::~ShardKvBase_Stub() {
 }
 
 void ShardKvBase_Stub::PrepareRead(::PROTOBUF_NAMESPACE_ID::RpcController* controller,
-                              const ::ReadArgs* request,
-                              ::ReadReply* response,
+                              const ::ShardReadArgs* request,
+                              ::ShardReadReply* response,
                               ::google::protobuf::Closure* done) {
   channel_->CallMethod(descriptor()->method(0),
                        controller, request, response, done);
 }
 void ShardKvBase_Stub::PrepareWrite(::PROTOBUF_NAMESPACE_ID::RpcController* controller,
-                              const ::WriteArgs* request,
-                              ::WriteReply* response,
+                              const ::ShardWriteArgs* request,
+                              ::ShardWriteReply* response,
                               ::google::protobuf::Closure* done) {
   channel_->CallMethod(descriptor()->method(1),
                        controller, request, response, done);
 }
 void ShardKvBase_Stub::BEGIN(::PROTOBUF_NAMESPACE_ID::RpcController* controller,
-                              const ::BeginArgs* request,
-                              ::BeginReply* response,
+                              const ::ShardBeginArgs* request,
+                              ::ShardBeginReply* response,
                               ::google::protobuf::Closure* done) {
   channel_->CallMethod(descriptor()->method(2),
                        controller, request, response, done);
 }
 void ShardKvBase_Stub::END(::PROTOBUF_NAMESPACE_ID::RpcController* controller,
-                              const ::EndArgs* request,
-                              ::EndReply* response,
+                              const ::ShardEndArgs* request,
+                              ::ShardEndReply* response,
                               ::google::protobuf::Closure* done) {
   channel_->CallMethod(descriptor()->method(3),
                        controller, request, response, done);
 }
 void ShardKvBase_Stub::ABORT(::PROTOBUF_NAMESPACE_ID::RpcController* controller,
-                              const ::AbortArgs* request,
-                              ::AbortReply* response,
+                              const ::ShardAbortArgs* request,
+                              ::ShardAbortReply* response,
                               ::google::protobuf::Closure* done) {
   channel_->CallMethod(descriptor()->method(4),
                        controller, request, response, done);
@@ -3260,35 +3262,35 @@ void ShardKvBase_Stub::CONNECT(::PROTOBUF_NAMESPACE_ID::RpcController* controlle
 
 // @@protoc_insertion_point(namespace_scope)
 PROTOBUF_NAMESPACE_OPEN
-template<> PROTOBUF_NOINLINE ::BeginArgs* Arena::CreateMaybeMessage< ::BeginArgs >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::BeginArgs >(arena);
+template<> PROTOBUF_NOINLINE ::ShardBeginArgs* Arena::CreateMaybeMessage< ::ShardBeginArgs >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::ShardBeginArgs >(arena);
 }
-template<> PROTOBUF_NOINLINE ::BeginReply* Arena::CreateMaybeMessage< ::BeginReply >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::BeginReply >(arena);
+template<> PROTOBUF_NOINLINE ::ShardBeginReply* Arena::CreateMaybeMessage< ::ShardBeginReply >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::ShardBeginReply >(arena);
 }
-template<> PROTOBUF_NOINLINE ::EndArgs* Arena::CreateMaybeMessage< ::EndArgs >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::EndArgs >(arena);
+template<> PROTOBUF_NOINLINE ::ShardEndArgs* Arena::CreateMaybeMessage< ::ShardEndArgs >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::ShardEndArgs >(arena);
 }
-template<> PROTOBUF_NOINLINE ::EndReply* Arena::CreateMaybeMessage< ::EndReply >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::EndReply >(arena);
+template<> PROTOBUF_NOINLINE ::ShardEndReply* Arena::CreateMaybeMessage< ::ShardEndReply >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::ShardEndReply >(arena);
 }
-template<> PROTOBUF_NOINLINE ::AbortArgs* Arena::CreateMaybeMessage< ::AbortArgs >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::AbortArgs >(arena);
+template<> PROTOBUF_NOINLINE ::ShardAbortArgs* Arena::CreateMaybeMessage< ::ShardAbortArgs >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::ShardAbortArgs >(arena);
 }
-template<> PROTOBUF_NOINLINE ::AbortReply* Arena::CreateMaybeMessage< ::AbortReply >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::AbortReply >(arena);
+template<> PROTOBUF_NOINLINE ::ShardAbortReply* Arena::CreateMaybeMessage< ::ShardAbortReply >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::ShardAbortReply >(arena);
 }
-template<> PROTOBUF_NOINLINE ::ReadArgs* Arena::CreateMaybeMessage< ::ReadArgs >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::ReadArgs >(arena);
+template<> PROTOBUF_NOINLINE ::ShardReadArgs* Arena::CreateMaybeMessage< ::ShardReadArgs >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::ShardReadArgs >(arena);
 }
-template<> PROTOBUF_NOINLINE ::ReadReply* Arena::CreateMaybeMessage< ::ReadReply >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::ReadReply >(arena);
+template<> PROTOBUF_NOINLINE ::ShardReadReply* Arena::CreateMaybeMessage< ::ShardReadReply >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::ShardReadReply >(arena);
 }
-template<> PROTOBUF_NOINLINE ::WriteArgs* Arena::CreateMaybeMessage< ::WriteArgs >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::WriteArgs >(arena);
+template<> PROTOBUF_NOINLINE ::ShardWriteArgs* Arena::CreateMaybeMessage< ::ShardWriteArgs >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::ShardWriteArgs >(arena);
 }
-template<> PROTOBUF_NOINLINE ::WriteReply* Arena::CreateMaybeMessage< ::WriteReply >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::WriteReply >(arena);
+template<> PROTOBUF_NOINLINE ::ShardWriteReply* Arena::CreateMaybeMessage< ::ShardWriteReply >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::ShardWriteReply >(arena);
 }
 template<> PROTOBUF_NOINLINE ::ConnectArgs* Arena::CreateMaybeMessage< ::ConnectArgs >(Arena* arena) {
   return Arena::CreateMessageInternal< ::ConnectArgs >(arena);

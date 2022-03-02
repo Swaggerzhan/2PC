@@ -7,11 +7,11 @@
 
   #define	FORCE_INLINE __attribute__((always_inline))
 
-  FORCE_INLINE uint32_t rotl32 ( uint32_t x, int8_t r ){ return (x << r) | (x >> (32 - r)); }
-  FORCE_INLINE uint64_t rotl64 ( uint64_t x, int8_t r ){ return (x << r) | (x >> (64 - r)); }
-  FORCE_INLINE uint32_t rotr32 ( uint32_t x, int8_t r ){ return (x >> r) | (x << (32 - r)); }
-  FORCE_INLINE uint64_t rotr64 ( uint64_t x, int8_t r ){ return (x >> r) | (x << (64 - r)); }
-  FORCE_INLINE unsigned long long int rdtsc(){ unsigned long long int x; __asm__ volatile ("rdtsc" : "=A" (x)); return x; }
+  FORCE_INLINE uint32_t rotl32 ( uint32_t x, int8_t r );
+  FORCE_INLINE uint64_t rotl64 ( uint64_t x, int8_t r );
+  FORCE_INLINE uint32_t rotr32 ( uint32_t x, int8_t r );
+  FORCE_INLINE uint64_t rotr64 ( uint64_t x, int8_t r );
+  FORCE_INLINE unsigned long long int rdtsc();
 
   #define	ROTL32(x,y)	rotl32(x,y)
   #define ROTL64(x,y)	rotl64(x,y)

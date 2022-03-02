@@ -54,77 +54,77 @@ struct TableStruct_shardkv_2eproto {
   static const uint32_t offsets[];
 };
 extern const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_shardkv_2eproto;
-class AbortArgs;
-struct AbortArgsDefaultTypeInternal;
-extern AbortArgsDefaultTypeInternal _AbortArgs_default_instance_;
-class AbortReply;
-struct AbortReplyDefaultTypeInternal;
-extern AbortReplyDefaultTypeInternal _AbortReply_default_instance_;
-class BeginArgs;
-struct BeginArgsDefaultTypeInternal;
-extern BeginArgsDefaultTypeInternal _BeginArgs_default_instance_;
-class BeginReply;
-struct BeginReplyDefaultTypeInternal;
-extern BeginReplyDefaultTypeInternal _BeginReply_default_instance_;
 class ConnectArgs;
 struct ConnectArgsDefaultTypeInternal;
 extern ConnectArgsDefaultTypeInternal _ConnectArgs_default_instance_;
 class ConnectReply;
 struct ConnectReplyDefaultTypeInternal;
 extern ConnectReplyDefaultTypeInternal _ConnectReply_default_instance_;
-class EndArgs;
-struct EndArgsDefaultTypeInternal;
-extern EndArgsDefaultTypeInternal _EndArgs_default_instance_;
-class EndReply;
-struct EndReplyDefaultTypeInternal;
-extern EndReplyDefaultTypeInternal _EndReply_default_instance_;
-class ReadArgs;
-struct ReadArgsDefaultTypeInternal;
-extern ReadArgsDefaultTypeInternal _ReadArgs_default_instance_;
-class ReadReply;
-struct ReadReplyDefaultTypeInternal;
-extern ReadReplyDefaultTypeInternal _ReadReply_default_instance_;
-class WriteArgs;
-struct WriteArgsDefaultTypeInternal;
-extern WriteArgsDefaultTypeInternal _WriteArgs_default_instance_;
-class WriteReply;
-struct WriteReplyDefaultTypeInternal;
-extern WriteReplyDefaultTypeInternal _WriteReply_default_instance_;
+class ShardAbortArgs;
+struct ShardAbortArgsDefaultTypeInternal;
+extern ShardAbortArgsDefaultTypeInternal _ShardAbortArgs_default_instance_;
+class ShardAbortReply;
+struct ShardAbortReplyDefaultTypeInternal;
+extern ShardAbortReplyDefaultTypeInternal _ShardAbortReply_default_instance_;
+class ShardBeginArgs;
+struct ShardBeginArgsDefaultTypeInternal;
+extern ShardBeginArgsDefaultTypeInternal _ShardBeginArgs_default_instance_;
+class ShardBeginReply;
+struct ShardBeginReplyDefaultTypeInternal;
+extern ShardBeginReplyDefaultTypeInternal _ShardBeginReply_default_instance_;
+class ShardEndArgs;
+struct ShardEndArgsDefaultTypeInternal;
+extern ShardEndArgsDefaultTypeInternal _ShardEndArgs_default_instance_;
+class ShardEndReply;
+struct ShardEndReplyDefaultTypeInternal;
+extern ShardEndReplyDefaultTypeInternal _ShardEndReply_default_instance_;
+class ShardReadArgs;
+struct ShardReadArgsDefaultTypeInternal;
+extern ShardReadArgsDefaultTypeInternal _ShardReadArgs_default_instance_;
+class ShardReadReply;
+struct ShardReadReplyDefaultTypeInternal;
+extern ShardReadReplyDefaultTypeInternal _ShardReadReply_default_instance_;
+class ShardWriteArgs;
+struct ShardWriteArgsDefaultTypeInternal;
+extern ShardWriteArgsDefaultTypeInternal _ShardWriteArgs_default_instance_;
+class ShardWriteReply;
+struct ShardWriteReplyDefaultTypeInternal;
+extern ShardWriteReplyDefaultTypeInternal _ShardWriteReply_default_instance_;
 PROTOBUF_NAMESPACE_OPEN
-template<> ::AbortArgs* Arena::CreateMaybeMessage<::AbortArgs>(Arena*);
-template<> ::AbortReply* Arena::CreateMaybeMessage<::AbortReply>(Arena*);
-template<> ::BeginArgs* Arena::CreateMaybeMessage<::BeginArgs>(Arena*);
-template<> ::BeginReply* Arena::CreateMaybeMessage<::BeginReply>(Arena*);
 template<> ::ConnectArgs* Arena::CreateMaybeMessage<::ConnectArgs>(Arena*);
 template<> ::ConnectReply* Arena::CreateMaybeMessage<::ConnectReply>(Arena*);
-template<> ::EndArgs* Arena::CreateMaybeMessage<::EndArgs>(Arena*);
-template<> ::EndReply* Arena::CreateMaybeMessage<::EndReply>(Arena*);
-template<> ::ReadArgs* Arena::CreateMaybeMessage<::ReadArgs>(Arena*);
-template<> ::ReadReply* Arena::CreateMaybeMessage<::ReadReply>(Arena*);
-template<> ::WriteArgs* Arena::CreateMaybeMessage<::WriteArgs>(Arena*);
-template<> ::WriteReply* Arena::CreateMaybeMessage<::WriteReply>(Arena*);
+template<> ::ShardAbortArgs* Arena::CreateMaybeMessage<::ShardAbortArgs>(Arena*);
+template<> ::ShardAbortReply* Arena::CreateMaybeMessage<::ShardAbortReply>(Arena*);
+template<> ::ShardBeginArgs* Arena::CreateMaybeMessage<::ShardBeginArgs>(Arena*);
+template<> ::ShardBeginReply* Arena::CreateMaybeMessage<::ShardBeginReply>(Arena*);
+template<> ::ShardEndArgs* Arena::CreateMaybeMessage<::ShardEndArgs>(Arena*);
+template<> ::ShardEndReply* Arena::CreateMaybeMessage<::ShardEndReply>(Arena*);
+template<> ::ShardReadArgs* Arena::CreateMaybeMessage<::ShardReadArgs>(Arena*);
+template<> ::ShardReadReply* Arena::CreateMaybeMessage<::ShardReadReply>(Arena*);
+template<> ::ShardWriteArgs* Arena::CreateMaybeMessage<::ShardWriteArgs>(Arena*);
+template<> ::ShardWriteReply* Arena::CreateMaybeMessage<::ShardWriteReply>(Arena*);
 PROTOBUF_NAMESPACE_CLOSE
 
 // ===================================================================
 
-class BeginArgs final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:BeginArgs) */ {
+class ShardBeginArgs final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:ShardBeginArgs) */ {
  public:
-  inline BeginArgs() : BeginArgs(nullptr) {}
-  ~BeginArgs() override;
-  explicit constexpr BeginArgs(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+  inline ShardBeginArgs() : ShardBeginArgs(nullptr) {}
+  ~ShardBeginArgs() override;
+  explicit constexpr ShardBeginArgs(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
-  BeginArgs(const BeginArgs& from);
-  BeginArgs(BeginArgs&& from) noexcept
-    : BeginArgs() {
+  ShardBeginArgs(const ShardBeginArgs& from);
+  ShardBeginArgs(ShardBeginArgs&& from) noexcept
+    : ShardBeginArgs() {
     *this = ::std::move(from);
   }
 
-  inline BeginArgs& operator=(const BeginArgs& from) {
+  inline ShardBeginArgs& operator=(const ShardBeginArgs& from) {
     CopyFrom(from);
     return *this;
   }
-  inline BeginArgs& operator=(BeginArgs&& from) noexcept {
+  inline ShardBeginArgs& operator=(ShardBeginArgs&& from) noexcept {
     if (this == &from) return *this;
     if (GetOwningArena() == from.GetOwningArena()
   #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
@@ -154,20 +154,20 @@ class BeginArgs final :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const BeginArgs& default_instance() {
+  static const ShardBeginArgs& default_instance() {
     return *internal_default_instance();
   }
-  static inline const BeginArgs* internal_default_instance() {
-    return reinterpret_cast<const BeginArgs*>(
-               &_BeginArgs_default_instance_);
+  static inline const ShardBeginArgs* internal_default_instance() {
+    return reinterpret_cast<const ShardBeginArgs*>(
+               &_ShardBeginArgs_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     0;
 
-  friend void swap(BeginArgs& a, BeginArgs& b) {
+  friend void swap(ShardBeginArgs& a, ShardBeginArgs& b) {
     a.Swap(&b);
   }
-  inline void Swap(BeginArgs* other) {
+  inline void Swap(ShardBeginArgs* other) {
     if (other == this) return;
   #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
     if (GetOwningArena() != nullptr &&
@@ -180,7 +180,7 @@ class BeginArgs final :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(BeginArgs* other) {
+  void UnsafeArenaSwap(ShardBeginArgs* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
     InternalSwap(other);
@@ -188,13 +188,13 @@ class BeginArgs final :
 
   // implements Message ----------------------------------------------
 
-  BeginArgs* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<BeginArgs>(arena);
+  ShardBeginArgs* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<ShardBeginArgs>(arena);
   }
   using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
-  void CopyFrom(const BeginArgs& from);
+  void CopyFrom(const ShardBeginArgs& from);
   using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom(const BeginArgs& from);
+  void MergeFrom(const ShardBeginArgs& from);
   private:
   static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to, const ::PROTOBUF_NAMESPACE_ID::Message& from);
   public:
@@ -211,15 +211,15 @@ class BeginArgs final :
   void SharedCtor();
   void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(BeginArgs* other);
+  void InternalSwap(ShardBeginArgs* other);
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "BeginArgs";
+    return "ShardBeginArgs";
   }
   protected:
-  explicit BeginArgs(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+  explicit ShardBeginArgs(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                        bool is_message_owned = false);
   private:
   static void ArenaDtor(void* object);
@@ -251,7 +251,7 @@ class BeginArgs final :
   void _internal_set_tid(int32_t value);
   public:
 
-  // @@protoc_insertion_point(class_scope:BeginArgs)
+  // @@protoc_insertion_point(class_scope:ShardBeginArgs)
  private:
   class _Internal;
 
@@ -265,24 +265,24 @@ class BeginArgs final :
 };
 // -------------------------------------------------------------------
 
-class BeginReply final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:BeginReply) */ {
+class ShardBeginReply final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:ShardBeginReply) */ {
  public:
-  inline BeginReply() : BeginReply(nullptr) {}
-  ~BeginReply() override;
-  explicit constexpr BeginReply(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+  inline ShardBeginReply() : ShardBeginReply(nullptr) {}
+  ~ShardBeginReply() override;
+  explicit constexpr ShardBeginReply(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
-  BeginReply(const BeginReply& from);
-  BeginReply(BeginReply&& from) noexcept
-    : BeginReply() {
+  ShardBeginReply(const ShardBeginReply& from);
+  ShardBeginReply(ShardBeginReply&& from) noexcept
+    : ShardBeginReply() {
     *this = ::std::move(from);
   }
 
-  inline BeginReply& operator=(const BeginReply& from) {
+  inline ShardBeginReply& operator=(const ShardBeginReply& from) {
     CopyFrom(from);
     return *this;
   }
-  inline BeginReply& operator=(BeginReply&& from) noexcept {
+  inline ShardBeginReply& operator=(ShardBeginReply&& from) noexcept {
     if (this == &from) return *this;
     if (GetOwningArena() == from.GetOwningArena()
   #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
@@ -312,20 +312,20 @@ class BeginReply final :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const BeginReply& default_instance() {
+  static const ShardBeginReply& default_instance() {
     return *internal_default_instance();
   }
-  static inline const BeginReply* internal_default_instance() {
-    return reinterpret_cast<const BeginReply*>(
-               &_BeginReply_default_instance_);
+  static inline const ShardBeginReply* internal_default_instance() {
+    return reinterpret_cast<const ShardBeginReply*>(
+               &_ShardBeginReply_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     1;
 
-  friend void swap(BeginReply& a, BeginReply& b) {
+  friend void swap(ShardBeginReply& a, ShardBeginReply& b) {
     a.Swap(&b);
   }
-  inline void Swap(BeginReply* other) {
+  inline void Swap(ShardBeginReply* other) {
     if (other == this) return;
   #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
     if (GetOwningArena() != nullptr &&
@@ -338,7 +338,7 @@ class BeginReply final :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(BeginReply* other) {
+  void UnsafeArenaSwap(ShardBeginReply* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
     InternalSwap(other);
@@ -346,13 +346,13 @@ class BeginReply final :
 
   // implements Message ----------------------------------------------
 
-  BeginReply* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<BeginReply>(arena);
+  ShardBeginReply* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<ShardBeginReply>(arena);
   }
   using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
-  void CopyFrom(const BeginReply& from);
+  void CopyFrom(const ShardBeginReply& from);
   using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom(const BeginReply& from);
+  void MergeFrom(const ShardBeginReply& from);
   private:
   static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to, const ::PROTOBUF_NAMESPACE_ID::Message& from);
   public:
@@ -369,15 +369,15 @@ class BeginReply final :
   void SharedCtor();
   void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(BeginReply* other);
+  void InternalSwap(ShardBeginReply* other);
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "BeginReply";
+    return "ShardBeginReply";
   }
   protected:
-  explicit BeginReply(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+  explicit ShardBeginReply(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                        bool is_message_owned = false);
   private:
   static void ArenaDtor(void* object);
@@ -409,7 +409,7 @@ class BeginReply final :
   void _internal_set_err(int32_t value);
   public:
 
-  // @@protoc_insertion_point(class_scope:BeginReply)
+  // @@protoc_insertion_point(class_scope:ShardBeginReply)
  private:
   class _Internal;
 
@@ -423,24 +423,24 @@ class BeginReply final :
 };
 // -------------------------------------------------------------------
 
-class EndArgs final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:EndArgs) */ {
+class ShardEndArgs final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:ShardEndArgs) */ {
  public:
-  inline EndArgs() : EndArgs(nullptr) {}
-  ~EndArgs() override;
-  explicit constexpr EndArgs(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+  inline ShardEndArgs() : ShardEndArgs(nullptr) {}
+  ~ShardEndArgs() override;
+  explicit constexpr ShardEndArgs(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
-  EndArgs(const EndArgs& from);
-  EndArgs(EndArgs&& from) noexcept
-    : EndArgs() {
+  ShardEndArgs(const ShardEndArgs& from);
+  ShardEndArgs(ShardEndArgs&& from) noexcept
+    : ShardEndArgs() {
     *this = ::std::move(from);
   }
 
-  inline EndArgs& operator=(const EndArgs& from) {
+  inline ShardEndArgs& operator=(const ShardEndArgs& from) {
     CopyFrom(from);
     return *this;
   }
-  inline EndArgs& operator=(EndArgs&& from) noexcept {
+  inline ShardEndArgs& operator=(ShardEndArgs&& from) noexcept {
     if (this == &from) return *this;
     if (GetOwningArena() == from.GetOwningArena()
   #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
@@ -470,20 +470,20 @@ class EndArgs final :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const EndArgs& default_instance() {
+  static const ShardEndArgs& default_instance() {
     return *internal_default_instance();
   }
-  static inline const EndArgs* internal_default_instance() {
-    return reinterpret_cast<const EndArgs*>(
-               &_EndArgs_default_instance_);
+  static inline const ShardEndArgs* internal_default_instance() {
+    return reinterpret_cast<const ShardEndArgs*>(
+               &_ShardEndArgs_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     2;
 
-  friend void swap(EndArgs& a, EndArgs& b) {
+  friend void swap(ShardEndArgs& a, ShardEndArgs& b) {
     a.Swap(&b);
   }
-  inline void Swap(EndArgs* other) {
+  inline void Swap(ShardEndArgs* other) {
     if (other == this) return;
   #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
     if (GetOwningArena() != nullptr &&
@@ -496,7 +496,7 @@ class EndArgs final :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(EndArgs* other) {
+  void UnsafeArenaSwap(ShardEndArgs* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
     InternalSwap(other);
@@ -504,13 +504,13 @@ class EndArgs final :
 
   // implements Message ----------------------------------------------
 
-  EndArgs* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<EndArgs>(arena);
+  ShardEndArgs* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<ShardEndArgs>(arena);
   }
   using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
-  void CopyFrom(const EndArgs& from);
+  void CopyFrom(const ShardEndArgs& from);
   using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom(const EndArgs& from);
+  void MergeFrom(const ShardEndArgs& from);
   private:
   static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to, const ::PROTOBUF_NAMESPACE_ID::Message& from);
   public:
@@ -527,15 +527,15 @@ class EndArgs final :
   void SharedCtor();
   void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(EndArgs* other);
+  void InternalSwap(ShardEndArgs* other);
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "EndArgs";
+    return "ShardEndArgs";
   }
   protected:
-  explicit EndArgs(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+  explicit ShardEndArgs(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                        bool is_message_owned = false);
   private:
   static void ArenaDtor(void* object);
@@ -567,7 +567,7 @@ class EndArgs final :
   void _internal_set_tid(int32_t value);
   public:
 
-  // @@protoc_insertion_point(class_scope:EndArgs)
+  // @@protoc_insertion_point(class_scope:ShardEndArgs)
  private:
   class _Internal;
 
@@ -581,24 +581,24 @@ class EndArgs final :
 };
 // -------------------------------------------------------------------
 
-class EndReply final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:EndReply) */ {
+class ShardEndReply final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:ShardEndReply) */ {
  public:
-  inline EndReply() : EndReply(nullptr) {}
-  ~EndReply() override;
-  explicit constexpr EndReply(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+  inline ShardEndReply() : ShardEndReply(nullptr) {}
+  ~ShardEndReply() override;
+  explicit constexpr ShardEndReply(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
-  EndReply(const EndReply& from);
-  EndReply(EndReply&& from) noexcept
-    : EndReply() {
+  ShardEndReply(const ShardEndReply& from);
+  ShardEndReply(ShardEndReply&& from) noexcept
+    : ShardEndReply() {
     *this = ::std::move(from);
   }
 
-  inline EndReply& operator=(const EndReply& from) {
+  inline ShardEndReply& operator=(const ShardEndReply& from) {
     CopyFrom(from);
     return *this;
   }
-  inline EndReply& operator=(EndReply&& from) noexcept {
+  inline ShardEndReply& operator=(ShardEndReply&& from) noexcept {
     if (this == &from) return *this;
     if (GetOwningArena() == from.GetOwningArena()
   #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
@@ -628,20 +628,20 @@ class EndReply final :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const EndReply& default_instance() {
+  static const ShardEndReply& default_instance() {
     return *internal_default_instance();
   }
-  static inline const EndReply* internal_default_instance() {
-    return reinterpret_cast<const EndReply*>(
-               &_EndReply_default_instance_);
+  static inline const ShardEndReply* internal_default_instance() {
+    return reinterpret_cast<const ShardEndReply*>(
+               &_ShardEndReply_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     3;
 
-  friend void swap(EndReply& a, EndReply& b) {
+  friend void swap(ShardEndReply& a, ShardEndReply& b) {
     a.Swap(&b);
   }
-  inline void Swap(EndReply* other) {
+  inline void Swap(ShardEndReply* other) {
     if (other == this) return;
   #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
     if (GetOwningArena() != nullptr &&
@@ -654,7 +654,7 @@ class EndReply final :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(EndReply* other) {
+  void UnsafeArenaSwap(ShardEndReply* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
     InternalSwap(other);
@@ -662,13 +662,13 @@ class EndReply final :
 
   // implements Message ----------------------------------------------
 
-  EndReply* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<EndReply>(arena);
+  ShardEndReply* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<ShardEndReply>(arena);
   }
   using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
-  void CopyFrom(const EndReply& from);
+  void CopyFrom(const ShardEndReply& from);
   using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom(const EndReply& from);
+  void MergeFrom(const ShardEndReply& from);
   private:
   static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to, const ::PROTOBUF_NAMESPACE_ID::Message& from);
   public:
@@ -685,15 +685,15 @@ class EndReply final :
   void SharedCtor();
   void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(EndReply* other);
+  void InternalSwap(ShardEndReply* other);
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "EndReply";
+    return "ShardEndReply";
   }
   protected:
-  explicit EndReply(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+  explicit ShardEndReply(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                        bool is_message_owned = false);
   private:
   static void ArenaDtor(void* object);
@@ -725,7 +725,7 @@ class EndReply final :
   void _internal_set_err(int32_t value);
   public:
 
-  // @@protoc_insertion_point(class_scope:EndReply)
+  // @@protoc_insertion_point(class_scope:ShardEndReply)
  private:
   class _Internal;
 
@@ -739,24 +739,24 @@ class EndReply final :
 };
 // -------------------------------------------------------------------
 
-class AbortArgs final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:AbortArgs) */ {
+class ShardAbortArgs final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:ShardAbortArgs) */ {
  public:
-  inline AbortArgs() : AbortArgs(nullptr) {}
-  ~AbortArgs() override;
-  explicit constexpr AbortArgs(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+  inline ShardAbortArgs() : ShardAbortArgs(nullptr) {}
+  ~ShardAbortArgs() override;
+  explicit constexpr ShardAbortArgs(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
-  AbortArgs(const AbortArgs& from);
-  AbortArgs(AbortArgs&& from) noexcept
-    : AbortArgs() {
+  ShardAbortArgs(const ShardAbortArgs& from);
+  ShardAbortArgs(ShardAbortArgs&& from) noexcept
+    : ShardAbortArgs() {
     *this = ::std::move(from);
   }
 
-  inline AbortArgs& operator=(const AbortArgs& from) {
+  inline ShardAbortArgs& operator=(const ShardAbortArgs& from) {
     CopyFrom(from);
     return *this;
   }
-  inline AbortArgs& operator=(AbortArgs&& from) noexcept {
+  inline ShardAbortArgs& operator=(ShardAbortArgs&& from) noexcept {
     if (this == &from) return *this;
     if (GetOwningArena() == from.GetOwningArena()
   #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
@@ -786,20 +786,20 @@ class AbortArgs final :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const AbortArgs& default_instance() {
+  static const ShardAbortArgs& default_instance() {
     return *internal_default_instance();
   }
-  static inline const AbortArgs* internal_default_instance() {
-    return reinterpret_cast<const AbortArgs*>(
-               &_AbortArgs_default_instance_);
+  static inline const ShardAbortArgs* internal_default_instance() {
+    return reinterpret_cast<const ShardAbortArgs*>(
+               &_ShardAbortArgs_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     4;
 
-  friend void swap(AbortArgs& a, AbortArgs& b) {
+  friend void swap(ShardAbortArgs& a, ShardAbortArgs& b) {
     a.Swap(&b);
   }
-  inline void Swap(AbortArgs* other) {
+  inline void Swap(ShardAbortArgs* other) {
     if (other == this) return;
   #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
     if (GetOwningArena() != nullptr &&
@@ -812,7 +812,7 @@ class AbortArgs final :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(AbortArgs* other) {
+  void UnsafeArenaSwap(ShardAbortArgs* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
     InternalSwap(other);
@@ -820,13 +820,13 @@ class AbortArgs final :
 
   // implements Message ----------------------------------------------
 
-  AbortArgs* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<AbortArgs>(arena);
+  ShardAbortArgs* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<ShardAbortArgs>(arena);
   }
   using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
-  void CopyFrom(const AbortArgs& from);
+  void CopyFrom(const ShardAbortArgs& from);
   using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom(const AbortArgs& from);
+  void MergeFrom(const ShardAbortArgs& from);
   private:
   static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to, const ::PROTOBUF_NAMESPACE_ID::Message& from);
   public:
@@ -843,15 +843,15 @@ class AbortArgs final :
   void SharedCtor();
   void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(AbortArgs* other);
+  void InternalSwap(ShardAbortArgs* other);
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "AbortArgs";
+    return "ShardAbortArgs";
   }
   protected:
-  explicit AbortArgs(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+  explicit ShardAbortArgs(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                        bool is_message_owned = false);
   private:
   static void ArenaDtor(void* object);
@@ -883,7 +883,7 @@ class AbortArgs final :
   void _internal_set_tid(int32_t value);
   public:
 
-  // @@protoc_insertion_point(class_scope:AbortArgs)
+  // @@protoc_insertion_point(class_scope:ShardAbortArgs)
  private:
   class _Internal;
 
@@ -897,24 +897,24 @@ class AbortArgs final :
 };
 // -------------------------------------------------------------------
 
-class AbortReply final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:AbortReply) */ {
+class ShardAbortReply final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:ShardAbortReply) */ {
  public:
-  inline AbortReply() : AbortReply(nullptr) {}
-  ~AbortReply() override;
-  explicit constexpr AbortReply(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+  inline ShardAbortReply() : ShardAbortReply(nullptr) {}
+  ~ShardAbortReply() override;
+  explicit constexpr ShardAbortReply(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
-  AbortReply(const AbortReply& from);
-  AbortReply(AbortReply&& from) noexcept
-    : AbortReply() {
+  ShardAbortReply(const ShardAbortReply& from);
+  ShardAbortReply(ShardAbortReply&& from) noexcept
+    : ShardAbortReply() {
     *this = ::std::move(from);
   }
 
-  inline AbortReply& operator=(const AbortReply& from) {
+  inline ShardAbortReply& operator=(const ShardAbortReply& from) {
     CopyFrom(from);
     return *this;
   }
-  inline AbortReply& operator=(AbortReply&& from) noexcept {
+  inline ShardAbortReply& operator=(ShardAbortReply&& from) noexcept {
     if (this == &from) return *this;
     if (GetOwningArena() == from.GetOwningArena()
   #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
@@ -944,20 +944,20 @@ class AbortReply final :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const AbortReply& default_instance() {
+  static const ShardAbortReply& default_instance() {
     return *internal_default_instance();
   }
-  static inline const AbortReply* internal_default_instance() {
-    return reinterpret_cast<const AbortReply*>(
-               &_AbortReply_default_instance_);
+  static inline const ShardAbortReply* internal_default_instance() {
+    return reinterpret_cast<const ShardAbortReply*>(
+               &_ShardAbortReply_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     5;
 
-  friend void swap(AbortReply& a, AbortReply& b) {
+  friend void swap(ShardAbortReply& a, ShardAbortReply& b) {
     a.Swap(&b);
   }
-  inline void Swap(AbortReply* other) {
+  inline void Swap(ShardAbortReply* other) {
     if (other == this) return;
   #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
     if (GetOwningArena() != nullptr &&
@@ -970,7 +970,7 @@ class AbortReply final :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(AbortReply* other) {
+  void UnsafeArenaSwap(ShardAbortReply* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
     InternalSwap(other);
@@ -978,13 +978,13 @@ class AbortReply final :
 
   // implements Message ----------------------------------------------
 
-  AbortReply* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<AbortReply>(arena);
+  ShardAbortReply* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<ShardAbortReply>(arena);
   }
   using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
-  void CopyFrom(const AbortReply& from);
+  void CopyFrom(const ShardAbortReply& from);
   using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom(const AbortReply& from);
+  void MergeFrom(const ShardAbortReply& from);
   private:
   static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to, const ::PROTOBUF_NAMESPACE_ID::Message& from);
   public:
@@ -1001,15 +1001,15 @@ class AbortReply final :
   void SharedCtor();
   void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(AbortReply* other);
+  void InternalSwap(ShardAbortReply* other);
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "AbortReply";
+    return "ShardAbortReply";
   }
   protected:
-  explicit AbortReply(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+  explicit ShardAbortReply(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                        bool is_message_owned = false);
   private:
   static void ArenaDtor(void* object);
@@ -1041,7 +1041,7 @@ class AbortReply final :
   void _internal_set_err(int32_t value);
   public:
 
-  // @@protoc_insertion_point(class_scope:AbortReply)
+  // @@protoc_insertion_point(class_scope:ShardAbortReply)
  private:
   class _Internal;
 
@@ -1055,24 +1055,24 @@ class AbortReply final :
 };
 // -------------------------------------------------------------------
 
-class ReadArgs final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:ReadArgs) */ {
+class ShardReadArgs final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:ShardReadArgs) */ {
  public:
-  inline ReadArgs() : ReadArgs(nullptr) {}
-  ~ReadArgs() override;
-  explicit constexpr ReadArgs(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+  inline ShardReadArgs() : ShardReadArgs(nullptr) {}
+  ~ShardReadArgs() override;
+  explicit constexpr ShardReadArgs(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
-  ReadArgs(const ReadArgs& from);
-  ReadArgs(ReadArgs&& from) noexcept
-    : ReadArgs() {
+  ShardReadArgs(const ShardReadArgs& from);
+  ShardReadArgs(ShardReadArgs&& from) noexcept
+    : ShardReadArgs() {
     *this = ::std::move(from);
   }
 
-  inline ReadArgs& operator=(const ReadArgs& from) {
+  inline ShardReadArgs& operator=(const ShardReadArgs& from) {
     CopyFrom(from);
     return *this;
   }
-  inline ReadArgs& operator=(ReadArgs&& from) noexcept {
+  inline ShardReadArgs& operator=(ShardReadArgs&& from) noexcept {
     if (this == &from) return *this;
     if (GetOwningArena() == from.GetOwningArena()
   #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
@@ -1102,20 +1102,20 @@ class ReadArgs final :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const ReadArgs& default_instance() {
+  static const ShardReadArgs& default_instance() {
     return *internal_default_instance();
   }
-  static inline const ReadArgs* internal_default_instance() {
-    return reinterpret_cast<const ReadArgs*>(
-               &_ReadArgs_default_instance_);
+  static inline const ShardReadArgs* internal_default_instance() {
+    return reinterpret_cast<const ShardReadArgs*>(
+               &_ShardReadArgs_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     6;
 
-  friend void swap(ReadArgs& a, ReadArgs& b) {
+  friend void swap(ShardReadArgs& a, ShardReadArgs& b) {
     a.Swap(&b);
   }
-  inline void Swap(ReadArgs* other) {
+  inline void Swap(ShardReadArgs* other) {
     if (other == this) return;
   #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
     if (GetOwningArena() != nullptr &&
@@ -1128,7 +1128,7 @@ class ReadArgs final :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(ReadArgs* other) {
+  void UnsafeArenaSwap(ShardReadArgs* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
     InternalSwap(other);
@@ -1136,13 +1136,13 @@ class ReadArgs final :
 
   // implements Message ----------------------------------------------
 
-  ReadArgs* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<ReadArgs>(arena);
+  ShardReadArgs* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<ShardReadArgs>(arena);
   }
   using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
-  void CopyFrom(const ReadArgs& from);
+  void CopyFrom(const ShardReadArgs& from);
   using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom(const ReadArgs& from);
+  void MergeFrom(const ShardReadArgs& from);
   private:
   static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to, const ::PROTOBUF_NAMESPACE_ID::Message& from);
   public:
@@ -1159,15 +1159,15 @@ class ReadArgs final :
   void SharedCtor();
   void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(ReadArgs* other);
+  void InternalSwap(ShardReadArgs* other);
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "ReadArgs";
+    return "ShardReadArgs";
   }
   protected:
-  explicit ReadArgs(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+  explicit ShardReadArgs(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                        bool is_message_owned = false);
   private:
   static void ArenaDtor(void* object);
@@ -1218,7 +1218,7 @@ class ReadArgs final :
   void _internal_set_tid(int32_t value);
   public:
 
-  // @@protoc_insertion_point(class_scope:ReadArgs)
+  // @@protoc_insertion_point(class_scope:ShardReadArgs)
  private:
   class _Internal;
 
@@ -1236,24 +1236,24 @@ class ReadArgs final :
 };
 // -------------------------------------------------------------------
 
-class ReadReply final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:ReadReply) */ {
+class ShardReadReply final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:ShardReadReply) */ {
  public:
-  inline ReadReply() : ReadReply(nullptr) {}
-  ~ReadReply() override;
-  explicit constexpr ReadReply(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+  inline ShardReadReply() : ShardReadReply(nullptr) {}
+  ~ShardReadReply() override;
+  explicit constexpr ShardReadReply(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
-  ReadReply(const ReadReply& from);
-  ReadReply(ReadReply&& from) noexcept
-    : ReadReply() {
+  ShardReadReply(const ShardReadReply& from);
+  ShardReadReply(ShardReadReply&& from) noexcept
+    : ShardReadReply() {
     *this = ::std::move(from);
   }
 
-  inline ReadReply& operator=(const ReadReply& from) {
+  inline ShardReadReply& operator=(const ShardReadReply& from) {
     CopyFrom(from);
     return *this;
   }
-  inline ReadReply& operator=(ReadReply&& from) noexcept {
+  inline ShardReadReply& operator=(ShardReadReply&& from) noexcept {
     if (this == &from) return *this;
     if (GetOwningArena() == from.GetOwningArena()
   #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
@@ -1283,20 +1283,20 @@ class ReadReply final :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const ReadReply& default_instance() {
+  static const ShardReadReply& default_instance() {
     return *internal_default_instance();
   }
-  static inline const ReadReply* internal_default_instance() {
-    return reinterpret_cast<const ReadReply*>(
-               &_ReadReply_default_instance_);
+  static inline const ShardReadReply* internal_default_instance() {
+    return reinterpret_cast<const ShardReadReply*>(
+               &_ShardReadReply_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     7;
 
-  friend void swap(ReadReply& a, ReadReply& b) {
+  friend void swap(ShardReadReply& a, ShardReadReply& b) {
     a.Swap(&b);
   }
-  inline void Swap(ReadReply* other) {
+  inline void Swap(ShardReadReply* other) {
     if (other == this) return;
   #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
     if (GetOwningArena() != nullptr &&
@@ -1309,7 +1309,7 @@ class ReadReply final :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(ReadReply* other) {
+  void UnsafeArenaSwap(ShardReadReply* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
     InternalSwap(other);
@@ -1317,13 +1317,13 @@ class ReadReply final :
 
   // implements Message ----------------------------------------------
 
-  ReadReply* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<ReadReply>(arena);
+  ShardReadReply* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<ShardReadReply>(arena);
   }
   using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
-  void CopyFrom(const ReadReply& from);
+  void CopyFrom(const ShardReadReply& from);
   using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom(const ReadReply& from);
+  void MergeFrom(const ShardReadReply& from);
   private:
   static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to, const ::PROTOBUF_NAMESPACE_ID::Message& from);
   public:
@@ -1340,15 +1340,15 @@ class ReadReply final :
   void SharedCtor();
   void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(ReadReply* other);
+  void InternalSwap(ShardReadReply* other);
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "ReadReply";
+    return "ShardReadReply";
   }
   protected:
-  explicit ReadReply(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+  explicit ShardReadReply(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                        bool is_message_owned = false);
   private:
   static void ArenaDtor(void* object);
@@ -1399,7 +1399,7 @@ class ReadReply final :
   void _internal_set_err(int32_t value);
   public:
 
-  // @@protoc_insertion_point(class_scope:ReadReply)
+  // @@protoc_insertion_point(class_scope:ShardReadReply)
  private:
   class _Internal;
 
@@ -1414,24 +1414,24 @@ class ReadReply final :
 };
 // -------------------------------------------------------------------
 
-class WriteArgs final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:WriteArgs) */ {
+class ShardWriteArgs final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:ShardWriteArgs) */ {
  public:
-  inline WriteArgs() : WriteArgs(nullptr) {}
-  ~WriteArgs() override;
-  explicit constexpr WriteArgs(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+  inline ShardWriteArgs() : ShardWriteArgs(nullptr) {}
+  ~ShardWriteArgs() override;
+  explicit constexpr ShardWriteArgs(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
-  WriteArgs(const WriteArgs& from);
-  WriteArgs(WriteArgs&& from) noexcept
-    : WriteArgs() {
+  ShardWriteArgs(const ShardWriteArgs& from);
+  ShardWriteArgs(ShardWriteArgs&& from) noexcept
+    : ShardWriteArgs() {
     *this = ::std::move(from);
   }
 
-  inline WriteArgs& operator=(const WriteArgs& from) {
+  inline ShardWriteArgs& operator=(const ShardWriteArgs& from) {
     CopyFrom(from);
     return *this;
   }
-  inline WriteArgs& operator=(WriteArgs&& from) noexcept {
+  inline ShardWriteArgs& operator=(ShardWriteArgs&& from) noexcept {
     if (this == &from) return *this;
     if (GetOwningArena() == from.GetOwningArena()
   #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
@@ -1461,20 +1461,20 @@ class WriteArgs final :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const WriteArgs& default_instance() {
+  static const ShardWriteArgs& default_instance() {
     return *internal_default_instance();
   }
-  static inline const WriteArgs* internal_default_instance() {
-    return reinterpret_cast<const WriteArgs*>(
-               &_WriteArgs_default_instance_);
+  static inline const ShardWriteArgs* internal_default_instance() {
+    return reinterpret_cast<const ShardWriteArgs*>(
+               &_ShardWriteArgs_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     8;
 
-  friend void swap(WriteArgs& a, WriteArgs& b) {
+  friend void swap(ShardWriteArgs& a, ShardWriteArgs& b) {
     a.Swap(&b);
   }
-  inline void Swap(WriteArgs* other) {
+  inline void Swap(ShardWriteArgs* other) {
     if (other == this) return;
   #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
     if (GetOwningArena() != nullptr &&
@@ -1487,7 +1487,7 @@ class WriteArgs final :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(WriteArgs* other) {
+  void UnsafeArenaSwap(ShardWriteArgs* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
     InternalSwap(other);
@@ -1495,13 +1495,13 @@ class WriteArgs final :
 
   // implements Message ----------------------------------------------
 
-  WriteArgs* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<WriteArgs>(arena);
+  ShardWriteArgs* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<ShardWriteArgs>(arena);
   }
   using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
-  void CopyFrom(const WriteArgs& from);
+  void CopyFrom(const ShardWriteArgs& from);
   using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom(const WriteArgs& from);
+  void MergeFrom(const ShardWriteArgs& from);
   private:
   static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to, const ::PROTOBUF_NAMESPACE_ID::Message& from);
   public:
@@ -1518,15 +1518,15 @@ class WriteArgs final :
   void SharedCtor();
   void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(WriteArgs* other);
+  void InternalSwap(ShardWriteArgs* other);
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "WriteArgs";
+    return "ShardWriteArgs";
   }
   protected:
-  explicit WriteArgs(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+  explicit ShardWriteArgs(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                        bool is_message_owned = false);
   private:
   static void ArenaDtor(void* object);
@@ -1624,7 +1624,7 @@ class WriteArgs final :
   void _internal_set_tid(int32_t value);
   public:
 
-  // @@protoc_insertion_point(class_scope:WriteArgs)
+  // @@protoc_insertion_point(class_scope:ShardWriteArgs)
  private:
   class _Internal;
 
@@ -1645,24 +1645,24 @@ class WriteArgs final :
 };
 // -------------------------------------------------------------------
 
-class WriteReply final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:WriteReply) */ {
+class ShardWriteReply final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:ShardWriteReply) */ {
  public:
-  inline WriteReply() : WriteReply(nullptr) {}
-  ~WriteReply() override;
-  explicit constexpr WriteReply(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+  inline ShardWriteReply() : ShardWriteReply(nullptr) {}
+  ~ShardWriteReply() override;
+  explicit constexpr ShardWriteReply(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
-  WriteReply(const WriteReply& from);
-  WriteReply(WriteReply&& from) noexcept
-    : WriteReply() {
+  ShardWriteReply(const ShardWriteReply& from);
+  ShardWriteReply(ShardWriteReply&& from) noexcept
+    : ShardWriteReply() {
     *this = ::std::move(from);
   }
 
-  inline WriteReply& operator=(const WriteReply& from) {
+  inline ShardWriteReply& operator=(const ShardWriteReply& from) {
     CopyFrom(from);
     return *this;
   }
-  inline WriteReply& operator=(WriteReply&& from) noexcept {
+  inline ShardWriteReply& operator=(ShardWriteReply&& from) noexcept {
     if (this == &from) return *this;
     if (GetOwningArena() == from.GetOwningArena()
   #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
@@ -1692,20 +1692,20 @@ class WriteReply final :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const WriteReply& default_instance() {
+  static const ShardWriteReply& default_instance() {
     return *internal_default_instance();
   }
-  static inline const WriteReply* internal_default_instance() {
-    return reinterpret_cast<const WriteReply*>(
-               &_WriteReply_default_instance_);
+  static inline const ShardWriteReply* internal_default_instance() {
+    return reinterpret_cast<const ShardWriteReply*>(
+               &_ShardWriteReply_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     9;
 
-  friend void swap(WriteReply& a, WriteReply& b) {
+  friend void swap(ShardWriteReply& a, ShardWriteReply& b) {
     a.Swap(&b);
   }
-  inline void Swap(WriteReply* other) {
+  inline void Swap(ShardWriteReply* other) {
     if (other == this) return;
   #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
     if (GetOwningArena() != nullptr &&
@@ -1718,7 +1718,7 @@ class WriteReply final :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(WriteReply* other) {
+  void UnsafeArenaSwap(ShardWriteReply* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
     InternalSwap(other);
@@ -1726,13 +1726,13 @@ class WriteReply final :
 
   // implements Message ----------------------------------------------
 
-  WriteReply* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<WriteReply>(arena);
+  ShardWriteReply* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<ShardWriteReply>(arena);
   }
   using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
-  void CopyFrom(const WriteReply& from);
+  void CopyFrom(const ShardWriteReply& from);
   using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom(const WriteReply& from);
+  void MergeFrom(const ShardWriteReply& from);
   private:
   static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to, const ::PROTOBUF_NAMESPACE_ID::Message& from);
   public:
@@ -1749,15 +1749,15 @@ class WriteReply final :
   void SharedCtor();
   void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(WriteReply* other);
+  void InternalSwap(ShardWriteReply* other);
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "WriteReply";
+    return "ShardWriteReply";
   }
   protected:
-  explicit WriteReply(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+  explicit ShardWriteReply(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                        bool is_message_owned = false);
   private:
   static void ArenaDtor(void* object);
@@ -1789,7 +1789,7 @@ class WriteReply final :
   void _internal_set_err(int32_t value);
   public:
 
-  // @@protoc_insertion_point(class_scope:WriteReply)
+  // @@protoc_insertion_point(class_scope:ShardWriteReply)
  private:
   class _Internal;
 
@@ -2138,24 +2138,24 @@ class ShardKvBase : public ::PROTOBUF_NAMESPACE_ID::Service {
   static const ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor* descriptor();
 
   virtual void PrepareRead(::PROTOBUF_NAMESPACE_ID::RpcController* controller,
-                       const ::ReadArgs* request,
-                       ::ReadReply* response,
+                       const ::ShardReadArgs* request,
+                       ::ShardReadReply* response,
                        ::google::protobuf::Closure* done);
   virtual void PrepareWrite(::PROTOBUF_NAMESPACE_ID::RpcController* controller,
-                       const ::WriteArgs* request,
-                       ::WriteReply* response,
+                       const ::ShardWriteArgs* request,
+                       ::ShardWriteReply* response,
                        ::google::protobuf::Closure* done);
   virtual void BEGIN(::PROTOBUF_NAMESPACE_ID::RpcController* controller,
-                       const ::BeginArgs* request,
-                       ::BeginReply* response,
+                       const ::ShardBeginArgs* request,
+                       ::ShardBeginReply* response,
                        ::google::protobuf::Closure* done);
   virtual void END(::PROTOBUF_NAMESPACE_ID::RpcController* controller,
-                       const ::EndArgs* request,
-                       ::EndReply* response,
+                       const ::ShardEndArgs* request,
+                       ::ShardEndReply* response,
                        ::google::protobuf::Closure* done);
   virtual void ABORT(::PROTOBUF_NAMESPACE_ID::RpcController* controller,
-                       const ::AbortArgs* request,
-                       ::AbortReply* response,
+                       const ::ShardAbortArgs* request,
+                       ::ShardAbortReply* response,
                        ::google::protobuf::Closure* done);
   virtual void CONNECT(::PROTOBUF_NAMESPACE_ID::RpcController* controller,
                        const ::ConnectArgs* request,
@@ -2191,24 +2191,24 @@ class ShardKvBase_Stub : public ShardKvBase {
   // implements ShardKvBase ------------------------------------------
 
   void PrepareRead(::PROTOBUF_NAMESPACE_ID::RpcController* controller,
-                       const ::ReadArgs* request,
-                       ::ReadReply* response,
+                       const ::ShardReadArgs* request,
+                       ::ShardReadReply* response,
                        ::google::protobuf::Closure* done);
   void PrepareWrite(::PROTOBUF_NAMESPACE_ID::RpcController* controller,
-                       const ::WriteArgs* request,
-                       ::WriteReply* response,
+                       const ::ShardWriteArgs* request,
+                       ::ShardWriteReply* response,
                        ::google::protobuf::Closure* done);
   void BEGIN(::PROTOBUF_NAMESPACE_ID::RpcController* controller,
-                       const ::BeginArgs* request,
-                       ::BeginReply* response,
+                       const ::ShardBeginArgs* request,
+                       ::ShardBeginReply* response,
                        ::google::protobuf::Closure* done);
   void END(::PROTOBUF_NAMESPACE_ID::RpcController* controller,
-                       const ::EndArgs* request,
-                       ::EndReply* response,
+                       const ::ShardEndArgs* request,
+                       ::ShardEndReply* response,
                        ::google::protobuf::Closure* done);
   void ABORT(::PROTOBUF_NAMESPACE_ID::RpcController* controller,
-                       const ::AbortArgs* request,
-                       ::AbortReply* response,
+                       const ::ShardAbortArgs* request,
+                       ::ShardAbortReply* response,
                        ::google::protobuf::Closure* done);
   void CONNECT(::PROTOBUF_NAMESPACE_ID::RpcController* controller,
                        const ::ConnectArgs* request,
@@ -2230,269 +2230,269 @@ class ShardKvBase_Stub : public ShardKvBase {
   #pragma GCC diagnostic push
   #pragma GCC diagnostic ignored "-Wstrict-aliasing"
 #endif  // __GNUC__
-// BeginArgs
+// ShardBeginArgs
 
 // required int32 Tid = 1;
-inline bool BeginArgs::_internal_has_tid() const {
+inline bool ShardBeginArgs::_internal_has_tid() const {
   bool value = (_has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool BeginArgs::has_tid() const {
+inline bool ShardBeginArgs::has_tid() const {
   return _internal_has_tid();
 }
-inline void BeginArgs::clear_tid() {
+inline void ShardBeginArgs::clear_tid() {
   tid_ = 0;
   _has_bits_[0] &= ~0x00000001u;
 }
-inline int32_t BeginArgs::_internal_tid() const {
+inline int32_t ShardBeginArgs::_internal_tid() const {
   return tid_;
 }
-inline int32_t BeginArgs::tid() const {
-  // @@protoc_insertion_point(field_get:BeginArgs.Tid)
+inline int32_t ShardBeginArgs::tid() const {
+  // @@protoc_insertion_point(field_get:ShardBeginArgs.Tid)
   return _internal_tid();
 }
-inline void BeginArgs::_internal_set_tid(int32_t value) {
+inline void ShardBeginArgs::_internal_set_tid(int32_t value) {
   _has_bits_[0] |= 0x00000001u;
   tid_ = value;
 }
-inline void BeginArgs::set_tid(int32_t value) {
+inline void ShardBeginArgs::set_tid(int32_t value) {
   _internal_set_tid(value);
-  // @@protoc_insertion_point(field_set:BeginArgs.Tid)
+  // @@protoc_insertion_point(field_set:ShardBeginArgs.Tid)
 }
 
 // -------------------------------------------------------------------
 
-// BeginReply
+// ShardBeginReply
 
 // required int32 err = 1;
-inline bool BeginReply::_internal_has_err() const {
+inline bool ShardBeginReply::_internal_has_err() const {
   bool value = (_has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool BeginReply::has_err() const {
+inline bool ShardBeginReply::has_err() const {
   return _internal_has_err();
 }
-inline void BeginReply::clear_err() {
+inline void ShardBeginReply::clear_err() {
   err_ = 0;
   _has_bits_[0] &= ~0x00000001u;
 }
-inline int32_t BeginReply::_internal_err() const {
+inline int32_t ShardBeginReply::_internal_err() const {
   return err_;
 }
-inline int32_t BeginReply::err() const {
-  // @@protoc_insertion_point(field_get:BeginReply.err)
+inline int32_t ShardBeginReply::err() const {
+  // @@protoc_insertion_point(field_get:ShardBeginReply.err)
   return _internal_err();
 }
-inline void BeginReply::_internal_set_err(int32_t value) {
+inline void ShardBeginReply::_internal_set_err(int32_t value) {
   _has_bits_[0] |= 0x00000001u;
   err_ = value;
 }
-inline void BeginReply::set_err(int32_t value) {
+inline void ShardBeginReply::set_err(int32_t value) {
   _internal_set_err(value);
-  // @@protoc_insertion_point(field_set:BeginReply.err)
+  // @@protoc_insertion_point(field_set:ShardBeginReply.err)
 }
 
 // -------------------------------------------------------------------
 
-// EndArgs
+// ShardEndArgs
 
 // required int32 Tid = 1;
-inline bool EndArgs::_internal_has_tid() const {
+inline bool ShardEndArgs::_internal_has_tid() const {
   bool value = (_has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool EndArgs::has_tid() const {
+inline bool ShardEndArgs::has_tid() const {
   return _internal_has_tid();
 }
-inline void EndArgs::clear_tid() {
+inline void ShardEndArgs::clear_tid() {
   tid_ = 0;
   _has_bits_[0] &= ~0x00000001u;
 }
-inline int32_t EndArgs::_internal_tid() const {
+inline int32_t ShardEndArgs::_internal_tid() const {
   return tid_;
 }
-inline int32_t EndArgs::tid() const {
-  // @@protoc_insertion_point(field_get:EndArgs.Tid)
+inline int32_t ShardEndArgs::tid() const {
+  // @@protoc_insertion_point(field_get:ShardEndArgs.Tid)
   return _internal_tid();
 }
-inline void EndArgs::_internal_set_tid(int32_t value) {
+inline void ShardEndArgs::_internal_set_tid(int32_t value) {
   _has_bits_[0] |= 0x00000001u;
   tid_ = value;
 }
-inline void EndArgs::set_tid(int32_t value) {
+inline void ShardEndArgs::set_tid(int32_t value) {
   _internal_set_tid(value);
-  // @@protoc_insertion_point(field_set:EndArgs.Tid)
+  // @@protoc_insertion_point(field_set:ShardEndArgs.Tid)
 }
 
 // -------------------------------------------------------------------
 
-// EndReply
+// ShardEndReply
 
 // required int32 err = 1;
-inline bool EndReply::_internal_has_err() const {
+inline bool ShardEndReply::_internal_has_err() const {
   bool value = (_has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool EndReply::has_err() const {
+inline bool ShardEndReply::has_err() const {
   return _internal_has_err();
 }
-inline void EndReply::clear_err() {
+inline void ShardEndReply::clear_err() {
   err_ = 0;
   _has_bits_[0] &= ~0x00000001u;
 }
-inline int32_t EndReply::_internal_err() const {
+inline int32_t ShardEndReply::_internal_err() const {
   return err_;
 }
-inline int32_t EndReply::err() const {
-  // @@protoc_insertion_point(field_get:EndReply.err)
+inline int32_t ShardEndReply::err() const {
+  // @@protoc_insertion_point(field_get:ShardEndReply.err)
   return _internal_err();
 }
-inline void EndReply::_internal_set_err(int32_t value) {
+inline void ShardEndReply::_internal_set_err(int32_t value) {
   _has_bits_[0] |= 0x00000001u;
   err_ = value;
 }
-inline void EndReply::set_err(int32_t value) {
+inline void ShardEndReply::set_err(int32_t value) {
   _internal_set_err(value);
-  // @@protoc_insertion_point(field_set:EndReply.err)
+  // @@protoc_insertion_point(field_set:ShardEndReply.err)
 }
 
 // -------------------------------------------------------------------
 
-// AbortArgs
+// ShardAbortArgs
 
 // required int32 Tid = 1;
-inline bool AbortArgs::_internal_has_tid() const {
+inline bool ShardAbortArgs::_internal_has_tid() const {
   bool value = (_has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool AbortArgs::has_tid() const {
+inline bool ShardAbortArgs::has_tid() const {
   return _internal_has_tid();
 }
-inline void AbortArgs::clear_tid() {
+inline void ShardAbortArgs::clear_tid() {
   tid_ = 0;
   _has_bits_[0] &= ~0x00000001u;
 }
-inline int32_t AbortArgs::_internal_tid() const {
+inline int32_t ShardAbortArgs::_internal_tid() const {
   return tid_;
 }
-inline int32_t AbortArgs::tid() const {
-  // @@protoc_insertion_point(field_get:AbortArgs.Tid)
+inline int32_t ShardAbortArgs::tid() const {
+  // @@protoc_insertion_point(field_get:ShardAbortArgs.Tid)
   return _internal_tid();
 }
-inline void AbortArgs::_internal_set_tid(int32_t value) {
+inline void ShardAbortArgs::_internal_set_tid(int32_t value) {
   _has_bits_[0] |= 0x00000001u;
   tid_ = value;
 }
-inline void AbortArgs::set_tid(int32_t value) {
+inline void ShardAbortArgs::set_tid(int32_t value) {
   _internal_set_tid(value);
-  // @@protoc_insertion_point(field_set:AbortArgs.Tid)
+  // @@protoc_insertion_point(field_set:ShardAbortArgs.Tid)
 }
 
 // -------------------------------------------------------------------
 
-// AbortReply
+// ShardAbortReply
 
 // required int32 err = 1;
-inline bool AbortReply::_internal_has_err() const {
+inline bool ShardAbortReply::_internal_has_err() const {
   bool value = (_has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool AbortReply::has_err() const {
+inline bool ShardAbortReply::has_err() const {
   return _internal_has_err();
 }
-inline void AbortReply::clear_err() {
+inline void ShardAbortReply::clear_err() {
   err_ = 0;
   _has_bits_[0] &= ~0x00000001u;
 }
-inline int32_t AbortReply::_internal_err() const {
+inline int32_t ShardAbortReply::_internal_err() const {
   return err_;
 }
-inline int32_t AbortReply::err() const {
-  // @@protoc_insertion_point(field_get:AbortReply.err)
+inline int32_t ShardAbortReply::err() const {
+  // @@protoc_insertion_point(field_get:ShardAbortReply.err)
   return _internal_err();
 }
-inline void AbortReply::_internal_set_err(int32_t value) {
+inline void ShardAbortReply::_internal_set_err(int32_t value) {
   _has_bits_[0] |= 0x00000001u;
   err_ = value;
 }
-inline void AbortReply::set_err(int32_t value) {
+inline void ShardAbortReply::set_err(int32_t value) {
   _internal_set_err(value);
-  // @@protoc_insertion_point(field_set:AbortReply.err)
+  // @@protoc_insertion_point(field_set:ShardAbortReply.err)
 }
 
 // -------------------------------------------------------------------
 
-// ReadArgs
+// ShardReadArgs
 
 // required int32 Tid = 1;
-inline bool ReadArgs::_internal_has_tid() const {
+inline bool ShardReadArgs::_internal_has_tid() const {
   bool value = (_has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool ReadArgs::has_tid() const {
+inline bool ShardReadArgs::has_tid() const {
   return _internal_has_tid();
 }
-inline void ReadArgs::clear_tid() {
+inline void ShardReadArgs::clear_tid() {
   tid_ = 0;
   _has_bits_[0] &= ~0x00000002u;
 }
-inline int32_t ReadArgs::_internal_tid() const {
+inline int32_t ShardReadArgs::_internal_tid() const {
   return tid_;
 }
-inline int32_t ReadArgs::tid() const {
-  // @@protoc_insertion_point(field_get:ReadArgs.Tid)
+inline int32_t ShardReadArgs::tid() const {
+  // @@protoc_insertion_point(field_get:ShardReadArgs.Tid)
   return _internal_tid();
 }
-inline void ReadArgs::_internal_set_tid(int32_t value) {
+inline void ShardReadArgs::_internal_set_tid(int32_t value) {
   _has_bits_[0] |= 0x00000002u;
   tid_ = value;
 }
-inline void ReadArgs::set_tid(int32_t value) {
+inline void ShardReadArgs::set_tid(int32_t value) {
   _internal_set_tid(value);
-  // @@protoc_insertion_point(field_set:ReadArgs.Tid)
+  // @@protoc_insertion_point(field_set:ShardReadArgs.Tid)
 }
 
 // required string key = 2;
-inline bool ReadArgs::_internal_has_key() const {
+inline bool ShardReadArgs::_internal_has_key() const {
   bool value = (_has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool ReadArgs::has_key() const {
+inline bool ShardReadArgs::has_key() const {
   return _internal_has_key();
 }
-inline void ReadArgs::clear_key() {
+inline void ShardReadArgs::clear_key() {
   key_.ClearToEmpty();
   _has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& ReadArgs::key() const {
-  // @@protoc_insertion_point(field_get:ReadArgs.key)
+inline const std::string& ShardReadArgs::key() const {
+  // @@protoc_insertion_point(field_get:ShardReadArgs.key)
   return _internal_key();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void ReadArgs::set_key(ArgT0&& arg0, ArgT... args) {
+void ShardReadArgs::set_key(ArgT0&& arg0, ArgT... args) {
  _has_bits_[0] |= 0x00000001u;
  key_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:ReadArgs.key)
+  // @@protoc_insertion_point(field_set:ShardReadArgs.key)
 }
-inline std::string* ReadArgs::mutable_key() {
+inline std::string* ShardReadArgs::mutable_key() {
   std::string* _s = _internal_mutable_key();
-  // @@protoc_insertion_point(field_mutable:ReadArgs.key)
+  // @@protoc_insertion_point(field_mutable:ShardReadArgs.key)
   return _s;
 }
-inline const std::string& ReadArgs::_internal_key() const {
+inline const std::string& ShardReadArgs::_internal_key() const {
   return key_.Get();
 }
-inline void ReadArgs::_internal_set_key(const std::string& value) {
+inline void ShardReadArgs::_internal_set_key(const std::string& value) {
   _has_bits_[0] |= 0x00000001u;
   key_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
 }
-inline std::string* ReadArgs::_internal_mutable_key() {
+inline std::string* ShardReadArgs::_internal_mutable_key() {
   _has_bits_[0] |= 0x00000001u;
   return key_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
 }
-inline std::string* ReadArgs::release_key() {
-  // @@protoc_insertion_point(field_release:ReadArgs.key)
+inline std::string* ShardReadArgs::release_key() {
+  // @@protoc_insertion_point(field_release:ShardReadArgs.key)
   if (!_internal_has_key()) {
     return nullptr;
   }
@@ -2505,7 +2505,7 @@ inline std::string* ReadArgs::release_key() {
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void ReadArgs::set_allocated_key(std::string* key) {
+inline void ShardReadArgs::set_allocated_key(std::string* key) {
   if (key != nullptr) {
     _has_bits_[0] |= 0x00000001u;
   } else {
@@ -2518,82 +2518,82 @@ inline void ReadArgs::set_allocated_key(std::string* key) {
     key_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), "", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:ReadArgs.key)
+  // @@protoc_insertion_point(field_set_allocated:ShardReadArgs.key)
 }
 
 // -------------------------------------------------------------------
 
-// ReadReply
+// ShardReadReply
 
 // required int32 err = 1;
-inline bool ReadReply::_internal_has_err() const {
+inline bool ShardReadReply::_internal_has_err() const {
   bool value = (_has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool ReadReply::has_err() const {
+inline bool ShardReadReply::has_err() const {
   return _internal_has_err();
 }
-inline void ReadReply::clear_err() {
+inline void ShardReadReply::clear_err() {
   err_ = 0;
   _has_bits_[0] &= ~0x00000002u;
 }
-inline int32_t ReadReply::_internal_err() const {
+inline int32_t ShardReadReply::_internal_err() const {
   return err_;
 }
-inline int32_t ReadReply::err() const {
-  // @@protoc_insertion_point(field_get:ReadReply.err)
+inline int32_t ShardReadReply::err() const {
+  // @@protoc_insertion_point(field_get:ShardReadReply.err)
   return _internal_err();
 }
-inline void ReadReply::_internal_set_err(int32_t value) {
+inline void ShardReadReply::_internal_set_err(int32_t value) {
   _has_bits_[0] |= 0x00000002u;
   err_ = value;
 }
-inline void ReadReply::set_err(int32_t value) {
+inline void ShardReadReply::set_err(int32_t value) {
   _internal_set_err(value);
-  // @@protoc_insertion_point(field_set:ReadReply.err)
+  // @@protoc_insertion_point(field_set:ShardReadReply.err)
 }
 
 // optional string value = 2;
-inline bool ReadReply::_internal_has_value() const {
+inline bool ShardReadReply::_internal_has_value() const {
   bool value = (_has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool ReadReply::has_value() const {
+inline bool ShardReadReply::has_value() const {
   return _internal_has_value();
 }
-inline void ReadReply::clear_value() {
+inline void ShardReadReply::clear_value() {
   value_.ClearToEmpty();
   _has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& ReadReply::value() const {
-  // @@protoc_insertion_point(field_get:ReadReply.value)
+inline const std::string& ShardReadReply::value() const {
+  // @@protoc_insertion_point(field_get:ShardReadReply.value)
   return _internal_value();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void ReadReply::set_value(ArgT0&& arg0, ArgT... args) {
+void ShardReadReply::set_value(ArgT0&& arg0, ArgT... args) {
  _has_bits_[0] |= 0x00000001u;
  value_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:ReadReply.value)
+  // @@protoc_insertion_point(field_set:ShardReadReply.value)
 }
-inline std::string* ReadReply::mutable_value() {
+inline std::string* ShardReadReply::mutable_value() {
   std::string* _s = _internal_mutable_value();
-  // @@protoc_insertion_point(field_mutable:ReadReply.value)
+  // @@protoc_insertion_point(field_mutable:ShardReadReply.value)
   return _s;
 }
-inline const std::string& ReadReply::_internal_value() const {
+inline const std::string& ShardReadReply::_internal_value() const {
   return value_.Get();
 }
-inline void ReadReply::_internal_set_value(const std::string& value) {
+inline void ShardReadReply::_internal_set_value(const std::string& value) {
   _has_bits_[0] |= 0x00000001u;
   value_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
 }
-inline std::string* ReadReply::_internal_mutable_value() {
+inline std::string* ShardReadReply::_internal_mutable_value() {
   _has_bits_[0] |= 0x00000001u;
   return value_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
 }
-inline std::string* ReadReply::release_value() {
-  // @@protoc_insertion_point(field_release:ReadReply.value)
+inline std::string* ShardReadReply::release_value() {
+  // @@protoc_insertion_point(field_release:ShardReadReply.value)
   if (!_internal_has_value()) {
     return nullptr;
   }
@@ -2606,7 +2606,7 @@ inline std::string* ReadReply::release_value() {
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void ReadReply::set_allocated_value(std::string* value) {
+inline void ShardReadReply::set_allocated_value(std::string* value) {
   if (value != nullptr) {
     _has_bits_[0] |= 0x00000001u;
   } else {
@@ -2619,82 +2619,82 @@ inline void ReadReply::set_allocated_value(std::string* value) {
     value_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), "", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:ReadReply.value)
+  // @@protoc_insertion_point(field_set_allocated:ShardReadReply.value)
 }
 
 // -------------------------------------------------------------------
 
-// WriteArgs
+// ShardWriteArgs
 
 // required int32 Tid = 1;
-inline bool WriteArgs::_internal_has_tid() const {
+inline bool ShardWriteArgs::_internal_has_tid() const {
   bool value = (_has_bits_[0] & 0x00000010u) != 0;
   return value;
 }
-inline bool WriteArgs::has_tid() const {
+inline bool ShardWriteArgs::has_tid() const {
   return _internal_has_tid();
 }
-inline void WriteArgs::clear_tid() {
+inline void ShardWriteArgs::clear_tid() {
   tid_ = 0;
   _has_bits_[0] &= ~0x00000010u;
 }
-inline int32_t WriteArgs::_internal_tid() const {
+inline int32_t ShardWriteArgs::_internal_tid() const {
   return tid_;
 }
-inline int32_t WriteArgs::tid() const {
-  // @@protoc_insertion_point(field_get:WriteArgs.Tid)
+inline int32_t ShardWriteArgs::tid() const {
+  // @@protoc_insertion_point(field_get:ShardWriteArgs.Tid)
   return _internal_tid();
 }
-inline void WriteArgs::_internal_set_tid(int32_t value) {
+inline void ShardWriteArgs::_internal_set_tid(int32_t value) {
   _has_bits_[0] |= 0x00000010u;
   tid_ = value;
 }
-inline void WriteArgs::set_tid(int32_t value) {
+inline void ShardWriteArgs::set_tid(int32_t value) {
   _internal_set_tid(value);
-  // @@protoc_insertion_point(field_set:WriteArgs.Tid)
+  // @@protoc_insertion_point(field_set:ShardWriteArgs.Tid)
 }
 
 // required string key = 2;
-inline bool WriteArgs::_internal_has_key() const {
+inline bool ShardWriteArgs::_internal_has_key() const {
   bool value = (_has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool WriteArgs::has_key() const {
+inline bool ShardWriteArgs::has_key() const {
   return _internal_has_key();
 }
-inline void WriteArgs::clear_key() {
+inline void ShardWriteArgs::clear_key() {
   key_.ClearToEmpty();
   _has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& WriteArgs::key() const {
-  // @@protoc_insertion_point(field_get:WriteArgs.key)
+inline const std::string& ShardWriteArgs::key() const {
+  // @@protoc_insertion_point(field_get:ShardWriteArgs.key)
   return _internal_key();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void WriteArgs::set_key(ArgT0&& arg0, ArgT... args) {
+void ShardWriteArgs::set_key(ArgT0&& arg0, ArgT... args) {
  _has_bits_[0] |= 0x00000001u;
  key_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:WriteArgs.key)
+  // @@protoc_insertion_point(field_set:ShardWriteArgs.key)
 }
-inline std::string* WriteArgs::mutable_key() {
+inline std::string* ShardWriteArgs::mutable_key() {
   std::string* _s = _internal_mutable_key();
-  // @@protoc_insertion_point(field_mutable:WriteArgs.key)
+  // @@protoc_insertion_point(field_mutable:ShardWriteArgs.key)
   return _s;
 }
-inline const std::string& WriteArgs::_internal_key() const {
+inline const std::string& ShardWriteArgs::_internal_key() const {
   return key_.Get();
 }
-inline void WriteArgs::_internal_set_key(const std::string& value) {
+inline void ShardWriteArgs::_internal_set_key(const std::string& value) {
   _has_bits_[0] |= 0x00000001u;
   key_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
 }
-inline std::string* WriteArgs::_internal_mutable_key() {
+inline std::string* ShardWriteArgs::_internal_mutable_key() {
   _has_bits_[0] |= 0x00000001u;
   return key_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
 }
-inline std::string* WriteArgs::release_key() {
-  // @@protoc_insertion_point(field_release:WriteArgs.key)
+inline std::string* ShardWriteArgs::release_key() {
+  // @@protoc_insertion_point(field_release:ShardWriteArgs.key)
   if (!_internal_has_key()) {
     return nullptr;
   }
@@ -2707,7 +2707,7 @@ inline std::string* WriteArgs::release_key() {
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void WriteArgs::set_allocated_key(std::string* key) {
+inline void ShardWriteArgs::set_allocated_key(std::string* key) {
   if (key != nullptr) {
     _has_bits_[0] |= 0x00000001u;
   } else {
@@ -2720,50 +2720,50 @@ inline void WriteArgs::set_allocated_key(std::string* key) {
     key_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), "", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:WriteArgs.key)
+  // @@protoc_insertion_point(field_set_allocated:ShardWriteArgs.key)
 }
 
 // required string value = 3;
-inline bool WriteArgs::_internal_has_value() const {
+inline bool ShardWriteArgs::_internal_has_value() const {
   bool value = (_has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool WriteArgs::has_value() const {
+inline bool ShardWriteArgs::has_value() const {
   return _internal_has_value();
 }
-inline void WriteArgs::clear_value() {
+inline void ShardWriteArgs::clear_value() {
   value_.ClearToEmpty();
   _has_bits_[0] &= ~0x00000002u;
 }
-inline const std::string& WriteArgs::value() const {
-  // @@protoc_insertion_point(field_get:WriteArgs.value)
+inline const std::string& ShardWriteArgs::value() const {
+  // @@protoc_insertion_point(field_get:ShardWriteArgs.value)
   return _internal_value();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void WriteArgs::set_value(ArgT0&& arg0, ArgT... args) {
+void ShardWriteArgs::set_value(ArgT0&& arg0, ArgT... args) {
  _has_bits_[0] |= 0x00000002u;
  value_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:WriteArgs.value)
+  // @@protoc_insertion_point(field_set:ShardWriteArgs.value)
 }
-inline std::string* WriteArgs::mutable_value() {
+inline std::string* ShardWriteArgs::mutable_value() {
   std::string* _s = _internal_mutable_value();
-  // @@protoc_insertion_point(field_mutable:WriteArgs.value)
+  // @@protoc_insertion_point(field_mutable:ShardWriteArgs.value)
   return _s;
 }
-inline const std::string& WriteArgs::_internal_value() const {
+inline const std::string& ShardWriteArgs::_internal_value() const {
   return value_.Get();
 }
-inline void WriteArgs::_internal_set_value(const std::string& value) {
+inline void ShardWriteArgs::_internal_set_value(const std::string& value) {
   _has_bits_[0] |= 0x00000002u;
   value_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
 }
-inline std::string* WriteArgs::_internal_mutable_value() {
+inline std::string* ShardWriteArgs::_internal_mutable_value() {
   _has_bits_[0] |= 0x00000002u;
   return value_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
 }
-inline std::string* WriteArgs::release_value() {
-  // @@protoc_insertion_point(field_release:WriteArgs.value)
+inline std::string* ShardWriteArgs::release_value() {
+  // @@protoc_insertion_point(field_release:ShardWriteArgs.value)
   if (!_internal_has_value()) {
     return nullptr;
   }
@@ -2776,7 +2776,7 @@ inline std::string* WriteArgs::release_value() {
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void WriteArgs::set_allocated_value(std::string* value) {
+inline void ShardWriteArgs::set_allocated_value(std::string* value) {
   if (value != nullptr) {
     _has_bits_[0] |= 0x00000002u;
   } else {
@@ -2789,95 +2789,95 @@ inline void WriteArgs::set_allocated_value(std::string* value) {
     value_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), "", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:WriteArgs.value)
+  // @@protoc_insertion_point(field_set_allocated:ShardWriteArgs.value)
 }
 
 // optional int64 clientID = 4;
-inline bool WriteArgs::_internal_has_clientid() const {
+inline bool ShardWriteArgs::_internal_has_clientid() const {
   bool value = (_has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool WriteArgs::has_clientid() const {
+inline bool ShardWriteArgs::has_clientid() const {
   return _internal_has_clientid();
 }
-inline void WriteArgs::clear_clientid() {
+inline void ShardWriteArgs::clear_clientid() {
   clientid_ = int64_t{0};
   _has_bits_[0] &= ~0x00000004u;
 }
-inline int64_t WriteArgs::_internal_clientid() const {
+inline int64_t ShardWriteArgs::_internal_clientid() const {
   return clientid_;
 }
-inline int64_t WriteArgs::clientid() const {
-  // @@protoc_insertion_point(field_get:WriteArgs.clientID)
+inline int64_t ShardWriteArgs::clientid() const {
+  // @@protoc_insertion_point(field_get:ShardWriteArgs.clientID)
   return _internal_clientid();
 }
-inline void WriteArgs::_internal_set_clientid(int64_t value) {
+inline void ShardWriteArgs::_internal_set_clientid(int64_t value) {
   _has_bits_[0] |= 0x00000004u;
   clientid_ = value;
 }
-inline void WriteArgs::set_clientid(int64_t value) {
+inline void ShardWriteArgs::set_clientid(int64_t value) {
   _internal_set_clientid(value);
-  // @@protoc_insertion_point(field_set:WriteArgs.clientID)
+  // @@protoc_insertion_point(field_set:ShardWriteArgs.clientID)
 }
 
 // optional int64 seqID = 5;
-inline bool WriteArgs::_internal_has_seqid() const {
+inline bool ShardWriteArgs::_internal_has_seqid() const {
   bool value = (_has_bits_[0] & 0x00000008u) != 0;
   return value;
 }
-inline bool WriteArgs::has_seqid() const {
+inline bool ShardWriteArgs::has_seqid() const {
   return _internal_has_seqid();
 }
-inline void WriteArgs::clear_seqid() {
+inline void ShardWriteArgs::clear_seqid() {
   seqid_ = int64_t{0};
   _has_bits_[0] &= ~0x00000008u;
 }
-inline int64_t WriteArgs::_internal_seqid() const {
+inline int64_t ShardWriteArgs::_internal_seqid() const {
   return seqid_;
 }
-inline int64_t WriteArgs::seqid() const {
-  // @@protoc_insertion_point(field_get:WriteArgs.seqID)
+inline int64_t ShardWriteArgs::seqid() const {
+  // @@protoc_insertion_point(field_get:ShardWriteArgs.seqID)
   return _internal_seqid();
 }
-inline void WriteArgs::_internal_set_seqid(int64_t value) {
+inline void ShardWriteArgs::_internal_set_seqid(int64_t value) {
   _has_bits_[0] |= 0x00000008u;
   seqid_ = value;
 }
-inline void WriteArgs::set_seqid(int64_t value) {
+inline void ShardWriteArgs::set_seqid(int64_t value) {
   _internal_set_seqid(value);
-  // @@protoc_insertion_point(field_set:WriteArgs.seqID)
+  // @@protoc_insertion_point(field_set:ShardWriteArgs.seqID)
 }
 
 // -------------------------------------------------------------------
 
-// WriteReply
+// ShardWriteReply
 
 // required int32 err = 1;
-inline bool WriteReply::_internal_has_err() const {
+inline bool ShardWriteReply::_internal_has_err() const {
   bool value = (_has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool WriteReply::has_err() const {
+inline bool ShardWriteReply::has_err() const {
   return _internal_has_err();
 }
-inline void WriteReply::clear_err() {
+inline void ShardWriteReply::clear_err() {
   err_ = 0;
   _has_bits_[0] &= ~0x00000001u;
 }
-inline int32_t WriteReply::_internal_err() const {
+inline int32_t ShardWriteReply::_internal_err() const {
   return err_;
 }
-inline int32_t WriteReply::err() const {
-  // @@protoc_insertion_point(field_get:WriteReply.err)
+inline int32_t ShardWriteReply::err() const {
+  // @@protoc_insertion_point(field_get:ShardWriteReply.err)
   return _internal_err();
 }
-inline void WriteReply::_internal_set_err(int32_t value) {
+inline void ShardWriteReply::_internal_set_err(int32_t value) {
   _has_bits_[0] |= 0x00000001u;
   err_ = value;
 }
-inline void WriteReply::set_err(int32_t value) {
+inline void ShardWriteReply::set_err(int32_t value) {
   _internal_set_err(value);
-  // @@protoc_insertion_point(field_set:WriteReply.err)
+  // @@protoc_insertion_point(field_set:ShardWriteReply.err)
 }
 
 // -------------------------------------------------------------------

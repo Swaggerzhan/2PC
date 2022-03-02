@@ -3,7 +3,7 @@
 //
 #include "ShardKvClient.h"
 #include "brpc/log.h"
-#include "../rpc/global.h"
+#include "../util/global.h"
 
 
 // for debug
@@ -34,8 +34,8 @@ RpcState ShardKvClient::BEGIN(int tid) {
   if (stub_ == nullptr){
     return Prepare_NotInit;
   }
-  BeginArgs args;
-  BeginReply reply;
+  ShardBeginArgs args;
+  ShardBeginReply reply;
   brpc::Controller cntl;
 
   args.set_tid(tid);
@@ -56,8 +56,8 @@ RpcState ShardKvClient::END(int tid) {
   if ( stub_ == nullptr )
     return Prepare_NotInit;
 
-  EndArgs args;
-  EndReply reply;
+  ShardEndArgs args;
+  ShardEndReply reply;
   brpc::Controller cntl;
 
   args.set_tid(tid);
@@ -81,8 +81,8 @@ RpcState ShardKvClient::END(int tid) {
 RpcState ShardKvClient::ABORT(int tid) {
   if ( stub_ == nullptr )
     return Prepare_NotInit;
-  AbortArgs args;
-  AbortReply reply;
+  ShardAbortArgs args;
+  ShardAbortReply reply;
   brpc::Controller cntl;
 
   args.set_tid(tid);
@@ -106,8 +106,8 @@ RpcState ShardKvClient::PrepareRead(int tid, std::string& key, std::string& valu
   }
 
   brpc::Controller cntl;
-  ReadArgs args;
-  ReadReply reply;
+  ShardReadArgs args;
+  ShardReadReply reply;
 
   args.set_tid(tid);
   args.set_key(key);
@@ -127,6 +127,10 @@ RpcState ShardKvClient::PrepareRead(int tid, std::string& key, std::string& valu
     return Prepare_NotInit;
   }
 
+  if ( reply.err() == Prepare_KeyNotExist) {
+    return Prepare_KeyNotExist;
+  }
+
   return Prepare_Failed;
 }
 
@@ -137,8 +141,8 @@ RpcState ShardKvClient::PrepareWrite(int tid, std::string& key, std::string& val
   }
 
   brpc::Controller cntl;
-  WriteArgs args;
-  WriteReply reply;
+  ShardWriteArgs args;
+  ShardWriteReply reply;
 
   args.set_tid(tid);
   args.set_key(key);
@@ -153,6 +157,11 @@ RpcState ShardKvClient::PrepareWrite(int tid, std::string& key, std::string& val
   if ( reply.err() == Prepare_OK ) {
     return Prepare_OK;
   }
+
+  if ( reply.err() == Prepare_NotInit ) {
+    return Prepare_NotInit;
+  }
+
   return Prepare_Failed;
 }
 

@@ -29,7 +29,7 @@ add_executable(2PC main.cpp
         util/global.h util/global.cc
 
 
-        )
+        coordinator/CoordinatorServer.h coordinator/CoordinatorServer.cc coordinator/CoordinatorClient.h coordinator/CoordinatorClient.cc)
 
 target_link_libraries(2PC Threads::Threads)
 target_link_libraries(2PC brpc)

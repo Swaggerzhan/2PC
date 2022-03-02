@@ -13,6 +13,7 @@ enum RpcState{
 
 
   Prepare_Failed = -1,
+  Prepare_KeyNotExist = 5,
   Prepare_OK = 6,
   Prepare_NotInit = 7,
   Prepare_ConnectFail = 8,
@@ -20,7 +21,9 @@ enum RpcState{
 
   Transaction_OK = 9,
   Transaction_Failed = -2,
+  Transaction_KeyNotExist = 10,
   Transaction_NotInit = 11,
+  Transaction_NetworkFailed = 12,
 
 };
 

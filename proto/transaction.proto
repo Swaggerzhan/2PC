@@ -33,7 +33,7 @@ message ReadArgs {
 
 message ReadReply {
   required int32 err = 1;
-  required string value = 2;
+  optional string value = 2;
 };
 
 message WriteArgs {

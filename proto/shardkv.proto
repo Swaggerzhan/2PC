@@ -1,42 +1,42 @@
 option cc_generic_services = true;
 
 
-message BeginArgs {
+message ShardBeginArgs {
   required int32 Tid = 1;  // 事务ID
 };
 
-message BeginReply {
+message ShardBeginReply {
   required int32 err = 1; // RPC操作
 };
 
-message EndArgs {
+message ShardEndArgs {
   required int32 Tid = 1;
 };
 
-message EndReply {
+message ShardEndReply {
   required int32 err = 1;
 };
 
-message AbortArgs {
+message ShardAbortArgs {
   required int32 Tid = 1;
 };
 
-message AbortReply {
+message ShardAbortReply {
   required int32 err = 1;
 };
 
 
-message ReadArgs {
+message ShardReadArgs {
   required int32 Tid = 1;
   required string key = 2;
 };
 
-message ReadReply {
+message ShardReadReply {
   required int32 err = 1;
   optional string value = 2; // optional
 };
 
-message WriteArgs {
+message ShardWriteArgs {
   required int32 Tid = 1;
   required string key = 2;
   required string value = 3;
@@ -46,7 +46,7 @@ message WriteArgs {
   optional int64 seqID = 5;
 };
 
-message WriteReply {
+message ShardWriteReply {
   required int32 err = 1;
 };
 
@@ -61,12 +61,12 @@ message ConnectReply {
 
 
 service ShardKvBase {
-  rpc PrepareRead(ReadArgs) returns (ReadReply);
-  rpc PrepareWrite(WriteArgs) returns (WriteReply);
+  rpc PrepareRead(ShardReadArgs) returns (ShardReadReply);
+  rpc PrepareWrite(ShardWriteArgs) returns (ShardWriteReply);
 
-  rpc BEGIN(BeginArgs) returns (BeginReply);
-  rpc END(EndArgs) returns (EndReply);
-  rpc ABORT(AbortArgs) returns (AbortReply);
+  rpc BEGIN(ShardBeginArgs) returns (ShardBeginReply);
+  rpc END(ShardEndArgs) returns (ShardEndReply);
+  rpc ABORT(ShardAbortArgs) returns (ShardAbortReply);
 
   rpc CONNECT(ConnectArgs) returns (ConnectReply);
 }

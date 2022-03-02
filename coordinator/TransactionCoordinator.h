@@ -12,14 +12,25 @@
 #include <mutex>
 #include <memory>
 
+
+struct CoordinatorContext;
+
+
+
 typedef std::shared_ptr<ShardKvClient> ShardKvClientPtr;
-typedef std::pair<int, std::vector<ShardKvClientPtr>*> TransactionRecord;
+typedef std::shared_ptr<CoordinatorContext> CoordinatorContextPtr;
+typedef std::pair<int, CoordinatorContextPtr> CoordinatorRecord;
+
+struct CoordinatorContext {
+  std::vector<int> usedShard;
+  void record(int);
+};
 
 
 class TransactionCoordinator : public TransactionCoordinatorBase {
 public:
 
-  TransactionCoordinator();
+  TransactionCoordinator(std::vector<std::string>);
   ~TransactionCoordinator()=default;
 
   void BEGIN(::google::protobuf::RpcController*,
@@ -45,7 +56,14 @@ public:
 
 private:
 
-  void errorAndAbort(int, std::vector<ShardKvClientPtr>*);
+  void addCoordinator(int);
+  RpcState getCoordinatorContext(int, CoordinatorContextPtr&);
+  void delCoordinatorContext(int);
+
+
+  int getShardKvClient(std::string, ShardKvClientPtr&);
+
+  void errorAndAbort(int);
 
 private:
 
@@ -54,7 +72,7 @@ private:
   std::mutex mutex_;
 
   // 每个事务ID和其对应的使用了多少个ShardKV
-  std::map<int, std::vector<ShardKvClientPtr>*> transactions_;
+  std::map<int, CoordinatorContextPtr> coordinatorsCtx_;
   std::mutex latch_;
 
   const int kRound_;
