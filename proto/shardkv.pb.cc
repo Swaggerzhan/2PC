@@ -42,7 +42,8 @@ struct ShardBeginReplyDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT ShardBeginReplyDefaultTypeInternal _ShardBeginReply_default_instance_;
 constexpr ShardEndArgs::ShardEndArgs(
   ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : tid_(0){}
+  : tid_(0)
+  , commitid_(0){}
 struct ShardEndArgsDefaultTypeInternal {
   constexpr ShardEndArgsDefaultTypeInternal()
     : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
@@ -194,7 +195,9 @@ const uint32_t TableStruct_shardkv_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
   PROTOBUF_FIELD_OFFSET(::ShardEndArgs, tid_),
+  PROTOBUF_FIELD_OFFSET(::ShardEndArgs, commitid_),
   0,
+  1,
   PROTOBUF_FIELD_OFFSET(::ShardEndReply, _has_bits_),
   PROTOBUF_FIELD_OFFSET(::ShardEndReply, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -283,16 +286,16 @@ const uint32_t TableStruct_shardkv_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(
 static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   { 0, 7, -1, sizeof(::ShardBeginArgs)},
   { 8, 15, -1, sizeof(::ShardBeginReply)},
-  { 16, 23, -1, sizeof(::ShardEndArgs)},
-  { 24, 31, -1, sizeof(::ShardEndReply)},
-  { 32, 39, -1, sizeof(::ShardAbortArgs)},
-  { 40, 47, -1, sizeof(::ShardAbortReply)},
-  { 48, 56, -1, sizeof(::ShardReadArgs)},
-  { 58, 66, -1, sizeof(::ShardReadReply)},
-  { 68, 79, -1, sizeof(::ShardWriteArgs)},
-  { 84, 91, -1, sizeof(::ShardWriteReply)},
-  { 92, 99, -1, sizeof(::ConnectArgs)},
-  { 100, 107, -1, sizeof(::ConnectReply)},
+  { 16, 24, -1, sizeof(::ShardEndArgs)},
+  { 26, 33, -1, sizeof(::ShardEndReply)},
+  { 34, 41, -1, sizeof(::ShardAbortArgs)},
+  { 42, 49, -1, sizeof(::ShardAbortReply)},
+  { 50, 58, -1, sizeof(::ShardReadArgs)},
+  { 60, 68, -1, sizeof(::ShardReadReply)},
+  { 70, 81, -1, sizeof(::ShardWriteArgs)},
+  { 86, 93, -1, sizeof(::ShardWriteReply)},
+  { 94, 101, -1, sizeof(::ConnectArgs)},
+  { 102, 109, -1, sizeof(::ConnectReply)},
 };
 
 static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
@@ -312,28 +315,29 @@ static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] =
 
 const char descriptor_table_protodef_shardkv_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
   "\n\rshardkv.proto\"\035\n\016ShardBeginArgs\022\013\n\003Tid"
-  "\030\001 \002(\005\"\036\n\017ShardBeginReply\022\013\n\003err\030\001 \002(\005\"\033"
-  "\n\014ShardEndArgs\022\013\n\003Tid\030\001 \002(\005\"\034\n\rShardEndR"
-  "eply\022\013\n\003err\030\001 \002(\005\"\035\n\016ShardAbortArgs\022\013\n\003T"
-  "id\030\001 \002(\005\"\036\n\017ShardAbortReply\022\013\n\003err\030\001 \002(\005"
-  "\")\n\rShardReadArgs\022\013\n\003Tid\030\001 \002(\005\022\013\n\003key\030\002 "
-  "\002(\t\",\n\016ShardReadReply\022\013\n\003err\030\001 \002(\005\022\r\n\005va"
-  "lue\030\002 \001(\t\"Z\n\016ShardWriteArgs\022\013\n\003Tid\030\001 \002(\005"
-  "\022\013\n\003key\030\002 \002(\t\022\r\n\005value\030\003 \002(\t\022\020\n\010clientID"
-  "\030\004 \001(\003\022\r\n\005seqID\030\005 \001(\003\"\036\n\017ShardWriteReply"
-  "\022\013\n\003err\030\001 \002(\005\"\033\n\013ConnectArgs\022\014\n\004host\030\001 \002"
-  "(\t\"\033\n\014ConnectReply\022\013\n\003err\030\001 \002(\0052\226\002\n\013Shar"
-  "dKvBase\022.\n\013PrepareRead\022\016.ShardReadArgs\032\017"
-  ".ShardReadReply\0221\n\014PrepareWrite\022\017.ShardW"
-  "riteArgs\032\020.ShardWriteReply\022*\n\005BEGIN\022\017.Sh"
-  "ardBeginArgs\032\020.ShardBeginReply\022$\n\003END\022\r."
-  "ShardEndArgs\032\016.ShardEndReply\022*\n\005ABORT\022\017."
-  "ShardAbortArgs\032\020.ShardAbortReply\022&\n\007CONN"
-  "ECT\022\014.ConnectArgs\032\r.ConnectReplyB\003\200\001\001"
+  "\030\001 \002(\005\"\036\n\017ShardBeginReply\022\013\n\003err\030\001 \002(\005\"-"
+  "\n\014ShardEndArgs\022\013\n\003Tid\030\001 \002(\005\022\020\n\010commitID\030"
+  "\002 \002(\005\"\034\n\rShardEndReply\022\013\n\003err\030\001 \002(\005\"\035\n\016S"
+  "hardAbortArgs\022\013\n\003Tid\030\001 \002(\005\"\036\n\017ShardAbort"
+  "Reply\022\013\n\003err\030\001 \002(\005\")\n\rShardReadArgs\022\013\n\003T"
+  "id\030\001 \002(\005\022\013\n\003key\030\002 \002(\t\",\n\016ShardReadReply\022"
+  "\013\n\003err\030\001 \002(\005\022\r\n\005value\030\002 \001(\t\"Z\n\016ShardWrit"
+  "eArgs\022\013\n\003Tid\030\001 \002(\005\022\013\n\003key\030\002 \002(\t\022\r\n\005value"
+  "\030\003 \002(\t\022\020\n\010clientID\030\004 \001(\003\022\r\n\005seqID\030\005 \001(\003\""
+  "\036\n\017ShardWriteReply\022\013\n\003err\030\001 \002(\005\"\033\n\013Conne"
+  "ctArgs\022\014\n\004host\030\001 \002(\t\"\033\n\014ConnectReply\022\013\n\003"
+  "err\030\001 \002(\0052\226\002\n\013ShardKvBase\022.\n\013PrepareRead"
+  "\022\016.ShardReadArgs\032\017.ShardReadReply\0221\n\014Pre"
+  "pareWrite\022\017.ShardWriteArgs\032\020.ShardWriteR"
+  "eply\022*\n\005BEGIN\022\017.ShardBeginArgs\032\020.ShardBe"
+  "ginReply\022$\n\003END\022\r.ShardEndArgs\032\016.ShardEn"
+  "dReply\022*\n\005ABORT\022\017.ShardAbortArgs\032\020.Shard"
+  "AbortReply\022&\n\007CONNECT\022\014.ConnectArgs\032\r.Co"
+  "nnectReplyB\003\200\001\001"
   ;
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_shardkv_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_shardkv_2eproto = {
-  false, false, 757, descriptor_table_protodef_shardkv_2eproto, "shardkv.proto", 
+  false, false, 775, descriptor_table_protodef_shardkv_2eproto, "shardkv.proto", 
   &descriptor_table_shardkv_2eproto_once, nullptr, 0, 12,
   schemas, file_default_instances, TableStruct_shardkv_2eproto::offsets,
   file_level_metadata_shardkv_2eproto, file_level_enum_descriptors_shardkv_2eproto, file_level_service_descriptors_shardkv_2eproto,
@@ -737,8 +741,11 @@ class ShardEndArgs::_Internal {
   static void set_has_tid(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
+  static void set_has_commitid(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
   static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
+    return ((has_bits[0] & 0x00000003) ^ 0x00000003) != 0;
   }
 };
 
@@ -755,12 +762,17 @@ ShardEndArgs::ShardEndArgs(const ShardEndArgs& from)
   : ::PROTOBUF_NAMESPACE_ID::Message(),
       _has_bits_(from._has_bits_) {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  tid_ = from.tid_;
+  ::memcpy(&tid_, &from.tid_,
+    static_cast<size_t>(reinterpret_cast<char*>(&commitid_) -
+    reinterpret_cast<char*>(&tid_)) + sizeof(commitid_));
   // @@protoc_insertion_point(copy_constructor:ShardEndArgs)
 }
 
 inline void ShardEndArgs::SharedCtor() {
-tid_ = 0;
+::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+    reinterpret_cast<char*>(&tid_) - reinterpret_cast<char*>(this)),
+    0, static_cast<size_t>(reinterpret_cast<char*>(&commitid_) -
+    reinterpret_cast<char*>(&tid_)) + sizeof(commitid_));
 }
 
 ShardEndArgs::~ShardEndArgs() {
@@ -790,7 +802,12 @@ void ShardEndArgs::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  tid_ = 0;
+  cached_has_bits = _has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    ::memset(&tid_, 0, static_cast<size_t>(
+        reinterpret_cast<char*>(&commitid_) -
+        reinterpret_cast<char*>(&tid_)) + sizeof(commitid_));
+  }
   _has_bits_.Clear();
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
@@ -807,6 +824,15 @@ const char* ShardEndArgs::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_I
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           _Internal::set_has_tid(&has_bits);
           tid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // required int32 commitID = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
+          _Internal::set_has_commitid(&has_bits);
+          commitid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -848,6 +874,12 @@ uint8_t* ShardEndArgs::_InternalSerialize(
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(1, this->_internal_tid(), target);
   }
 
+  // required int32 commitID = 2;
+  if (cached_has_bits & 0x00000002u) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(2, this->_internal_commitid(), target);
+  }
+
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
@@ -856,13 +888,35 @@ uint8_t* ShardEndArgs::_InternalSerialize(
   return target;
 }
 
+size_t ShardEndArgs::RequiredFieldsByteSizeFallback() const {
+// @@protoc_insertion_point(required_fields_byte_size_fallback_start:ShardEndArgs)
+  size_t total_size = 0;
+
+  if (_internal_has_tid()) {
+    // required int32 Tid = 1;
+    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32SizePlusOne(this->_internal_tid());
+  }
+
+  if (_internal_has_commitid()) {
+    // required int32 commitID = 2;
+    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32SizePlusOne(this->_internal_commitid());
+  }
+
+  return total_size;
+}
 size_t ShardEndArgs::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:ShardEndArgs)
   size_t total_size = 0;
 
-  // required int32 Tid = 1;
-  if (_internal_has_tid()) {
+  if (((_has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
+    // required int32 Tid = 1;
     total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32SizePlusOne(this->_internal_tid());
+
+    // required int32 commitID = 2;
+    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32SizePlusOne(this->_internal_commitid());
+
+  } else {
+    total_size += RequiredFieldsByteSizeFallback();
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
@@ -890,8 +944,15 @@ void ShardEndArgs::MergeFrom(const ShardEndArgs& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_tid()) {
-    _internal_set_tid(from._internal_tid());
+  cached_has_bits = from._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    if (cached_has_bits & 0x00000001u) {
+      tid_ = from.tid_;
+    }
+    if (cached_has_bits & 0x00000002u) {
+      commitid_ = from.commitid_;
+    }
+    _has_bits_[0] |= cached_has_bits;
   }
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -912,7 +973,12 @@ void ShardEndArgs::InternalSwap(ShardEndArgs* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_has_bits_[0], other->_has_bits_[0]);
-  swap(tid_, other->tid_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(ShardEndArgs, commitid_)
+      + sizeof(ShardEndArgs::commitid_)
+      - PROTOBUF_FIELD_OFFSET(ShardEndArgs, tid_)>(
+          reinterpret_cast<char*>(&tid_),
+          reinterpret_cast<char*>(&other->tid_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata ShardEndArgs::GetMetadata() const {

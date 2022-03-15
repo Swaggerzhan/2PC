@@ -52,7 +52,7 @@ RpcState ShardKvClient::BEGIN(int tid) {
 }
 
 
-RpcState ShardKvClient::END(int tid) {
+RpcState ShardKvClient::END(int tid, int commitID) {
   if ( stub_ == nullptr )
     return Prepare_NotInit;
 
@@ -61,6 +61,7 @@ RpcState ShardKvClient::END(int tid) {
   brpc::Controller cntl;
 
   args.set_tid(tid);
+  args.set_commitid(commitID);
 
   stub_->END(&cntl, &args, &reply, nullptr);
 

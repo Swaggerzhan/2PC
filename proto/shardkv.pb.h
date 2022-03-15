@@ -553,6 +553,7 @@ class ShardEndArgs final :
 
   enum : int {
     kTidFieldNumber = 1,
+    kCommitIDFieldNumber = 2,
   };
   // required int32 Tid = 1;
   bool has_tid() const;
@@ -567,9 +568,25 @@ class ShardEndArgs final :
   void _internal_set_tid(int32_t value);
   public:
 
+  // required int32 commitID = 2;
+  bool has_commitid() const;
+  private:
+  bool _internal_has_commitid() const;
+  public:
+  void clear_commitid();
+  int32_t commitid() const;
+  void set_commitid(int32_t value);
+  private:
+  int32_t _internal_commitid() const;
+  void _internal_set_commitid(int32_t value);
+  public:
+
   // @@protoc_insertion_point(class_scope:ShardEndArgs)
  private:
   class _Internal;
+
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -577,6 +594,7 @@ class ShardEndArgs final :
   ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   int32_t tid_;
+  int32_t commitid_;
   friend struct ::TableStruct_shardkv_2eproto;
 };
 // -------------------------------------------------------------------
@@ -2322,6 +2340,34 @@ inline void ShardEndArgs::_internal_set_tid(int32_t value) {
 inline void ShardEndArgs::set_tid(int32_t value) {
   _internal_set_tid(value);
   // @@protoc_insertion_point(field_set:ShardEndArgs.Tid)
+}
+
+// required int32 commitID = 2;
+inline bool ShardEndArgs::_internal_has_commitid() const {
+  bool value = (_has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool ShardEndArgs::has_commitid() const {
+  return _internal_has_commitid();
+}
+inline void ShardEndArgs::clear_commitid() {
+  commitid_ = 0;
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline int32_t ShardEndArgs::_internal_commitid() const {
+  return commitid_;
+}
+inline int32_t ShardEndArgs::commitid() const {
+  // @@protoc_insertion_point(field_get:ShardEndArgs.commitID)
+  return _internal_commitid();
+}
+inline void ShardEndArgs::_internal_set_commitid(int32_t value) {
+  _has_bits_[0] |= 0x00000002u;
+  commitid_ = value;
+}
+inline void ShardEndArgs::set_commitid(int32_t value) {
+  _internal_set_commitid(value);
+  // @@protoc_insertion_point(field_set:ShardEndArgs.commitID)
 }
 
 // -------------------------------------------------------------------

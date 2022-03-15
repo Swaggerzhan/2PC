@@ -28,7 +28,7 @@ public:
   RpcState PrepareWrite(int, std::string&, std::string&);
 
   // tid
-  RpcState END(int);
+  RpcState END(int, int);
 
   RpcState ABORT(int);
 

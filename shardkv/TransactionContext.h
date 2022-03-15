@@ -8,28 +8,46 @@
 
 #include <vector>
 #include <memory>
+#include <mutex>
+#include <atomic>
+#include <map>
 
-struct Entry;
+struct Tuple {
 
-enum UndoType {
-  Delete,
-  Replace,
-  Insert,
+  Tuple(uint64_t);
+
+  std::mutex latch; // for struct, protect for Tid and Rcnt
+  uint64_t Tid;
+  uint32_t Rcnt;
+
+  std::atomic<uint64_t> BeginTS;
+  std::atomic<uint64_t> EndTS;
+
+  // for value
+  std::string value;
+
+  bool invalid;
+
+  std::atomic<Tuple*> next_;
+
 };
-
-// key -> value
-typedef std::pair<std::string, std::shared_ptr<Entry>> Record;
-typedef std::pair<UndoType, Record> UndoRecord;
 
 struct TransactionContext {
 
   TransactionContext();
 
-  int t_id;
-  std::vector<UndoRecord> undoList;
-  std::vector<std::shared_ptr<Entry>> lockTable;
+  uint64_t id;
+  uint64_t commit_id;
 
+  Tuple* writeCheck(std::string&);
+  Tuple* readCheck(std::string&);
+
+  std::map<std::string, Tuple*> ReadMap;
+  std::map<std::string, Tuple*> WriteMap;
+
+  // mark this bit when Transaction failed
   bool invalid;
+
 };
 
 

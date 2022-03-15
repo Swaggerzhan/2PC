@@ -10,19 +10,14 @@
 #include <thread>
 #include <map>
 #include <memory>
+#include <atomic>
 
 struct TransactionContext;
 
-typedef std::shared_ptr<TransactionContext> TransactionContextPtr;
 
-struct Entry {
+struct Tuple;
 
-  Entry();
 
-  std::timed_mutex latch;
-  std::string value;
-  bool invalid;
-};
 
 enum State {
   Success,
@@ -35,43 +30,38 @@ enum State {
 class Engine{
 public:
 
-  static void BEGIN(TransactionContextPtr&);
-  static bool END(TransactionContextPtr&);
-  static void ABORT(TransactionContextPtr&);
 
-  // don't call it!
-  static void COMMIT(TransactionContextPtr&);
 
-  static void ROLLBACK(TransactionContextPtr&);
+  static State commit(TransactionContext*);
+  static State read(TransactionContext*, std::string&, std::string&);
+  static State write(TransactionContext*, std::string&, std::string&);
+  static void abort(TransactionContext*);
 
-  // key -> value
-  static State read(TransactionContextPtr&, std::string&, std::string&);
-  static State write(TransactionContextPtr&, std::string&, std::string&);
-  static State del(TransactionContextPtr&, std::string&);
+
 
   // for debug
   static void show();
 
 private:
 
-  static void pushUndoRecord(TransactionContext*, std::string&, std::shared_ptr<Entry>);
+
+  static State doUpdate(TransactionContext*, Tuple*, std::string&, std::string&);
+  static State doInsert(TransactionContext*, std::string&, std::string&);
+  static State doDel(TransactionContext*, Tuple*, std::string&);
 
 
 
-  // 从data_中获取数据
-  static bool getData(std::string&, std::shared_ptr<Entry>&);
-  static bool writeData(std::string&, std::shared_ptr<Entry>&);
-
-  // 被删除的Entry需要提前上锁
-  static bool delData(std::string&);
+  /////// for struct data_
+  static Tuple* getData(std::string&);
+  static bool insert(std::string&, Tuple*);
 
 
 
 private:
 
-  static std::mutex mutex_;
-  static std::map<std::string, std::shared_ptr<Entry>> data_;
-  static TransactionContext* lockBy_;
+
+  static std::mutex latch_;
+  static std::map<std::string, Tuple*> data_;
 
 };
 

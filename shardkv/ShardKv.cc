@@ -21,13 +21,12 @@ void ShardKv::BEGIN(::google::protobuf::RpcController* c, const ::ShardBeginArgs
                     ::google::protobuf::Closure* done) {
   brpc::ClosureGuard done_guard(done);
   //brpc::Controller* ctnl = static_cast<brpc::Controller*>(c);
-  std::shared_ptr<TransactionContext> t(new TransactionContext);
+  TransactionContext* Tctx = new TransactionContext;
   mutex_.lock();
-  t->t_id = args->tid();
-  Tmap_.insert(TMapRecord(t->t_id, t));
+  Tctx->id = args->tid();
+  Tmap_.insert(TMapRecord(Tctx->id, Tctx));
   mutex_.unlock();
 
-  Engine::BEGIN(t);
   reply->set_err(Prepare_OK);
 }
 
@@ -44,17 +43,24 @@ void ShardKv::END(::google::protobuf::RpcController* c, const ::ShardEndArgs* ar
     mutex_.unlock();
     return;
   }
-  TransactionContextPtr Tctx = iter->second;
+  TransactionContext* Tctx = iter->second;
   mutex_.unlock();
-  bool ret = Engine::END(Tctx);
+
+  if ( Tctx->invalid )  {
+    reply->set_err(Prepare_Failed);
+    return;
+  }
+  Tctx->commit_id = args->commitid();
+  State ret = Engine::commit(Tctx);
 
   mutex_.lock();
-  Tmap_.erase(Tctx->t_id);
+  Tmap_.erase(Tctx->id);
   mutex_.unlock();
-  if ( ret ) {
+  if ( ret == Success ) {
     reply->set_err(Prepare_OK);
-  }else {
+  }else { // TODO: when fail happened
     reply->set_err(Prepare_Failed);
+    Tctx->invalid = true;
   }
 }
 
@@ -74,24 +80,33 @@ void ShardKv::PrepareRead(::google::protobuf::RpcController *c, const ::ShardRea
     mutex_.unlock();
     return;
   }
-  TransactionContextPtr Tctx = iter->second;
+  TransactionContext* Tctx = iter->second;
   mutex_.unlock();
+
+  // Transaction already failed
+  if ( Tctx->invalid )  {
+    reply->set_err(Prepare_Failed);
+    return;
+  }
 
   std::string key = args->key();
   cout << "key: " << key << endl;
   std::string value;
   State s = Engine::read(Tctx, key, value);
+  // TODO: ShardKV无权利移除失败的事务
   if ( s == KeyNotExist ) {
     reply->set_err(Prepare_KeyNotExist);
-    Engine::ABORT(Tctx);
-    removeContext(args->tid());
+    Tctx->invalid = true;
+    //Engine::ABORT(Tctx);
+    //removeContext(args->tid());
     return;
   }
 
   if ( s == LockFailed ) {
     reply->set_err(Prepare_Failed);
-    Engine::ABORT(Tctx);
-    removeContext(args->tid());
+    Tctx->invalid = true;
+    //Engine::ABORT(Tctx);
+    //removeContext(args->tid());
     return;
   }
   reply->set_err(Prepare_OK);
@@ -111,8 +126,13 @@ void ShardKv::PrepareWrite(::google::protobuf::RpcController* c, const ::ShardWr
     mutex_.unlock();
     return;
   }
-  TransactionContextPtr Tctx = iter->second;
+  TransactionContext* Tctx = iter->second;
   mutex_.unlock();
+
+  if ( Tctx->invalid ) {
+    reply->set_err(Prepare_Failed);
+    return;
+  }
 
   std::string key = args->key();
   std::string value = args->value();
@@ -120,8 +140,7 @@ void ShardKv::PrepareWrite(::google::protobuf::RpcController* c, const ::ShardWr
   State s = Engine::write(Tctx, key, value);
 
   if ( s == LockFailed ) {
-    Engine::ABORT(Tctx);
-    removeContext(args->tid());
+    Tctx->invalid = true;
     reply->set_err(Prepare_Failed);
     return;
   }
@@ -141,11 +160,11 @@ void ShardKv::ABORT(::google::protobuf::RpcController*, const ::ShardAbortArgs* 
     reply->set_err(Prepare_NotInit);
     return;
   }
-  TransactionContextPtr Tctx = iter->second;
+  TransactionContext* Tctx = iter->second;
   Tmap_.erase(args->tid());
   mutex_.unlock();
 
-  Engine::ABORT(Tctx);
+  Engine::abort(Tctx);
   reply->set_err(Prepare_OK);
 }
 
@@ -154,3 +173,4 @@ void ShardKv::removeContext(int tid) {
   std::unique_lock<std::mutex> lockGuard(mutex_);
   Tmap_.erase(tid);
 }
+

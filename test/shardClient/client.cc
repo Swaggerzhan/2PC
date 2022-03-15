@@ -6,106 +6,76 @@ using std::endl;
 using std::string;
 
 
-void add() {
+using std::cin;
+
+void Input(int tid) {
   ShardKvClient c("0.0.0.0:7777");
-
-  string key = "Swagger";
-  string key2 = "Bob";
-  string key3 = "Alice";
-  string value = "100000";
-  string value2 = "Bob has not money";
-  string value3 = "Alice say fuck you!";
-
-  int tid = 1;
-
-  cout << State2Str(c.BEGIN(tid)) << endl;
-  cout << State2Str(c.PrepareWrite(tid, key, value)) << endl;
-  cout << State2Str(c.PrepareWrite(tid, key2, value2)) << endl;
-  cout << State2Str(c.PrepareWrite(tid, key3, value3)) << endl;
-  cout << State2Str(c.END(tid)) << endl;
-}
-
-void query() {
-
-  ShardKvClient c("0.0.0.0:7777");
-
-  string key = "Swagger";
-  string key2 = "Bob";
-  string key3 = "Alice";
-  string value;
-  string value2;
-  string value3;
-  int tid = 2;
-
-  cout << State2Str(c.BEGIN(tid)) << endl;
-  cout << State2Str(c.PrepareRead(tid, key, value)) << endl;
-  cout << State2Str(c.PrepareRead(tid, key2, value2)) << endl;
-  cout << State2Str(c.PrepareRead(tid, key3, value3)) << endl;
-  cout << State2Str(c.END(tid)) << endl;
-
-  cout << value << endl;
-  cout << value2 << endl;
-  cout << value3 << endl;
-
-}
-
-
-void abortTest() {
-  ShardKvClient c("0.0.0.0:7777");
-
-  string key = "Swagger";
-  string key2 = "Bob";
-  string key3 = "Alice";
-  string key4 = "NotExist";
-  string value = "100000";
-  string value2 = "Bob has not money";
-  string value3 = "Alice say fuck you!";
-  string value4 = "";
-
-  int tid = 1;
-
-  cout << State2Str(c.BEGIN(tid)) << endl;
-  cout << State2Str(c.PrepareWrite(tid, key, value)) << endl;
-  cout << State2Str(c.PrepareWrite(tid, key2, value2)) << endl;
-  cout << State2Str(c.PrepareWrite(tid, key3, value3)) << endl;
-  cout << State2Str(c.PrepareRead(tid, key4, value4)) << endl;
-  cout << State2Str(c.END(tid)) << endl;
-}
-
-void handleAbort() {
-    ShardKvClient c("0.0.0.0:7777");
-
-    string key = "Swagger";
-    string key2 = "Bob";
-    string key3 = "Alice";
-    string value = "100000";
-    string value2 = "Bob has not money";
-    string value3 = "Alice say fuck you!";
-
-    int tid = 1;
-
-    cout << State2Str(c.BEGIN(tid)) << endl;
-    cout << State2Str(c.PrepareWrite(tid, key, value)) << endl;
-    cout << State2Str(c.PrepareWrite(tid, key2, value2)) << endl;
-    cout << State2Str(c.PrepareWrite(tid, key3, value3)) << endl;
+  cout << "start at tid: " << tid << endl;
+  AGAIN:
+  string op = "";
+  cout << "your op: ";
+  cin >> op;
+  if ( op == "exit") {
     cout << State2Str(c.ABORT(tid)) << endl;
-    cout << State2Str(c.END(tid)) << endl;
-
+    return;
+  }else if ( op ==  "read") {
+      string key;
+      string value;
+      cout << "key: ";
+      cin >> key;
+      RpcState ret = c.PrepareRead(tid, key, value);
+      cout << State2Str(ret) << endl;
+      if ( ret == Prepare_OK )  {
+        cout << "*******************" << endl;
+        cout << key << " -> " << value << endl;
+        cout << "*******************" << endl;
+      }
+      goto AGAIN;
+  }else if ( op ==  "write") {
+      std::string key;
+      std::string value;
+      cout << "key: ";
+      cin >> key;
+      cout << "value: ";
+      cin >> value;
+      cout << State2Str(c.PrepareWrite(tid, key, value)) << endl;
+      goto AGAIN;
+  }else if (op == "begin") {
+      cout << State2Str(c.BEGIN(tid)) << endl;
+      goto AGAIN;
+  }else if (op ==  "commit") {
+    int commitID = 0;
+    cout << "commit id: ";
+    cin >> commitID;
+    cout << State2Str(c.END(tid, commitID)) << endl;
+    return;
+  } else if ( op ==  "abort") {
+      cout << State2Str(c.ABORT(tid)) << endl;
+      return;
+  }else {
+      cout << "FAIL op" << endl;
+      cout << State2Str(c.ABORT(tid)) << endl;
+      return;
+  }
 }
 
 
 int main(int argc, char** args) {
+
+
   if ( argc < 2 ) {
     cout << "ShardKvClient + number" << endl;
     return -1;
   }
-  if ( atoi(args[1]) == 1) {
-    add();
-  }else if (atoi(args[1]) == 2 ) {
-    query();
-  }else if (atoi(args[1]) == 3) {
-    abortTest();
-  } else if ( atoi(args[1]) == 4) {
-    handleAbort();
-  }
+
+  Input(atoi(args[1]));
+//  if ( atoi(args[1]) == 1) {
+//    add();
+//  }else if (atoi(args[1]) == 2 ) {
+//    query();
+//  }else if (atoi(args[1]) == 3) {
+//    abortTest();
+//  } else if ( atoi(args[1]) == 4) {
+//    handleAbort();
+//  }
 }

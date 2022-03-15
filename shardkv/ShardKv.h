@@ -10,7 +10,7 @@
 
 struct TransactionContext;
 
-typedef std::pair<int, std::shared_ptr<TransactionContext>> TMapRecord;
+typedef std::pair<int, TransactionContext*> TMapRecord;
 
 
 class ShardKv : public ShardKvBase {
@@ -37,7 +37,7 @@ private:
   void removeContext(int);
 
 private:
-  std::map<int, std::shared_ptr<TransactionContext>> Tmap_;
+  std::map<int, TransactionContext*> Tmap_;
   std::mutex mutex_;
 
 };

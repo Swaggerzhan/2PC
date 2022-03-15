@@ -11,6 +11,7 @@ message ShardBeginReply {
 
 message ShardEndArgs {
   required int32 Tid = 1;
+  required int32 commitID = 2;
 };
 
 message ShardEndReply {
